@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qunar.qauction.dao.HomeDao">
+
+    <sql id="selectFields">
+        unfinished_item_fixed_info.item_id,
+        item_name,
+        start_time,
+        end_time,
+        start_price,
+        step_price,
+        browse_count,
+        auction_count,
+        subscription_count,
+        state,
+        current_price,
+    </sql>
+
+    <select id="queryAllCategory" resultType="com.qunar.qauction.model.common.Category">
+        SELECT
+        *
+        FROM item_category
+    </select>
+
+    <!--首页展示的拍品信息
+            商品id ,    类别id,
+            开始时间,   结束时间,
+            浏览人数,   参与人数,
+            订阅人数,   拍品状态,
+            起拍价格,   加价幅度,
+            商品名称,   当前价格 -->
+    <resultMap id="Auctioning" type="com.qunar.qauction.model.home.AuctioningPo">
+        <!-- 静态信息 -->
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="start_time" property="endTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
+                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+        <result column="end_time" property="endTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
+                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+        <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
+                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+        <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
+                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+        <!-- 动态信息 -->
+        <result column="browse_count" property="browseCount"/>
+        <result column="auction_count" property="auctionCount"/>
+        <result column="subscription_count" property="subscriptionCount"/>
+        <result column="state" property="state"
+                typeHandler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"/>
+        <result column="current_price" property="auctionPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
+                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+
+
+    </resultMap>
+    <select id="queryAuctioningPoByState" parameterType="Integer" resultMap="Auctioning">
+        SELECT
+        <include refid="selectFields"/>
+        FROM unfinished_item_fixed_info
+        AS uifi
+        LEFT JOIN unfinished_item_dynamic_info
+        AS uidi
+        ON uifi.item_id=uidi.item_id
+        WHERE state=#{state}
+        ORDER BY end_time
+    </select>
+
+    <select id="queryAuctioningPoByCategoryId" parameterType="Integer" resultMap="Auctioning">
+        SELECT
+        <include refid="selectFields"/>
+        FROM (
+        SELECT
+        item_id, item_name, category_id, start_time, end_time, start_price, step_price,
+        FROM unfinished_item_fixed_info
+        WHERE category_id=#{categoryId}
+        AS uifi
+        LEFT JOIN unfinished_item_dynamic_info
+        AS uidi
+        ON uifi.item_id=uidi.item_id )
+        ORDER BY end_time
+    </select>
+
+</mapper>

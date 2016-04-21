@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qunar.qauction.dao.ImgDao">
+
+    <insert id="insertImgs" parameterType="com.qunar.qauction.model.upload.ImgModel">
+        INSERT INTO item_picture(item_id,picture_id)
+        VALUES
+        <foreach collection="imgModel.pictureId" separator="," item="item">
+            (#{imgModel.itemId},#{item})
+        </foreach>
+    </insert>
+    <select id="selectImages" parameterType="java.lang.String" resultType="String">
+        SELECT picture_id
+        FROM item_picture
+        WHERE
+        item_id=#{itemId}
+    </select>
+
+    <select id="selectFirstPicture" resultType="String" parameterType="String">
+        SELECT picture_id FROM item_picture
+        WHERE id= (
+        SELECT MIN(id) AS id
+        FROM item_picture
+        WHERE item_id =#{itemId}
+        );
+
+    </select>
+    <delete id="deleteImg" parameterType="String">
+        DELETE  FROM  item_picture WHERE picture_id=#{pictureId}
+    </delete>
+    <delete id="deleteImgByItemId" parameterType="String">
+        DELETE FROM item_picture WHERE item_id=#{itemId}
+    </delete>
+</mapper>

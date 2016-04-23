@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/Constants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/Monitor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/AuthorityException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/BusinessException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/ExternalException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/NumberToLargeException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/ParameterException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/PutOnFailureException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/exceptions/TakeOffFailureException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/CipherUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/CookieUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/DateTimeUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/DateUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/FileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/LogUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/ParameterCheckUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/SHA1.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/UUIDGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/UserContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/beanmapper/BeanMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/beanmapper/MapClass.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/beanmapper/MapClassScanner.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/beanmapper/MapField.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/common/utils/beanmapper/OrikaBeanMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/AdministratorDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/AuctionDetailDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/AuctiondynamicItemDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/HomeDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/ImgDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/UploadItemDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/UserAuctionDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/typeHandler/DateTimeTypeHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/typeHandler/EnumTypeHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/dao/typeHandler/MoneyTypeHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/job/ItemAutoOffloadJob.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/job/ItemAutoStartAuctionJob.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/admin/Administrator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/admin/FinishedItemInfoForQuery.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/admin/UnfinishedItemForQuery.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/admin/dto/ResultOfPutOn.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/admin/dto/ResultOfTakeOff.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/auctiondetails/AuctionMoney.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/auctiondetails/AuctionOrder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/auctiondetails/ReturnMessage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/auctiondetails/param/UpdateDynamic.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/auctiondetails/vo/AuctionBidderSuc.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/auctiondetails/vo/AuctionDetail.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/AuctionOrderModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/Category.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/FinishedItemInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/ItemModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/MailContent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/UnfinishedItemDynamicInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/common/UnfinishedItemFixedInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/enums/OldDegree.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/enums/State.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/home/AuctioningPo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/home/AuctioningVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/upload/ImgModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/upload/UploadItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionInAfter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionInNow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOrderFail.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOrderSuccess.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOutAfter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOutBefore.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOutNow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionInAfterVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionInNowVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOrderFailVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOrderSuccessVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOutAfterVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOutBeforeVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOutNowVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/admin/AdministratorService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/admin/impl/AdministratorServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/auctiondetails/AuctionDetailService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/auctiondetails/impl/AuctionServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/common/EmailService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/common/ImgService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/common/ItemTakeOffService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/common/impl/EmailServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/common/impl/ImgServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/common/impl/ItemTakeOffServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/home/HomeService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/home/impl/HomeServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/upload/UploadItemService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/upload/impl/SwiftClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/upload/impl/SwiftContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/upload/impl/UploadServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/userauction/UserAucitonService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/service/userauction/impl/UserAucitonServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/AdministratorController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/AuctionDetailController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/BaseController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/ErrorController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/HomeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/ItemUploadController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/LoginController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/RedirectController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/controller/UserAuctionController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/filter/LoginFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/filter/XSSFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/filter/XSSRequestWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/interceptor/AdminAuthorityInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/interceptor/BrowserInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/java/com/qunar/qauction/web/listener/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.beta/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.beta/myid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.beta/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.beta/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.beta/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.dev/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.dev/myid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.dev/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.dev/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.dev/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.local/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.local/myid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.local/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.local/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.local/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.prod/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.prod/myid" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.prod/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.prod/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources.prod/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/liuyan.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/AdministratorDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/HomeDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/ImgDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/UploadItemDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/auctiondynamic.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/auctionitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mapper/userAuctionDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/mybatis/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/qunar-app.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/spring/spring-bean.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/spring/spring-mvc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/spring/spring-mybatis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/spring/spring-qschedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/resources/sql/createtable.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/WEB-INF/view/404.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/WEB-INF/view/500.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/WEB-INF/view/502.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/WEB-INF/view/hello/hello.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/WEB-INF/view/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/ace-elements.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/ace-extra.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/ace.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/avalon.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/main/webapp/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/test/java/com/qunar/qauction/service/Test1.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/src/test/java/com/qunar/qauction/service/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/Monitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/exceptions/AuthorityException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/exceptions/BusinessException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/exceptions/ExternalException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/exceptions/NumberToLargeException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/exceptions/ParameterException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/CipherUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/CookieUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/DateTimeUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/DateUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/FileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/LogUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/ParameterCheckUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/SHA1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/UUIDGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/common/utils/UserContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/AdministratorDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/AuctionDetailDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/AuctiondynamicItemDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/HomeDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/ImgDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/UploadItemDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/UserAuctionDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/typeHandler/DateTimeTypeHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/typeHandler/EnumTypeHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/dao/typeHandler/MoneyTypeHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/job/ItemAutoOffloadJob.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/admin/Administrator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/admin/FinishedItemInfoForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/admin/UnfinishedItemForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/admin/dto/ResultOfTakeOff.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/auctiondetails/AuctionMoney.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/auctiondetails/AuctionOrder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/auctiondetails/ReturnMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/auctiondetails/param/UpdateDynamic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/auctiondetails/vo/AuctionBidderSuc.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/auctiondetails/vo/AuctionDetail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/AuctionOrderModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/Category.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/FinishedItemInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/ItemModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/MailContent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/UnfinishedItemDynamicInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/common/UnfinishedItemFixedInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/enums/OldDegree.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/enums/State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/home/AuctioningPo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/home/AuctioningVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/upload/ImgModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/upload/UploadItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionInAfter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionInNow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionOrderFail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionOrderSuccess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionOutAfter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionOutBefore.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/UserAuctionOutNow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionInAfterVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionInNowVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOrderFailVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOrderSuccessVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOutAfterVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOutBeforeVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOutNowVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/admin/AdministratorService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/admin/impl/AdministratorServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/auctiondetails/AuctionDetailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/auctiondetails/impl/AuctionServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/common/EmailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/common/ImgService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/common/impl/EmailServiceImpl$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/common/impl/EmailServiceImpl$SingleMail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/common/impl/EmailServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/common/impl/ImgServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/home/HomeService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/home/impl/HomeServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/upload/UploadItemService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/upload/impl/SwiftClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/upload/impl/SwiftContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/upload/impl/UploadServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/userauction/UserAucitonService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/service/userauction/impl/UserAucitonServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/AdministratorController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/AuctionDetailController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/BaseController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/ErrorController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/HomeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/ItemUploadController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/RedirectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/controller/UserAuctionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/filter/LoginFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/filter/XSSFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/filter/XSSRequestWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/interceptor/AdminAuthorityInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/com/qunar/qauction/web/interceptor/BrowserInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/liuyan.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/AdministratorDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/HomeDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/ImgDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/UploadItemDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/auctiondynamic.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/auctionitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mapper/userAuctionDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/mybatis/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/qunar-app.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/spring/spring-bean.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/spring/spring-mvc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/spring/spring-mybatis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/spring/spring-qschedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/classes/sql/createtable.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/Monitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/exceptions/AuthorityException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/exceptions/BusinessException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/exceptions/ExternalException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/exceptions/NumberToLargeException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/exceptions/ParameterException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/CipherUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/CookieUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/DateTimeUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/DateUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/FileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/LogUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/ParameterCheckUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/SHA1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/UUIDGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/common/utils/UserContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/AdministratorDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/AuctionDetailDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/AuctiondynamicItemDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/HomeDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/ImgDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/UploadItemDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/UserAuctionDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/typeHandler/DateTimeTypeHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/typeHandler/EnumTypeHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/dao/typeHandler/MoneyTypeHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/job/ItemAutoOffloadJob.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/admin/Administrator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/admin/FinishedItemInfoForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/admin/UnfinishedItemForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/admin/dto/ResultOfTakeOff.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/auctiondetails/AuctionMoney.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/auctiondetails/AuctionOrder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/auctiondetails/ReturnMessage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/auctiondetails/param/UpdateDynamic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/auctiondetails/vo/AuctionBidderSuc.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/auctiondetails/vo/AuctionDetail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/AuctionOrderModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/Category.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/FinishedItemInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/ItemModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/MailContent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/UnfinishedItemDynamicInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/common/UnfinishedItemFixedInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/enums/OldDegree.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/enums/State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/home/AuctioningPo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/home/AuctioningVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/upload/ImgModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/upload/UploadItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionInAfter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionInNow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionOrderFail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionOrderSuccess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionOutAfter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionOutBefore.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/UserAuctionOutNow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionInAfterVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionInNowVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOrderFailVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOrderSuccessVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOutAfterVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOutBeforeVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/model/userauction/vo/UserAuctionOutNowVo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/admin/AdministratorService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/admin/impl/AdministratorServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/auctiondetails/AuctionDetailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/auctiondetails/impl/AuctionServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/common/EmailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/common/ImgService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/common/impl/EmailServiceImpl$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/common/impl/EmailServiceImpl$SingleMail.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/common/impl/EmailServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/common/impl/ImgServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/home/HomeService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/home/impl/HomeServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/upload/UploadItemService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/upload/impl/SwiftClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/upload/impl/SwiftContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/upload/impl/UploadServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/userauction/UserAucitonService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/service/userauction/impl/UserAucitonServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/AdministratorController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/AuctionDetailController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/BaseController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/ErrorController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/HomeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/ItemUploadController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/RedirectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/controller/UserAuctionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/filter/LoginFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/filter/XSSFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/filter/XSSRequestWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/interceptor/AdminAuthorityInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/com/qunar/qauction/web/interceptor/BrowserInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/liuyan.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/AdministratorDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/HomeDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/ImgDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/UploadItemDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/auctiondynamic.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/auctionitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mapper/userAuctionDao.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/mybatis/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/properties/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/properties/mail.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/properties/swift.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/qunar-app.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/spring/spring-bean.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/spring/spring-mvc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/spring/spring-mybatis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/spring/spring-qschedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/classes/sql/createtable.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/activation-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/asm-3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/aspectjweaver-1.6.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/async-http-client-1.8.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/bcprov-jdk16-1.46.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/cglib-2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-api-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-blocking-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-concurrent-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-core-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-http-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-lang-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-rpc-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-web-8.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/common-zookeeper-1.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-beanutils-1.8.3.fix.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-codec-1.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-csv-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-dbcp-1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-fileupload-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-jxpath-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-lang-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-lang3-3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/commons-pool-1.5.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/concurrent-trees-1.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/corppublicservice-api-1.1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/curator-client-2.2.0-incubating.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/curator-framework-2.2.0-incubating.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/curator-recipes-2.2.0-incubating.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/dubbo-3.1.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/fastjson-1.1.35.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/guava-15.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/hibernate-validator-4.2.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/httpclient-4.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/httpcore-4.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jackson-annotations-2.3.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jackson-core-2.3.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jackson-databind-2.3.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/javassist-3.18.0-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jcl-over-slf4j-1.7.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jline-0.9.94.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/joda-time-2.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/joss-0.9.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/jul-to-slf4j-1.7.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/libphonenumber-7.0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/log4j-over-slf4j-1.7.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/logback-classic-1.0.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/logback-core-1.0.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/mail-1.4.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/meerkat-common-2.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/meerkat-monitor-1.3.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/meerkat-mybatis-2.2.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/meerkat-web-2.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/metrics-core-3.0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/mybatis-3.2.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/mybatis-spring-1.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/mysql-connector-java-5.1.21.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/netty-3.9.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/netty-all-4.0.9.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qconfig-client-1.1.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qconfig-common-1.1.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qmq-api-2.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qmq-client-2.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qmq-common-2.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qschedule-api-1.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qschedule-client-1.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qschedule-common-1.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qschedule-config-1.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qschedule-config-api-1.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qschedule-executor-1.0.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qsso-client-0.0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qtracer-client-1.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qtracer-common-1.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/qtracer-instrument-http-1.0.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/slf4j-api-1.7.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-aop-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-asm-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-aspects-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-beans-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-context-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-context-support-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-core-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-expression-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-jdbc-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-tx-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-web-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/spring-webmvc-3.1.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/tomcat-jdbc-7.0.30.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/tomcat-juli-7.0.30.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/tomcat-servlet-api-7.0.64.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/zkclient-0.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/lib/zookeeper-3.4.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/view/404.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/view/500.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/view/502.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/view/hello/hello.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/view/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/ace-elements.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/ace-extra.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/ace.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/avalon.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/qauction/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookShop/target/test-classes/com/qunar/qauction/service/Test1.class" afterPath="" />
+    </list>
+    <ignored path="bookshop.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="bookshop" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.3165715" vertical-offset="0" max-vertical-offset="7596">
+              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="-4" />
+    <option name="width" value="1920" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="" />
+      <created>1461395490788</created>
+      <option name="number" value="Default" />
+      <updated>1461395490788</updated>
+      <workItem from="1461395495042" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976446" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3165715" vertical-offset="0" max-vertical-offset="7596">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

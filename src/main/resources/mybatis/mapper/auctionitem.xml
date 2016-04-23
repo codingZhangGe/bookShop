@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qunar.qauction.dao.AuctionDetailDao">
+<mapper namespace="com.xupt.bookshop.dao.AuctionDetailDao">
 
     <!--查询商品的详细信息 商品id，商品名称，卖家信息，结束时间，起拍价格，加价幅度，成色，拍卖次数，当前价格，浏览人数,图片-->
-    <resultMap id="AuctionDetail" type="com.qunar.qauction.model.auctiondetails.vo.AuctionDetail">
+    <resultMap id="AuctionDetail" type="com.xupt.bookshop.model.auctiondetails.vo.AuctionDetail">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="seller_qtalk" property="sellerQtalk"/>
@@ -19,14 +19,14 @@
 
 
     </resultMap>
-    <resultMap id="AuctionItem" type="com.qunar.qauction.model.auctiondetails.AuctionMoney">
+    <resultMap id="AuctionItem" type="com.xupt.bookshop.model.auctiondetails.AuctionMoney">
         <result column="item_Id" property="itemId"/>
         <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="reserve_price" property="reservePrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
     </resultMap>
     <select id="queryAuctionDetail" parameterType="String" resultMap="AuctionDetail">
         SELECT unfinished_item_fixed_info.item_id,

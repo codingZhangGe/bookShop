@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qunar.qauction.dao.AdministratorDao">
+<mapper namespace="com.xupt.bookshop.dao.AdministratorDao">
 
 
-    <resultMap id="FinishedItemInfoForQuery" type="com.qunar.qauction.model.admin.FinishedItemInfoForQuery">
+    <resultMap id="FinishedItemInfoForQuery" type="com.xupt.bookshop.model.admin.FinishedItemInfoForQuery">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="seller_qtalk" property="sellerQtalk"/>
         <result column="state" property="state"
                 typeHandler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"/>
         <result column="start_time" property="startTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler"/>
         <result column="end_time" property="time" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler"/>
         <result column="starting_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="final_price" property="finalPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="old_degree" property="oldDegree"
                 typeHandler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"/>
         <result column="auction_count" property="auctionCount"/>
@@ -37,19 +37,19 @@
         FROM finished_item_fixed_info
     </select>
 
-    <resultMap id="UnFinishedItemInfoForQuery" type="com.qunar.qauction.model.admin.UnfinishedItemForQuery">
+    <resultMap id="UnFinishedItemInfoForQuery" type="com.xupt.bookshop.model.admin.UnfinishedItemForQuery">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="state" property="state"/>
         <result column="start_time" property="startTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler"/>
         <result column="end_time" property="time" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler"/>
         <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"/>
         <result column="current_price" property="currentPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="old_degree" property="oldDegree"
                 typeHandler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"/>
         <result column="auction_count" property="auctionCount"/>
@@ -82,14 +82,14 @@
         values(#{category.categoryName})
     </insert>
 
-    <select id="queryAllCategories" resultType="com.qunar.qauction.model.common.Category">
+    <select id="queryAllCategories" resultType="com.xupt.bookshop.model.common.Category">
         SELECT
         id, category_name
         FROM
         item_category
     </select>
 
-    <resultMap id="UnfinishedItemFixedInfo" type="com.qunar.qauction.model.common.UnfinishedItemFixedInfo">
+    <resultMap id="UnfinishedItemFixedInfo" type="com.xupt.bookshop.model.common.UnfinishedItemFixedInfo">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="old_degree" property="oldDegree"
@@ -99,15 +99,15 @@
         <result column="state" property="state"/>
         <result column="description" property="description"/>
         <result column="start_time" property="startTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler"/>
         <result column="end_time" property="endTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler"/>
         <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="reverse_price" property="reversePrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
     </resultMap>
     <sql id="unfinishedItemFixedInfoField">
         (item_id, item_name, old_degree, category_id, seller_qtalk, state,
@@ -125,10 +125,10 @@
         </where>
     </select>
 
-    <resultMap id="UnfinishedItemDynamicInfo" type="com.qunar.qauction.model.common.UnfinishedItemDynamicInfo">
+    <resultMap id="UnfinishedItemDynamicInfo" type="com.xupt.bookshop.model.common.UnfinishedItemDynamicInfo">
         <result column="item_Id" property="itemId"/>
         <result column="current_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
         <result column="current_bidder_qtalk" property="currentBidderQtalk"/>
         <result column="auction_count" property="auctionCount"/>
         <result column="browse_count" property="browseCount"/>
@@ -169,7 +169,7 @@
         )
     </insert>
 
-    <select id="selectAdminByQtalk" resultType="com.qunar.qauction.model.admin.Administrator">
+    <select id="selectAdminByQtalk" resultType="com.xupt.bookshop.model.admin.Administrator">
         SELECT
         id AS id,
         admin_qtalk AS administratorQtalk

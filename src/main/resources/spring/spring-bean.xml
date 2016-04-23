@@ -6,34 +6,27 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:component-scan base-package="com.qunar.qauction">
+    <context:component-scan base-package="com.xupt.bookshop">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
     </context:component-scan>
 
 
     <!--swift account config-->
-    <bean id="swiftClient" class="com.qunar.qauction.service.upload.impl.SwiftClient" init-method="initAccount">
+    <bean id="swiftClient" class="com.xupt.bookshop.service.upload.impl.SwiftClient" init-method="initAccount">
         <property name="swiftName" value="${swift.username}"/>
         <property name="swiftPassWord" value="${swift.password}"/>
         <property name="authUrl" value="${swift.authUrl}"/>
     </bean>
-    <bean id="swiftContainer" class="com.qunar.qauction.service.upload.impl.SwiftContainer" init-method="initContainer">
+    <bean id="swiftContainer" class="com.xupt.bookshop.service.upload.impl.SwiftContainer" init-method="initContainer">
         <property name="name" value="${swift.img}"/>
     </bean>
 
     <!--   bean 映射 -->
-    <bean id="beanMapper" class="com.qunar.qauction.common.utils.beanmapper.OrikaBeanMapper">
-        <property name="basePackage" value="com.qunar.qauction.model.**" />
+    <bean id="beanMapper" class="com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper">
+        <property name="basePackage" value="com.xupt.bookshop.model.**" />
     </bean>
 
 
-    <!--email-->
-    <!--线程池异步发送短信-->
-    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
-        <property name="corePoolSize" value="15"/>
-        <property name="maxPoolSize" value="50"/>
-        <property name="queueCapacity" value="2000"/>
-    </bean>
 
 </beans>

@@ -3,9 +3,9 @@
         "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.qunar.qauction.dao.UserAuctionDao">
+<mapper namespace="com.xupt.bookshop.dao.UserAuctionDao">
 
-    <resultMap id="UserAuctionInNow" type="com.qunar.qauction.model.userauction.UserAuctionInNow">
+    <resultMap id="UserAuctionInNow" type="com.xupt.bookshop.model.userauction.UserAuctionInNow">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="current_price" property="currentPrice"
@@ -34,7 +34,7 @@
         ord.bidder_qtalk=#{qtalk}
     </select>
 
-    <resultMap id="UserAuctionInAfter" type="com.qunar.qauction.model.userauction.UserAuctionInAfter">
+    <resultMap id="UserAuctionInAfter" type="com.xupt.bookshop.model.userauction.UserAuctionInAfter">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="final_price" property="finalPrice"
@@ -60,7 +60,7 @@
         ord.bidder_qtalk=#{qtalk}
     </select>
 
-    <resultMap id="UserAuctionOutBefore" type="com.qunar.qauction.model.userauction.UserAuctionOutBefore">
+    <resultMap id="UserAuctionOutBefore" type="com.xupt.bookshop.model.userauction.UserAuctionOutBefore">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="start_price" property="startPrice"
@@ -82,7 +82,7 @@
         fixed.state=1
     </select>
 
-    <resultMap id="UserAuctionOutNow" type="com.qunar.qauction.model.userauction.UserAuctionOutNow">
+    <resultMap id="UserAuctionOutNow" type="com.xupt.bookshop.model.userauction.UserAuctionOutNow">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="current_price" property="currentPrice"
@@ -107,7 +107,7 @@
         fixed.state=2
     </select>
 
-    <resultMap id="UserAuctionOutAfter" type="com.qunar.qauction.model.userauction.UserAuctionOutAfter">
+    <resultMap id="UserAuctionOutAfter" type="com.xupt.bookshop.model.userauction.UserAuctionOutAfter">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="final_price" property="fianlPrice"
@@ -129,7 +129,7 @@
         finished.seller_qtalk=#{qtalk}
     </select>
 
-    <resultMap id="UserAuctionOrderSuccess" type="com.qunar.qauction.model.userauction.UserAuctionOrderSuccess">
+    <resultMap id="UserAuctionOrderSuccess" type="com.xupt.bookshop.model.userauction.UserAuctionOrderSuccess">
         <result column="item_Id" property="itemId"/>
         <result column="item_name" property="itemName"/>
         <result column="auction_time" property="auctionTime"

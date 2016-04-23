@@ -54,7 +54,7 @@
 
     <!--<filter>-->
         <!--<filter-name>loginFilter</filter-name>-->
-        <!--<filter-class>com.qunar.qauction.web.filter.LoginFilter</filter-class>-->
+        <!--<filter-class>LoginFilter</filter-class>-->
     <!--</filter>-->
     <!--<filter-mapping>-->
         <!--<filter-name>loginFilter</filter-name>-->
@@ -64,7 +64,7 @@
 
     <filter>
         <filter-name>xssFilter</filter-name>
-        <filter-class>com.qunar.qauction.web.filter.XSSFilter</filter-class>
+        <filter-class>com.xupt.bookshop.web.filter.XSSFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>xssFilter</filter-name>

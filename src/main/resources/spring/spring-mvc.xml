@@ -10,7 +10,7 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-    <context:component-scan base-package="qunar.web.spring,com.qunar.qauction.web.controller">
+    <context:component-scan base-package="qunar.web.spring,com.xupt.bookshop.web.controller">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     <context:annotation-config/>
@@ -21,11 +21,11 @@
         <mvc:interceptor>
             <mvc:mapping path="/auction/details"/>
             <!--拦截的路径-->
-            <bean class="com.qunar.qauction.web.interceptor.BrowserInterceptor"/>
+            <bean class="com.xupt.bookshop.web.interceptor.BrowserInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/administrator/*"/>
-            <bean class="com.qunar.qauction.web.interceptor.AdminAuthorityInterceptor" />
+            <bean class="com.xupt.bookshop.web.interceptor.AdminAuthorityInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 

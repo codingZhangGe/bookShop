@@ -1,6 +1,8 @@
 package com.xupt.bookshop.service.home.impl;
 
 import com.google.common.collect.Lists;
+import com.xupt.bookshop.common.utils.beanmapper.BeanMapper;
+import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
 import com.xupt.bookshop.model.common.Category;
 import com.xupt.bookshop.dao.HomeDao;
 import com.xupt.bookshop.model.home.BookingPo;
@@ -15,10 +17,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Description: 主页ServiceImpl
- *
- * @author lingtong.fu
- * @version 2016-04-18 13:02
+ * 主页详细信息展示
+ * service
  */
 @Service
 public class HomeServiceImpl implements HomeService {
@@ -28,11 +28,13 @@ public class HomeServiceImpl implements HomeService {
     @Resource
     public ImgService imgService;
 
+    @Resource
+    OrikaBeanMapper orikaBeanMapper;
+
     @Override
     public String sayHi(String name) {
 
         Assert.hasText(name, "名字不能为空");
-
         return "Hello, " + name;
     }
 
@@ -43,23 +45,15 @@ public class HomeServiceImpl implements HomeService {
     
 
     @Override
-    public List<BookingVo> queryAuctioningVo( Integer currentPage, Integer pageSize) {
+    public List<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize) {
 
         List<BookingVo> AuctioningVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage, pageSize);
-        List<BookingPo> AuctioningPos = homeDao.queryAuctioningPo( rowBounds);
+        List<BookingPo> AuctioningPos = homeDao.queryBookingPo( rowBounds);
 
         for (BookingPo po : AuctioningPos) {
-
-            BookingVo auctioningVo = new BookingVo();
-            auctioningVo.setBookId(po.getBookId());
-            auctioningVo.setBookName(po.getBookName());
-            auctioningVo.setCategoryId(po.getCategoryId());
-            auctioningVo.setDiscount(po.getDiscount());
-            auctioningVo.setBrowseCount(po.getBrowseCount());
-            auctioningVo.setBuyCount(po.getBuyCount());
-            auctioningVo.setPrice(po.getPrice());
-            auctioningVo.setCurrentPrice(po.getCurrentPrice());
+            BookingVo auctioningVo ;
+            auctioningVo=orikaBeanMapper.map(po,BookingVo.class);
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
 
             AuctioningVos.add(auctioningVo);
@@ -69,28 +63,17 @@ public class HomeServiceImpl implements HomeService {
 
     @Override public List<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize) {
 
-        List<BookingVo> AuctioningVos = Lists.newArrayList();
+        List<BookingVo> BookingVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage, pageSize);
-        List<BookingPo> AuctioningPos = homeDao.queryAuctioningPoByCategoryId(categoryId, rowBounds);
+        List<BookingPo> BookingPos = homeDao.queryBookingPoByCategory(categoryId, rowBounds);
 
-        for (BookingPo po : AuctioningPos) {
+        for (BookingPo po : BookingPos) {
 
-            BookingVo auctioningVo = new BookingVo();
-            auctioningVo.setItemId(po.getItemId());
-            auctioningVo.setItemName(po.getItemName());
-            auctioningVo.setStartTime(po.getStartTime());
-            auctioningVo.setEndTime(po.getEndTime());
-            auctioningVo.setBrowseCount(po.getBrowseCount());
-            auctioningVo.setAuctionCount(po.getAuctionCount());
-            auctioningVo.setSubscriptionCount(po.getSubscriptionCount());
-            auctioningVo.setStartPrice(po.getStartPrice());
-            auctioningVo.setStepPrice(po.getStepPrice());
-            auctioningVo.setCurrentPrice(po.getCurrentPrice());
-            auctioningVo.setCategoryId(po.getCategoryId());
-            auctioningVo.setItemPictureURL(imgService.getFirstPictureUrl(po.getItemId()));
-
-            AuctioningVos.add(auctioningVo);
+            BookingVo auctioningVo ;
+            auctioningVo=orikaBeanMapper.map(po, BookingVo.class);
+            auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
+            BookingVos.add(auctioningVo);
         }
-        return AuctioningVos;
+        return BookingVos;
     }
 }

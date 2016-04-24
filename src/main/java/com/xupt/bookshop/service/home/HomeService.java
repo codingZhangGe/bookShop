@@ -28,7 +28,7 @@ public interface HomeService {
      * state = 1 : 正在竞拍
      * state = 2 : 即将竞拍
      */
-    List<BookingVo> queryAuctioningVo( Integer currentPage, Integer pageSize);
+    List<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize);
 
     /**
      * 通过类别查询正在竞拍中的物品信息

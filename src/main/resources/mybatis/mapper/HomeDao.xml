@@ -33,7 +33,7 @@
 
     </resultMap>
     <!--order by  buy Count-->
-    <select id="queryAuctioningPo" resultMap="queryBoookItem">
+    <select id="queryBookingPo" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book
@@ -43,7 +43,7 @@
         ORDER BY buy_count
     </select>
 
-    <select id="queryAuctioningPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
+    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book

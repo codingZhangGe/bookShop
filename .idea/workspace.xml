@@ -2,128 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/job/ItemAutoOffloadJob.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/job/ItemAutoStartAuctionJob.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/properties/mail.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sql/createtable.sql" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/Constants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/Monitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/Monitor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/AuthorityException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/AuthorityException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/BusinessException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/BusinessException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/ExternalException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/ExternalException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/NumberToLargeException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/NumberToLargeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/ParameterException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/ParameterException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/PutOnFailureException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/PutOnFailureException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/exceptions/TakeOffFailureException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/TakeOffFailureException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/CipherUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CipherUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/CookieUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CookieUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/DateTimeUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/DateTimeUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/DateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/DateUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/FileUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/LogUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/LogUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/ParameterCheckUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/SHA1.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/SHA1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/UUIDGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/UUIDGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/UserContainer.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/UserContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/beanmapper/BeanMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/beanmapper/BeanMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/beanmapper/MapClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/beanmapper/MapClass.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/beanmapper/MapClassScanner.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/beanmapper/MapClassScanner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/beanmapper/MapField.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/beanmapper/MapField.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/common/utils/beanmapper/OrikaBeanMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/beanmapper/OrikaBeanMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/AdministratorDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AdministratorDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/AuctionDetailDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AuctionDetailDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/AuctiondynamicItemDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AuctiondynamicItemDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/HomeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/ImgDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/ImgDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/UploadItemDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/UploadItemDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/UserAuctionDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/UserAuctionDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/typeHandler/DateTimeTypeHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/DateTimeTypeHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/typeHandler/EnumTypeHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/EnumTypeHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/dao/typeHandler/MoneyTypeHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/MoneyTypeHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/admin/Administrator.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/Administrator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/admin/FinishedItemInfoForQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/FinishedItemInfoForQuery.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/admin/UnfinishedItemForQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/UnfinishedItemForQuery.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/admin/dto/ResultOfPutOn.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/dto/ResultOfPutOn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/admin/dto/ResultOfTakeOff.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/dto/ResultOfTakeOff.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/auctiondetails/AuctionMoney.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/auctiondetails/AuctionMoney.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/auctiondetails/AuctionOrder.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/auctiondetails/AuctionOrder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/auctiondetails/ReturnMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/auctiondetails/ReturnMessage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/auctiondetails/param/UpdateDynamic.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/auctiondetails/param/UpdateDynamic.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/auctiondetails/vo/AuctionBidderSuc.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/auctiondetails/vo/AuctionBidderSuc.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/auctiondetails/vo/AuctionDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/auctiondetails/vo/AuctionDetail.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/AuctionOrderModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/AuctionOrderModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/Category.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/Category.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/FinishedItemInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/FinishedItemInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/ItemModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/ItemModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/MailContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/MailContent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/UnfinishedItemDynamicInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/UnfinishedItemDynamicInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/common/UnfinishedItemFixedInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/UnfinishedItemFixedInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/enums/OldDegree.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/enums/OldDegree.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/enums/State.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/enums/State.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/home/AuctioningPo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingPo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/home/AuctioningVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/upload/ImgModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/upload/ImgModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/upload/UploadItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/upload/UploadItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionInAfter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionInAfter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionInNow.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionInNow.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOrderFail.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOrderFail.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOrderSuccess.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOrderSuccess.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOutAfter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOutAfter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOutBefore.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOutBefore.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/UserAuctionOutNow.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOutNow.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionInAfterVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionInAfterVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionInNowVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionInNowVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOrderFailVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOrderFailVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOrderSuccessVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOrderSuccessVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOutAfterVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOutAfterVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOutBeforeVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOutBeforeVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/model/userauction/vo/UserAuctionOutNowVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOutNowVo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/admin/AdministratorService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/admin/AdministratorService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/admin/impl/AdministratorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/admin/impl/AdministratorServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/auctiondetails/AuctionDetailService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/auctiondetails/AuctionDetailService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/auctiondetails/impl/AuctionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/auctiondetails/impl/AuctionServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/common/ImgService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/ImgService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/common/ItemTakeOffService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/ItemTakeOffService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/common/impl/ImgServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/impl/ImgServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/common/impl/ItemTakeOffServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/impl/ItemTakeOffServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/home/HomeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/home/impl/HomeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/upload/UploadItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/UploadItemService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/upload/impl/SwiftClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/SwiftClient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/upload/impl/SwiftContainer.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/SwiftContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/upload/impl/UploadServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/userauction/UserAucitonService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/userauction/UserAucitonService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/service/userauction/impl/UserAucitonServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/userauction/impl/UserAucitonServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/AdministratorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/AdministratorController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/AuctionDetailController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/AuctionDetailController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/BaseController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/ErrorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ErrorController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/ItemUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/RedirectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/RedirectController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/controller/UserAuctionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/UserAuctionController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/filter/LoginFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/filter/XSSFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/filter/XSSRequestWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSRequestWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/interceptor/AdminAuthorityInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/interceptor/AdminAuthorityInterceptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/interceptor/BrowserInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/interceptor/BrowserInterceptor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qunar/qauction/web/listener/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/listener/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/qunar/qauction/service/Test1.java" afterPath="$PROJECT_DIR$/src/test/java/com/xupt/bookshop/service/Test1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/qunar/qauction/service/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/xupt/bookshop/service/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AdministratorDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AdministratorDao.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/MoneyTypeHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/qunar-app.properties" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ImgDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ImgDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UploadItemDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UploadItemDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/auctiondynamic.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/auctiondynamic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/auctionitem.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/auctionitem.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/userAuctionDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/userAuctionDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSRequestWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSRequestWrapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookshop.iws" />
@@ -188,132 +77,112 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="spring-bean.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-bean.xml">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1098">
+              <caret line="76" column="39" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+      <file leaf-file-name="SessionUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/SessionUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.16" vertical-offset="73" max-vertical-offset="936">
-              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="1116">
-              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
               <folding>
-                <marker date="1461404690981" expanded="true" signature="427:465" placeholder="SELECT * FRO..category..." />
-                <marker date="1461404690981" expanded="true" signature="1329:1499" placeholder="SELECT FROM ..book..." />
-                <marker date="1461404690981" expanded="true" signature="1329:1508" placeholder="SELECT FROM ..book..." />
-                <marker date="1461404690981" expanded="true" signature="1629:1849" placeholder="SELECT FROM ..book..." />
+                <element signature="e#239#245#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java">
+      <file leaf-file-name="CookieUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CookieUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="918">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java">
+      <file leaf-file-name="AdministratorDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AdministratorDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="702">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java">
+      <file leaf-file-name="JsonResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/JsonResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3938356" vertical-offset="994" max-vertical-offset="1584">
-              <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookingVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingVo.java">
+      <file leaf-file-name="LoginPara.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/LoginPara.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2178">
-              <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#796#797#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1399#1400#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
-                <element signature="e#1553#1554#0" expanded="true" />
-                <element signature="e#1582#1583#0" expanded="true" />
-                <element signature="e#1627#1628#0" expanded="true" />
-                <element signature="e#1667#1668#0" expanded="true" />
-                <element signature="e#1718#1719#0" expanded="true" />
-                <element signature="e#1764#1765#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1849#1850#0" expanded="true" />
-                <element signature="e#1898#1899#0" expanded="true" />
-                <element signature="e#1942#1943#0" expanded="true" />
-                <element signature="e#2006#2007#0" expanded="true" />
-                <element signature="e#2052#2053#0" expanded="true" />
-                <element signature="e#2090#2091#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookingPo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingPo.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1458">
-              <caret line="105" column="5" selection-start-line="10" selection-start-column="4" selection-end-line="105" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6952055" vertical-offset="0" max-vertical-offset="1278">
+              <caret line="74" column="54" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQL - bookshop@localhost" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/51b59265/7cb93cba-36e9-4784-981d-42461a16d1ec/">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="414">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1908">
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -336,11 +205,21 @@
         <option value="dbtable:/51b59265/7cb93cba-36e9-4784-981d-42461a16d1ec/bookshop..cart" />
         <option value="dbtable:/51b59265/7cb93cba-36e9-4784-981d-42461a16d1ec/bookshop..category" />
         <option value="db-console:/51b59265/7cb93cba-36e9-4784-981d-42461a16d1ec/" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSRequestWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/LoginPara.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/JsonResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/SessionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" />
       </list>
     </option>
   </component>
@@ -434,6 +313,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -590,6 +499,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -755,7 +736,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -789,6 +770,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -806,6 +851,15 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Qauction/qauction" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xupt.bookshop.common.utils" />
+      <recent name="com.xupt.bookshop.model.common" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -1067,12 +1121,12 @@
       <option name="number" value="Default" />
       <updated>1461395490788</updated>
       <workItem from="1461395495042" duration="1488000" />
-      <workItem from="1461398514305" duration="7456000" />
+      <workItem from="1461398514305" duration="13649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8944000" />
+    <option name="totallyTimeSpent" value="15137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
@@ -1100,7 +1154,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12473233" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20663811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24357602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1324,35 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="1116">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-          <folding>
-            <marker date="1461404690981" expanded="true" signature="427:465" placeholder="SELECT * FRO..category..." />
-            <marker date="1461404690981" expanded="true" signature="1329:1499" placeholder="SELECT FROM ..book..." />
-            <marker date="1461404690981" expanded="true" signature="1329:1508" placeholder="SELECT FROM ..book..." />
-            <marker date="1461404690981" expanded="true" signature="1629:1849" placeholder="SELECT FROM ..book..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="702">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/home/BookingPo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1458">
@@ -1366,49 +1391,219 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2178">
           <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
           <folding>
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-            <element signature="e#1898#1899#0" expanded="true" />
-            <element signature="e#1942#1943#0" expanded="true" />
-            <element signature="e#2006#2007#0" expanded="true" />
-            <element signature="e#2052#2053#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#796#797#0" expanded="false" />
+            <element signature="e#827#828#0" expanded="false" />
+            <element signature="e#870#871#0" expanded="false" />
+            <element signature="e#905#906#0" expanded="false" />
+            <element signature="e#941#942#0" expanded="false" />
+            <element signature="e#969#970#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
+            <element signature="e#1067#1068#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1133#1134#0" expanded="false" />
+            <element signature="e#1164#1165#0" expanded="false" />
+            <element signature="e#1198#1199#0" expanded="false" />
+            <element signature="e#1231#1232#0" expanded="false" />
+            <element signature="e#1275#1276#0" expanded="false" />
+            <element signature="e#1311#1312#0" expanded="false" />
+            <element signature="e#1359#1360#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1459#1460#0" expanded="false" />
+            <element signature="e#1507#1508#0" expanded="false" />
+            <element signature="e#1553#1554#0" expanded="false" />
+            <element signature="e#1582#1583#0" expanded="false" />
+            <element signature="e#1627#1628#0" expanded="false" />
+            <element signature="e#1667#1668#0" expanded="false" />
+            <element signature="e#1718#1719#0" expanded="false" />
+            <element signature="e#1764#1765#0" expanded="false" />
+            <element signature="e#1809#1810#0" expanded="false" />
+            <element signature="e#1849#1850#0" expanded="false" />
+            <element signature="e#1898#1899#0" expanded="false" />
+            <element signature="e#1942#1943#0" expanded="false" />
+            <element signature="e#2006#2007#0" expanded="false" />
+            <element signature="e#2052#2053#0" expanded="false" />
+            <element signature="e#2090#2091#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1116">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <marker date="1461491325044" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..category..." />
+            <marker date="1461491325044" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+            <marker date="1461491325044" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+            <marker date="1461491325044" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="702">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/beanmapper/BeanMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3938356" vertical-offset="994" max-vertical-offset="1584">
-          <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1242">
+          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSRequestWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09694794" vertical-offset="0" max-vertical-offset="557">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/LoginPara.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/JsonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/LogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7250438" vertical-offset="0" max-vertical-offset="954">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1908">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5814361" vertical-offset="1486" max-vertical-offset="2196">
+          <caret line="117" column="45" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="828">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AdministratorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="918">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1098">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/SessionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#239#245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6952055" vertical-offset="0" max-vertical-offset="1278">
+          <caret line="74" column="54" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="54" />
           <folding />
         </state>
       </provider>

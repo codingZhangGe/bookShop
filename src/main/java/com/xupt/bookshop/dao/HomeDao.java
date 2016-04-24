@@ -19,7 +19,7 @@ public interface HomeDao {
 
     List<Category> queryAllCategory();
 
-    List<BookingPo> queryAuctioningPo( RowBounds rowBounds);
+    List<BookingPo> queryBookingPo( RowBounds rowBounds);
 
-    List<BookingPo> queryAuctioningPoByCategoryId(@Param("categoryId") Integer categoryId, RowBounds rowBounds);
+    List<BookingPo> queryBookingPoByCategory(@Param("categoryId") Integer categoryId, RowBounds rowBounds);
 }

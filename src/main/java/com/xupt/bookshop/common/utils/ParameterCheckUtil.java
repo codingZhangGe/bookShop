@@ -9,6 +9,8 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import qunar.api.pojo.CodeMessage;
 import qunar.api.pojo.json.JsonV2;
 
@@ -109,6 +111,22 @@ public class ParameterCheckUtil {
             return new JsonV2(CodeMessage.SYSTEM_ERROR, "itemId不能为空", "");
         }
         return new JsonV2(CodeMessage.OK, "信息校验正确", "");
+    }
+
+
+
+    public static String checkBingResultParam(BindingResult result) {
+
+        if (result.hasErrors()) {
+            StringBuilder builder = new StringBuilder();
+            for (ObjectError error : result.getAllErrors()) {
+                builder.append(error.getDefaultMessage()).append(";");
+            }
+
+            return builder.toString();
+        } else {
+            return "true";
+        }
     }
 
 }

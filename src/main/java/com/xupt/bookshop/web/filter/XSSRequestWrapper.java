@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 /**
  * Description: HttpServletRequestWrapper重新包装HttpServletRequest的参数
  *
- * @author lingtong.fu
+ * @author zhangge
  * @version 2016-04-18 15:40
  */
 public class XSSRequestWrapper extends HttpServletRequestWrapper {

@@ -1,87 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qunar.qauction.dao.HomeDao">
+<mapper namespace="com.xupt.bookshop.dao.HomeDao">
 
     <sql id="selectFields">
-        unfinished_item_fixed_info.item_id,
-        item_name,
-        start_time,
-        end_time,
-        start_price,
-        step_price,
-        browse_count,
-        auction_count,
-        subscription_count,
-        state,
-        current_price,
+             book_id,book_name,price,current_price,discount,browse_count,buy_count
     </sql>
 
-    <select id="queryAllCategory" resultType="com.qunar.qauction.model.common.Category">
+    <select id="queryAllCategory" resultType="com.xupt.bookshop.model.common.Category">
         SELECT
         *
-        FROM item_category
+        FROM category
     </select>
 
     <!--首页展示的拍品信息
             商品id ,    类别id,
-            开始时间,   结束时间,
-            浏览人数,   参与人数,
-            订阅人数,   拍品状态,
-            起拍价格,   加价幅度,
-            商品名称,   当前价格 -->
-
-    <resultMap id="Auctioning" type="com.qunar.qauction.model.home.AuctioningPo">
-
+            浏览人数,   购买人数,
+            当前价格,   折扣价格,
+            商品名称     折扣
+            -->
+    <resultMap id="queryBoookItem" type="com.xupt.bookshop.model.home.BookingPo">
         <!-- 静态信息 -->
-        <result column="item_Id" property="itemId"/>
-        <result column="item_name" property="itemName"/>
+        <result column="book_Id" property="bookId"/>
+        <result column="book_name" property="bookName"/>
         <result column="category_id" property="categoryId"/>
-        <result column="start_time" property="endTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
-        <result column="end_time" property="endTime" jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime"
-                typeHandler="com.qunar.qauction.dao.typeHandler.DateTimeTypeHandler"/>
-        <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
-        <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
+        <result column="current_price" property="currentPrice" />
+        <result column="price" property="Price" />
+        <result column="discount" property="discount"/>
         <!-- 动态信息 -->
         <result column="browse_count" property="browseCount"/>
-        <result column="auction_count" property="auctionCount"/>
-        <result column="subscription_count" property="subscriptionCount"/>
-        <result column="state" property="state"
-                typeHandler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"/>
-        <result column="current_price" property="auctionPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.qunar.qauction.dao.typeHandler.MoneyTypeHandler"/>
-
+        <result column="buy_count" property="buyCount"/>
 
     </resultMap>
-    <select id="queryAuctioningPo" parameterType="Integer" resultMap="Auctioning">
+    <!--order by  buy Count-->
+    <select id="queryBookingPo" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
-        FROM unfinished_item_fixed_info
-        AS uifi
-        LEFT JOIN unfinished_item_dynamic_info
-        AS uidi
-        ON uifi.item_id=uidi.item_id
-        WHERE state=#{state}
-        ORDER BY end_time
+        FROM book
+        LEFT JOIN book_dynamic_info
+        AS  bdi
+        ON book.book_id=bdi.book_id
+        ORDER BY buy_count
     </select>
 
-    <select id="queryAuctioningPoByCategoryId" parameterType="Integer" resultMap="Auctioning">
+    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
-        FROM (
-        SELECT
-        item_id, item_name, category_id, start_time, end_time, start_price, step_price,
-        FROM unfinished_item_fixed_info
-        WHERE category_id=#{categoryId}
-        AS uifi
-        LEFT JOIN unfinished_item_dynamic_info
-        AS uidi
-        ON uifi.item_id=uidi.item_id )
-        ORDER BY end_time
+        FROM book
+        LEFT JOIN book_dynamic_info
+        AS  bdi
+        ON book.book_id=bdi.book_id
+        WHERE category_id=#{category_id}
+        ORDER BY buy_count
     </select>
+<!--根据状态选取图书-->
 
 
 </mapper>

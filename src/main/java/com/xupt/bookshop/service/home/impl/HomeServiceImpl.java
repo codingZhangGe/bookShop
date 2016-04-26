@@ -47,7 +47,7 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public List<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize) {
 
-        List<BookingVo> AuctioningVos = Lists.newArrayList();
+        List<BookingVo> BookingVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage, pageSize);
         List<BookingPo> AuctioningPos = homeDao.queryBookingPo( rowBounds);
 
@@ -56,9 +56,9 @@ public class HomeServiceImpl implements HomeService {
             auctioningVo=orikaBeanMapper.map(po,BookingVo.class);
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
 
-            AuctioningVos.add(auctioningVo);
+            BookingVos.add(auctioningVo);
         }
-        return AuctioningVos;
+        return BookingVos;
     }
 
     @Override public List<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize) {

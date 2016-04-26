@@ -1,6 +1,6 @@
 package com.xupt.bookshop.dao.typeHandler;
 
-import com.xupt.bookshop.model.enums.OldDegree;
+import com.xupt.bookshop.model.enums.Category;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.TypeHandler;
 
@@ -12,11 +12,11 @@ import java.sql.SQLException;
 /**
  * Created by zhangge on 16-4-20.
  */
-public class EnumTypeHandler implements TypeHandler<OldDegree> {
+public class EnumTypeHandler implements TypeHandler<Category> {
     @Override
-    public void setParameter(PreparedStatement preparedStatement, int i, OldDegree oldDegree, JdbcType jdbcType) throws SQLException {
-        if(oldDegree!=null){
-            preparedStatement.setInt(i,oldDegree.getCode());
+    public void setParameter(PreparedStatement preparedStatement, int i, Category category, JdbcType jdbcType) throws SQLException {
+        if(category !=null){
+            preparedStatement.setInt(i, category.getCode());
         }
         else {
             preparedStatement.setInt(i,0);
@@ -24,19 +24,19 @@ public class EnumTypeHandler implements TypeHandler<OldDegree> {
     }
 
     @Override
-    public OldDegree getResult(ResultSet resultSet, String s) throws SQLException {
+    public Category getResult(ResultSet resultSet, String s) throws SQLException {
         int code=resultSet.getInt(s);
-        return OldDegree.codeOf(code);
+        return Category.codeOf(code);
     }
 
     @Override
-    public OldDegree getResult(ResultSet resultSet, int i) throws SQLException {
+    public Category getResult(ResultSet resultSet, int i) throws SQLException {
 
-        return OldDegree.codeOf(i);
+        return Category.codeOf(i);
     }
 
     @Override
-    public OldDegree getResult(CallableStatement callableStatement, int i) throws SQLException {
-        return OldDegree.codeOf(callableStatement.getInt(i));
+    public Category getResult(CallableStatement callableStatement, int i) throws SQLException {
+        return Category.codeOf(callableStatement.getInt(i));
     }
 }

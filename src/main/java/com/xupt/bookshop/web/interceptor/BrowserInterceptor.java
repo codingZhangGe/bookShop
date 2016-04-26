@@ -1,6 +1,6 @@
 package com.xupt.bookshop.web.interceptor;
 
-import com.xupt.bookshop.service.auctiondetails.AuctionDetailService;
+import com.xupt.bookshop.service.auctiondetails.BookDetailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -16,14 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 public class BrowserInterceptor implements HandlerInterceptor {
     Logger logger = LoggerFactory.getLogger(BrowserInterceptor.class);
     @Resource
-    AuctionDetailService auctionDetailService;
+    BookDetailService bookDetailService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         // 更新当前的商品的浏览人数
-        String itemId = request.getParameter("itemId");
-        boolean result = auctionDetailService.updateBrowserCount(itemId);
+        String itemId = request.getParameter("bookId");
+        boolean result = bookDetailService.updateBrowserCount(itemId);
         if (!result) {
             logger.warn("更新失败");
         }

@@ -10,7 +10,7 @@
         WHERE item_id=#{itemId}
     </update>
     <!--更新竞拍人数,当前价格,出价方qtalk-->
-    <update id="updateAuctionCountAndPrice" parameterType="com.xupt.bookshop.model.auctiondetails.param.UpdateDynamic">
+    <update id="updateAuctionCountAndPrice" parameterType="com.xupt.bookshop.model.bookdetails.param.UpdateDynamic">
         UPDATE unfinished_item_dynamic_info
         SET auction_count=auction_count+1,
         current_price=#{currentPrice,typeHandler=com.qunar.qauction.dao.typeHandler.MoneyTypeHandler},

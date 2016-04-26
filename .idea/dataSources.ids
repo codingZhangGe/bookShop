@@ -14,21 +14,21 @@
       <primary-key name="PRIMARY" columns="AdminID"/>
     </table>
     <table name="book" schema="" catalog="bookshop" type="TABLE">
-      <column name="book_id" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="book_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="price" sqlType="DECIMAL" precision="8" scale="2" nullable="true" jdbcType="3"/>
-      <column name="current_price" sqlType="DECIMAL" precision="8" scale="2" nullable="true" jdbcType="3"/>
-      <column name="discount" sqlType="DECIMAL" precision="3" scale="1" nullable="true" jdbcType="3"/>
-      <column name="Author" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="Publish" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
-      <column name="category_id" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <column name="Introduce" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
-      <column name="shop_id" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <column name="Image_s" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
-      <column name="Image_b" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
-      <column name="Stauts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="book_id"/>
-      <index name="FK_book" unique="false" columns="category_id"/>
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
+      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzEn" remarks="5Zu+5LmmaWQ="/>
+      <column name="book_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5Zu+5Lmm5ZCN56ew"/>
+      <column name="description" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5o+P6L+w"/>
+      <column name="price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" def="MA==" remarks="5Lu35qC8"/>
+      <column name="current_price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" def="MA==" remarks="5b2T5YmN5Lu35qC8"/>
+      <column name="discount" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MTAw" remarks="5oqY5omj"/>
+      <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ==" remarks="57G75YiraWQ="/>
+      <column name="publish" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="5Ye654mI56S+"/>
+      <column name="author" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" def="J+S9muWQjSc=" remarks="5L2c6ICF"/>
+      <column name="surplus" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Ymp5L2Z6YeP"/>
+      <column name="publish_date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="state" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="book_id" unique="true" columns="book_id"/>
     </table>
     <table name="book_dynamic_info" schema="" catalog="bookshop" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
@@ -83,6 +83,7 @@
       <column name="ShopID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="ShopName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="ShopDes" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="ShopID"/>
       <exported-key name="FK_seller" table="seller" schema="" catalog="bookshop" columns="ShopID"/>
       <index name="ShopName" unique="true" columns="ShopName"/>

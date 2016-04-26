@@ -3,7 +3,7 @@
         "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.qunar.qauction.dao.UploadItemDao">
+<mapper namespace="com.xupt.bookshop.dao.UploadItemDao">
     <sql id="selectField">
         (
         item_id,item_name,old_degree,category_id,seller_qtalk,
@@ -11,7 +11,7 @@
         step_price,reserve_price
         )
     </sql>
-    <insert id="insertItem" parameterType="com.qunar.qauction.model.upload.UploadItem">
+    <insert id="insertItem" parameterType="com.xupt.bookshop.model.upload.UploadItem">
         INSERT INTO unfinished_item_fixed_info
         <include refid="selectField"/>
         VALUES(

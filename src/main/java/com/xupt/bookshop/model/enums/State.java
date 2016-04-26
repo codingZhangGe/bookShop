@@ -1,13 +1,13 @@
 package com.xupt.bookshop.model.enums;
 
 /**
- * 拍卖物品状态, 1-未开始, 2-竞拍中, 3-竞拍成功, 4-竞拍失败
+ * 图书状态, 1有货, 2无货, 3下架
  * 
  * @author yunfeng.yang created on 16-4-19
  * @version 1.0
  */
 public enum State {
-    UN_START_AUCTION(1, "未开始"), DURING_AUCTION(2, "竞拍中"), SUCCESS_AUCTION(3, "竞拍成功"), FAILURE_AUCTION(4, "竞拍失败");
+    OK_TO_ORDER(1, "有货"), OUT_OF_STOCK(2, "无货"), UNDER_CARRIAGE(3, "下架");
 
     private int code;
     private String description;
@@ -33,15 +33,14 @@ public enum State {
 
 
     public static State byString(String src) {
-        if (src.equals(UN_START_AUCTION.toString())) {
-            return UN_START_AUCTION;
-        } else if (src.equals(DURING_AUCTION.toString())) {
-            return DURING_AUCTION;
-        } else if (src.equals(SUCCESS_AUCTION.toString())) {
-            return SUCCESS_AUCTION;
-        } else if (src.equals(FAILURE_AUCTION.toString())) {
-            return FAILURE_AUCTION;
-        }  else
+        if (src.equals(OUT_OF_STOCK.toString())) {
+            return OUT_OF_STOCK;
+        } else if (src.equals(UNDER_CARRIAGE.toString())) {
+            return UNDER_CARRIAGE;
+        }else if(src.equals(OK_TO_ORDER.toString())) {
+            return OK_TO_ORDER;
+        }
+        else
             return null;
     }
     public int getCode() {

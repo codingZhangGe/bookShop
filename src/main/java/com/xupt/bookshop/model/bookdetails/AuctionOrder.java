@@ -1,4 +1,4 @@
-package com.xupt.bookshop.model.auctiondetails;
+package com.xupt.bookshop.model.bookdetails;
 
 import org.joda.time.DateTime;
 import qunar.api.pojo.Money;

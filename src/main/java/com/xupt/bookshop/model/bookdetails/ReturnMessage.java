@@ -1,4 +1,4 @@
-package com.xupt.bookshop.model.auctiondetails;
+package com.xupt.bookshop.model.bookdetails;
 
 /**
  * Created by zhangge on 16-4-20.

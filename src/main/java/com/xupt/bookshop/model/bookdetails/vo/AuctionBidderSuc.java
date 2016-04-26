@@ -1,4 +1,4 @@
-package com.xupt.bookshop.model.auctiondetails.vo;
+package com.xupt.bookshop.model.bookdetails.vo;
 
 import qunar.api.pojo.Money;
 

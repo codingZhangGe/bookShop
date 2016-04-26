@@ -4,7 +4,7 @@ package com.xupt.bookshop.model.enums;
  * @author yunfeng.yang created on 16-4-18
  * @version 1.0
  */
-public enum OldDegree {
+public enum Category {
     ONE_OLD_DEGREE(1, "1成新"), TWO_OLD_DEGREE(2, "2成新"), THREE_OLD_DEGREE(3, "3成新"), FOUR_OLD_DEGREE(4,
             "4成新"), FIVE_OLD_DEGREE(5, "5成新"), SIX_OLD_DEGREE(6, "6成新"), SEVEN_OLD_DEGREE(7, "7成新"), EIGHT_OLD_DEGREE(8,
                     "8成新"), NINE_OLD_DEGREE(9, "9成新"), TEN_OLD_DEGREE(10, "10成新");
@@ -19,7 +19,7 @@ public enum OldDegree {
      */
     private String descriptions;
 
-    OldDegree(int code, String descriptions) {
+    Category(int code, String descriptions) {
         this.code = code;
         this.descriptions = descriptions;
     }
@@ -28,9 +28,9 @@ public enum OldDegree {
         return getCode();
     }
 
-    public static OldDegree codeOf(int code) {
-        OldDegree[] values = values();
-        for (OldDegree value : values) {
+    public static Category codeOf(int code) {
+        Category[] values = values();
+        for (Category value : values) {
             if (value.getCode() == code) {
                 return value;
             }
@@ -38,7 +38,7 @@ public enum OldDegree {
         return null;
     }
 
-    public static OldDegree byString(String src) {
+    public static Category byString(String src) {
         if (src.equals(ONE_OLD_DEGREE.toString())) {
             return ONE_OLD_DEGREE;
         } else if (src.equals(TWO_OLD_DEGREE.toString())) {

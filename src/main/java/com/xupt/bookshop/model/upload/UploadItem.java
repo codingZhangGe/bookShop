@@ -3,7 +3,7 @@ package com.xupt.bookshop.model.upload;
 import java.math.BigDecimal;
 
 import com.xupt.bookshop.common.utils.DateTimeUtil;
-import com.xupt.bookshop.model.enums.OldDegree;
+import com.xupt.bookshop.model.enums.Category;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.joda.time.DateTime;
 
@@ -22,7 +22,7 @@ public class UploadItem {
     /**
      * 成色, 1-1成新, 2-2成新, 3-3成新, 4-4成新, 5-5成新, 6-6成新, 7-7成新, 8-8成新, 9-9成新, 10-10成新, 默认为5
      */
-    private OldDegree oldDegree = OldDegree.FIVE_OLD_DEGREE;
+    private Category category = Category.FIVE_OLD_DEGREE;
     /**
      * 类别id
      */
@@ -75,12 +75,12 @@ public class UploadItem {
         this.itemName = itemName;
     }
 
-    public OldDegree getOldDegree() {
-        return oldDegree;
+    public Category getOldDegree() {
+        return category;
     }
 
     public void setOldDegree(String oldDegree) {
-        this.oldDegree = OldDegree.codeOf(Integer.valueOf(oldDegree));
+        this.category = Category.codeOf(Integer.valueOf(oldDegree));
     }
 
     public int getCategoryId() {

@@ -6,6 +6,7 @@ import com.xupt.bookshop.common.utils.SHA1;
 import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.login.User;
 import com.xupt.bookshop.model.login.param.LoginPara;
+import com.xupt.bookshop.service.login.LoginService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -39,6 +40,10 @@ public class LoginController {
 
     @Resource
     private LoginManager<String> loginManager;
+    @Resource
+    LoginService loginService;
+
+
     /**
      * 登陆
      *index.jsp
@@ -51,14 +56,14 @@ public class LoginController {
     public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse response, @Valid LoginPara loginPara, BindingResult result) {
 
         if (ParameterCheckUtil.checkBingResultParam(result).equals("true")) {
-            User user = userService.queryByName(loginPara.getUsername());
+            User user = loginService.queryByName(loginPara.getUsername());
 
             if (user != null) {
                 if(!loginPara.getPassword().equals(user.getPassword())){
                     return  JsonResult.fail("密码输入错误");
                 }
                 else{
-                 CookieUtil.addCookie((HttpServletResponse) httpServletRequest,"username",loginPara.getUsername());
+                 CookieUtil.addCookie((HttpServletResponse) httpServletRequest,"login_id",loginPara.getUsername());
                     return JsonResult.succ();
                 }
             } else {
@@ -73,8 +78,7 @@ public class LoginController {
     @RequestMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        loginManager.logout(response);
-        request.getSession().invalidate();
+
         return "redirect:/login";
     }
 }

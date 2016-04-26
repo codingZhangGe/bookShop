@@ -7,6 +7,7 @@ import com.xupt.bookshop.common.utils.CookieUtil;
 import com.xupt.bookshop.common.utils.LogUtils;
 import com.xupt.bookshop.common.utils.SHA1;
 import com.xupt.bookshop.common.utils.SessionUtil;
+import com.xupt.bookshop.dao.UserDao;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -24,7 +25,7 @@ import java.io.IOException;
 /**
  * Description: Login
  *
- * @author lingtong.fu
+ * @author ge.zhang
  * @version 2016-04-18 15:40
  */
 

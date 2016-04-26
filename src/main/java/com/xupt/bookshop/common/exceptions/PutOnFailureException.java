@@ -1,7 +1,8 @@
 package com.xupt.bookshop.common.exceptions;
 
-import com.xupt.bookshop.common.Constants;
 import qunar.api.pojo.CodeMessage;
+
+import com.xupt.bookshop.common.Constants;
 
 /**
  * @author yunfeng.yang created on 16-4-20

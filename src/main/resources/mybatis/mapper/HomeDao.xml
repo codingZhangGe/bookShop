@@ -53,5 +53,7 @@
         WHERE category_id=#{category_id}
         ORDER BY buy_count
     </select>
+<!--根据状态选取图书-->
+
 
 </mapper>

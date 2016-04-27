@@ -1,12 +1,13 @@
 package com.xupt.bookshop.service.upload.impl;
 
-import com.google.common.base.Preconditions;
-import com.google.common.base.Strings;
+import javax.annotation.Resource;
+
 import org.javaswift.joss.model.Container;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.annotation.Resource;
+import com.google.common.base.Preconditions;
+import com.google.common.base.Strings;
 
 /**
  * Created by liuyanjiang on 16-4-17.

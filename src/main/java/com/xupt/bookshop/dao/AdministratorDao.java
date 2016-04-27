@@ -27,7 +27,7 @@ public interface AdministratorDao {
 
     void addAdministrator(@Param("administrator") Administrator administrator);
 
-    void addCategory(@Param("category") Category category);
+    void addCategory(@Param("cart") Category category);
 
     List<Category> queryAllCategories(RowBounds rowBounds);
 

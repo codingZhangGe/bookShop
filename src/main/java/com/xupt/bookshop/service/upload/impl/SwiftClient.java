@@ -1,13 +1,14 @@
 package com.xupt.bookshop.service.upload.impl;
 
-import com.google.common.base.Preconditions;
-import com.google.common.base.Strings;
 import org.javaswift.joss.client.factory.AccountConfig;
 import org.javaswift.joss.client.factory.AccountFactory;
 import org.javaswift.joss.client.factory.AuthenticationMethod;
 import org.javaswift.joss.model.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.common.base.Preconditions;
+import com.google.common.base.Strings;
 
 /**
  * Created by liuyanjiang on 16-4-17.

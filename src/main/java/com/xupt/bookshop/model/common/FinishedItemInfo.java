@@ -1,6 +1,6 @@
 package com.xupt.bookshop.model.common;
 
-import com.xupt.bookshop.model.enums.Category;
+import com.xupt.bookshop.model.enums.OrderState;
 import com.xupt.bookshop.model.enums.State;
 import org.joda.time.DateTime;
 import qunar.api.pojo.Money;
@@ -27,7 +27,7 @@ public class FinishedItemInfo {
     /**
      * 成色, 1-1成新, 2-2成新, 3-3成新, 4-4成新, 5-5成新, 6-6成新, 7-7成新, 8-8成新, 9-9成新, 10-10成新, 默认为5
      */
-    private Category category;
+    private OrderState orderState;
     /**
      * 类别id
      */
@@ -109,12 +109,12 @@ public class FinishedItemInfo {
         this.itemName = itemName;
     }
 
-    public Category getOldDegree() {
-        return category;
+    public OrderState getOldDegree() {
+        return orderState;
     }
 
-    public void setOldDegree(Category category) {
-        this.category = category;
+    public void setOldDegree(OrderState orderState) {
+        this.orderState = orderState;
     }
 
     public int getCategoryId() {
@@ -232,7 +232,7 @@ public class FinishedItemInfo {
     @Override
     public String toString() {
         return "Item{" + "id=" + id + ", itemId='" + itemId + '\'' + ", itemName='" + itemName + '\'' + ", oldDegree="
-                + category + ", categoryId=" + categoryId + ", sellerQtalk='" + sellerQtalk + '\'' + ", buyerQtalk='"
+                + orderState + ", categoryId=" + categoryId + ", sellerQtalk='" + sellerQtalk + '\'' + ", buyerQtalk='"
                 + buyerQtalk + '\'' + ", state=" + state + ", description='" + description + '\'' + ", startTime="
                 + startTime + ", endTime=" + endTime + ", stepPrice=" + stepPrice + ", reservePrice=" + reservePrice
                 + ", finalPrice=" + finalPrice + ", auctionCount=" + auctionCount + ", subscriptionCount="

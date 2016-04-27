@@ -1,7 +1,7 @@
 package com.xupt.bookshop.service.auctiondetails;
 
 
-import com.xupt.bookshop.model.bookdetails.dto.ResultOfJudgeAuction;
+import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
 
@@ -27,5 +27,5 @@ public interface BookDetailService {
     /**
      * 判断此次购买是否正确
      */
-    ResultOfJudgeAuction judgeItemAddCategory(AddCategoryParam doOrderParam);
+    ResultOfRequest judgeItemAddCategory(AddCategoryParam doOrderParam);
 }

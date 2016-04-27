@@ -2,12 +2,12 @@ package com.xupt.bookshop.model.upload;
 
 import java.math.BigDecimal;
 
-import com.xupt.bookshop.common.utils.DateTimeUtil;
-import com.xupt.bookshop.model.enums.Category;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.joda.time.DateTime;
 
 import qunar.api.pojo.Money;
+
+
 
 public class UploadItem {
 
@@ -19,10 +19,7 @@ public class UploadItem {
      * 拍品名字
      */
     private String itemName;
-    /**
-     * 成色, 1-1成新, 2-2成新, 3-3成新, 4-4成新, 5-5成新, 6-6成新, 7-7成新, 8-8成新, 9-9成新, 10-10成新, 默认为5
-     */
-    private Category category = Category.FIVE_OLD_DEGREE;
+
     /**
      * 类别id
      */
@@ -75,13 +72,6 @@ public class UploadItem {
         this.itemName = itemName;
     }
 
-    public Category getOldDegree() {
-        return category;
-    }
-
-    public void setOldDegree(String oldDegree) {
-        this.category = Category.codeOf(Integer.valueOf(oldDegree));
-    }
 
     public int getCategoryId() {
         return categoryId;
@@ -109,18 +99,6 @@ public class UploadItem {
 
     public DateTime getStartTime() {
         return startTime;
-    }
-
-    public void setStartTime(String startTime) {
-        this.startTime = DateTimeUtil.convertToDateTimeByFullFormatter(startTime);
-    }
-
-    public DateTime getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = DateTimeUtil.convertToDateTimeByFullFormatter(endTime);
     }
 
     public Money getStartPrice() {

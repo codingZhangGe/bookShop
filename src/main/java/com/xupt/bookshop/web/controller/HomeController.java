@@ -36,7 +36,7 @@ public class HomeController {
     public List<BookingVo> queryAuctioningVoByState( Integer currentPage, Integer pageSize) {
         checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
         checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-        return homeService.queryBookingVo(currentPage, pageSize);
+        return homeService.queryBookingVo(currentPage-1, pageSize);
     }
 
     /**
@@ -61,6 +61,6 @@ public class HomeController {
     @JsonBody
     @RequestMapping(value = "/index/queryItemByCategory", method = RequestMethod.GET)
     public List<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize) {
-        return homeService.queryItemByCategory(categoryId, currentPage, pageSize);
+        return homeService.queryItemByCategory(categoryId, currentPage-1, pageSize);
     }
 }

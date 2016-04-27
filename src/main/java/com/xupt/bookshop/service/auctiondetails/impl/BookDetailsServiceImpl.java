@@ -4,12 +4,12 @@ package com.xupt.bookshop.service.auctiondetails.impl;
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.NoItemFoundException;
 import com.xupt.bookshop.dao.BookDetailDao;
-import com.xupt.bookshop.dao.CategoryDao;
-import com.xupt.bookshop.model.bookdetails.dto.ResultOfJudgeAuction;
+import com.xupt.bookshop.dao.CartDao;
+import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
 import com.xupt.bookshop.model.bookdetails.BookDetail;
-import com.xupt.bookshop.model.bookdetails.vo.CategoryItem;
+import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.model.enums.State;
 import com.xupt.bookshop.service.auctiondetails.BookDetailService;
 import com.xupt.bookshop.service.common.ImgService;
@@ -33,7 +33,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
     BookDetailDao bookDetailDao;
     @Resource ImgService imgService;
     @Resource
-    CategoryDao categoryDao;
+    CartDao cartDao;
 
 
 
@@ -75,34 +75,34 @@ public class BookDetailsServiceImpl implements BookDetailService {
     }
 
     @Override
-    public ResultOfJudgeAuction judgeItemAddCategory(AddCategoryParam doOrderParam) {
+    public ResultOfRequest judgeItemAddCategory(AddCategoryParam doOrderParam) {
         //根据id查询出来信息
         BookDetail bookDetail=bookDetailDao.queryBookDetail(doOrderParam.getItemId());
         //null
         if(bookDetail==null){
-            ResultOfJudgeAuction resultOfJudgeAuction = new ResultOfJudgeAuction();
-            resultOfJudgeAuction.setResult(false);
-            resultOfJudgeAuction.setCode(Constants.NO_ITEM_FOUND_CODE);
-            resultOfJudgeAuction.setMessage("竞拍物品不存在或者已经下架, itemId = " + doOrderParam.getItemId());
-            return resultOfJudgeAuction;
+            ResultOfRequest resultOfRequest = new ResultOfRequest();
+            resultOfRequest.setResult(false);
+            resultOfRequest.setCode(Constants.NO_ITEM_FOUND_CODE);
+            resultOfRequest.setMessage("竞拍物品不存在或者已经下架, itemId = " + doOrderParam.getItemId());
+            return resultOfRequest;
         }
         //no null 检查传递进来的购买数量和此商品的状态是否正确
         return judgeItemBookLegal(bookDetail,doOrderParam);
     }
 
 
-    private ResultOfJudgeAuction judgeItemBookLegal(BookDetail bookDetail,AddCategoryParam addCategoryParam){
+    private ResultOfRequest judgeItemBookLegal(BookDetail bookDetail,AddCategoryParam addCategoryParam){
 
-        ResultOfJudgeAuction resultOfJudgeAuction = judgeItemBookState(bookDetail);
+        ResultOfRequest resultOfRequest = judgeItemBookState(bookDetail);
         //判断图书状态是否合法
-        if (!resultOfJudgeAuction.getResult()) {
-            return resultOfJudgeAuction;
+        if (!resultOfRequest.getResult()) {
+            return resultOfRequest;
         }
 
         // 判断提交的购买数量是否合法
-        resultOfJudgeAuction = judgebuyNum(addCategoryParam,bookDetail);
-        if (!resultOfJudgeAuction.getResult()) {
-            return resultOfJudgeAuction;
+        resultOfRequest = judgebuyNum(addCategoryParam,bookDetail);
+        if (!resultOfRequest.getResult()) {
+            return resultOfRequest;
         }
 
         //TODO  判断购买者是否合法，商铺店家不能购买自己的东西
@@ -112,70 +112,69 @@ public class BookDetailsServiceImpl implements BookDetailService {
         return createCategoryWithBookItem(bookDetail, addCategoryParam);
     }
 
-    private ResultOfJudgeAuction createCategoryWithBookItem(BookDetail bookDetail,AddCategoryParam addCategoryParam){
+    private ResultOfRequest createCategoryWithBookItem(BookDetail bookDetail,AddCategoryParam addCategoryParam){
 
-       CategoryItem categoryItem=new CategoryItem();
-      categoryItem.setBookName(bookDetail.getBookName());
-        categoryItem.setUserName(addCategoryParam.getCurrentBidderQtalk());
-        categoryItem.setBookID(bookDetail.getBookId());
-        categoryItem.setCurrentPrice(bookDetail.getCurrentPrice());
-        categoryItem.setBuyNum(addCategoryParam.getBuyNumber());
-        categoryItem.setPrice(bookDetail.getPrice());
-        categoryItem.setShopName(bookDetail.getShopName());
+       CartItem cartItem =new CartItem();
+      cartItem.setBookName(bookDetail.getBookName());
+        cartItem.setUserName(addCategoryParam.getCurrentBidderQtalk());
+        cartItem.setBookID(bookDetail.getBookId());
+        cartItem.setCurrentPrice(bookDetail.getCurrentPrice());
+        cartItem.setBuyNum(addCategoryParam.getBuyNumber());
+        cartItem.setPrice(bookDetail.getPrice());
 
         //TODO 返回数据
-        ResultOfJudgeAuction<CategoryItem> resultOfJudgeAuction=new ResultOfJudgeAuction<>();
-        resultOfJudgeAuction.setResult(true);
-        resultOfJudgeAuction.setCode(Constants.ADD_CATEGORY_SUCC);
-        resultOfJudgeAuction.setMessage("添加购物车成功");
-        resultOfJudgeAuction.setData(categoryItem);
+        ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
+        resultOfRequest.setResult(true);
+        resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);
+        resultOfRequest.setMessage("添加购物车成功");
+        resultOfRequest.setData(cartItem);
         //TODO 插入数据库 用户登陆在购物车中插入一条记录，生成购物车id,每添加一条购物车信息，给购物车详情里面加入，根据用户id 插入
-        categoryDao.insertCategoryitem(categoryItem);
-        return resultOfJudgeAuction;
+        cartDao.insertCategoryitem(cartItem);
+        return resultOfRequest;
     }
 
 
 
-    private ResultOfJudgeAuction judgeItemBookState(BookDetail bookDetail) {
-        ResultOfJudgeAuction resultOfJudgeAuction = new ResultOfJudgeAuction();
+    private ResultOfRequest judgeItemBookState(BookDetail bookDetail) {
+        ResultOfRequest resultOfRequest = new ResultOfRequest();
         // 判断竞拍物品状态
         State state = bookDetail.getState();
         String itemId = bookDetail.getBookId();
         //无货
         if (State.OUT_OF_STOCK == state || bookDetail.getSurplus()< 0) {
-            resultOfJudgeAuction.setResult(false);
-            resultOfJudgeAuction.setCode(Constants.OUT_OF_STOCK);
-            resultOfJudgeAuction.setMessage("商品无货");
+            resultOfRequest.setResult(false);
+            resultOfRequest.setCode(Constants.OUT_OF_STOCK);
+            resultOfRequest.setMessage("商品无货");
             logger.warn("This book is out of stock itemId = {}", itemId);
-            return resultOfJudgeAuction;
+            return resultOfRequest;
         }
         //下架
         if (State.UNDER_CARRIAGE== state) {
-            resultOfJudgeAuction.setResult(false);
-            resultOfJudgeAuction.setCode(Constants.Item_Take_Off_State);
-            resultOfJudgeAuction.setMessage("商品已经下架" + itemId);
-            logger.warn("Item has been taken off when add category , itemId = {}", itemId);
-            return resultOfJudgeAuction;
+            resultOfRequest.setResult(false);
+            resultOfRequest.setCode(Constants.Item_Take_Off_State);
+            resultOfRequest.setMessage("商品已经下架" + itemId);
+            logger.warn("Item has been taken off when add cart , itemId = {}", itemId);
+            return resultOfRequest;
         }
-        resultOfJudgeAuction.setResult(true);
-        return resultOfJudgeAuction;
+        resultOfRequest.setResult(true);
+        return resultOfRequest;
     }
 
 
-    private ResultOfJudgeAuction judgebuyNum(AddCategoryParam addCategoryParam,BookDetail bookDetail) {
-        ResultOfJudgeAuction resultOfJudgeAuction = new ResultOfJudgeAuction();
+    private ResultOfRequest judgebuyNum(AddCategoryParam addCategoryParam,BookDetail bookDetail) {
+        ResultOfRequest resultOfRequest = new ResultOfRequest();
         // 判断购买的数量是不是高于剩余数量
         int buyNum = addCategoryParam.getBuyNumber();
         int surplusNum = bookDetail.getSurplus();
         if (buyNum>surplusNum) {
-            resultOfJudgeAuction.setResult(false);
-            resultOfJudgeAuction.setCode(Constants.LESS_NUM_CODE);
-            resultOfJudgeAuction.setMessage("库存不够!");
+            resultOfRequest.setResult(false);
+            resultOfRequest.setCode(Constants.LESS_NUM_CODE);
+            resultOfRequest.setMessage("库存不够!");
             logger.warn("buy count is bigger  itemId {}", bookDetail.getBookId());
-            return resultOfJudgeAuction;
+            return resultOfRequest;
         }
-        resultOfJudgeAuction.setResult(true);
-        return resultOfJudgeAuction;
+        resultOfRequest.setResult(true);
+        return resultOfRequest;
     }
 
 

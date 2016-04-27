@@ -36,14 +36,16 @@ public class AdministratorServiceImpl implements AdministratorService {
     public List<UnfinishedItemForQuery> queryUnStartItemList(Integer currentPage, Integer pageSize) {
         // currentPage从前端传来的时候从1开始, 所以在这减一
         RowBounds rowBounds = new RowBounds(currentPage - 1, pageSize);
-        return administratorDao.queryUnfinishedItemList(rowBounds, State.UN_START_AUCTION);
+      //  return administratorDao.queryUnfinishedItemList(rowBounds, State.UN_START_AUCTION);
+        return null;
     }
 
     @Override
     public List<UnfinishedItemForQuery> queryDuringAuctionItemList(Integer currentPage, Integer pageSize) {
         // currentPage从前端传来的时候从1开始, 所以在这减一
         RowBounds rowBounds = new RowBounds(currentPage - 1, pageSize);
-        return administratorDao.queryUnfinishedItemList(rowBounds, State.DURING_AUCTION);
+        //return administratorDao.queryUnfinishedItemList(rowBounds, State.DURING_AUCTION);
+        return  null;
     }
 
     @Override

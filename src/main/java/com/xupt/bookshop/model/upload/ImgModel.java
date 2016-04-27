@@ -1,8 +1,8 @@
 package com.xupt.bookshop.model.upload;
 
-import com.google.common.collect.Lists;
-
 import java.util.List;
+
+import com.google.common.collect.Lists;
 
 /**
  * Created by liuyanjiang on 16-4-18.

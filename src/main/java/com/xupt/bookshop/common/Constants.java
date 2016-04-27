@@ -9,11 +9,11 @@ public interface Constants {
     int FAILED_CODE = -1;
     int BAD_AUTHORITY_CODE = -2;
     /**
-     * 竞拍相关返回码
+     * 业务相关返回码
      */
     int NO_ITEM_FOUND_CODE = -3;
-    int AUCTION_FINISHED_CODE = -4;
-    int UN_START_AUCTION_CODE = -5;
+    int DO_ORDER_FAILURE_ = -4;
+    int DO_ORDER_SUCCESS = -5;
     int BIDDER_FAILURE_CODE = -6;
     int SAME_BIDDER_CODE = -7;
     int ADD_CATEGORY_SUCC = -8;

@@ -1,7 +1,7 @@
 package com.xupt.bookshop.web.controller;
 
 import com.google.common.base.Strings;
-import com.xupt.bookshop.model.bookdetails.dto.ResultOfJudgeAuction;
+import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.bookdetails.param.BookDetailParam;
 import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
@@ -55,12 +55,12 @@ public class AuctionDetailController extends BaseController {
     {
         checkArgument(!Strings.isNullOrEmpty(username),"username 不能是空");
         //TODO 判断图书的状态 如果是可以进行购买的状态 进行购买
-        ResultOfJudgeAuction resultOfJudgeAuction=new ResultOfJudgeAuction();
-        resultOfJudgeAuction=bookDetailService.judgeItemAddCategory(doOrderParam);
-        if (!resultOfJudgeAuction.getResult()) {
-            return new JsonV2<>(resultOfJudgeAuction.getCode(), resultOfJudgeAuction.getMessage(), null);
+        ResultOfRequest resultOfRequest =new ResultOfRequest();
+        resultOfRequest =bookDetailService.judgeItemAddCategory(doOrderParam);
+        if (!resultOfRequest.getResult()) {
+            return new JsonV2<>(resultOfRequest.getCode(), resultOfRequest.getMessage(), null);
         }
-        return new JsonV2<>(resultOfJudgeAuction.getCode(), resultOfJudgeAuction.getMessage(), resultOfJudgeAuction.getData());
+        return new JsonV2<>(resultOfRequest.getCode(), resultOfRequest.getMessage(), resultOfRequest.getData());
 
     }
 

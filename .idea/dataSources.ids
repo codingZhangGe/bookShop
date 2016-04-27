@@ -49,9 +49,9 @@
       <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
       <column name="book_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
-      <column name="discount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="discount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="current_price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
-      <column name="shop_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="buy_num" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="usr_id"/>
       <index name="unique_usr_id" unique="true" columns="usr_id"/>
     </table>
@@ -83,21 +83,9 @@
       <column name="TEL" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="IDCard" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
-      <column name="ShopID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="SellerID"/>
-      <foreign-key name="FK_seller" columns="ShopID" ref-table="shop" ref-schema="" ref-catalog="bookshop" ref-columns="ShopID" update-rule="0" delete-rule="0" deferrability="2"/>
       <index name="IDCard" unique="true" columns="IDCard"/>
       <index name="SName" unique="true" columns="SName"/>
-      <index name="FK_seller" unique="false" columns="ShopID"/>
-    </table>
-    <table name="shop" schema="" catalog="bookshop" type="TABLE">
-      <column name="ShopID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <column name="ShopName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="ShopDes" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
-      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="ShopID"/>
-      <exported-key name="FK_seller" table="seller" schema="" catalog="bookshop" columns="ShopID"/>
-      <index name="ShopName" unique="true" columns="ShopName"/>
     </table>
     <table name="user" schema="" catalog="bookshop" type="TABLE">
       <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>

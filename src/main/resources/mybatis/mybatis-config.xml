@@ -34,7 +34,7 @@
         <typeHandler handler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"
                 javaType="com.xupt.bookshop.model.enums.State"  jdbcType="TINYINT"/>
         <typeHandler handler="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler"
-                 javaType="com.xupt.bookshop.model.enums.Category"   jdbcType="TINYINT"/>
+                 javaType="com.xupt.bookshop.model.enums.OrderState"   jdbcType="TINYINT"/>
         <typeHandler handler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" javaType="org.joda.time.DateTime"
                      jdbcType="TIMESTAMP"/>
         <typeHandler handler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler" jdbcType="DECIMAL"

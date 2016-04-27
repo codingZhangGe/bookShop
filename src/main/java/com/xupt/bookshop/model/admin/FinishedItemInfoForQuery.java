@@ -1,6 +1,6 @@
 package com.xupt.bookshop.model.admin;
 
-import com.xupt.bookshop.model.enums.Category;
+import com.xupt.bookshop.model.enums.OrderState;
 import com.xupt.bookshop.model.enums.State;
 import org.joda.time.DateTime;
 import qunar.api.pojo.Money;
@@ -41,7 +41,7 @@ public class FinishedItemInfoForQuery {
     /**
      * 几成新
      */
-    private Category category;
+    private OrderState orderState;
     /**
      * 起拍价
      */
@@ -171,11 +171,11 @@ public class FinishedItemInfoForQuery {
         this.browseCount = browseCount;
     }
 
-    public Category getOldDegree() {
-        return category;
+    public OrderState getOldDegree() {
+        return orderState;
     }
 
-    public void setOldDegree(Category category) {
-        this.category = category;
+    public void setOldDegree(OrderState orderState) {
+        this.orderState = orderState;
     }
 }

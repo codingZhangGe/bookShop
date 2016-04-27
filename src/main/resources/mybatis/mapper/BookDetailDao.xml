@@ -22,7 +22,6 @@
         <result column="author" property="author" />
         <result column="publish" property="publish"  />
         <result column="state" property="state"/>
-        <result column="ShopName" property="shopName"  />
         <result column="publish_date" property="publishDate" typeHandler="DateTimeTypeHandler"/>
         <result column="surplus" property="surplus"/>
         <result column="buy_count" property="buyCount"/>
@@ -43,7 +42,6 @@
         book.publish_date,
         book.surplus,
         book.state,
-        shop.ShopName,
         book_dynamic_info.browse_count,
         book_dynamic_info.buy_count,
         book_dynamic_info.collect_count
@@ -53,7 +51,7 @@
         (book_dynamic_info
         ON book.book_id=book_dynamic_info.book_id
         WHERE unfinished_item_fixed_info.item_id=#{itemId})
-        LEFT  JOIN shop on shop.book_id=book.book_id
+
     </select>
 
     <resultMap id="AuctionItem" type="com.xupt.bookshop.model.bookdetails.AuctionMoney">

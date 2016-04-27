@@ -1,10 +1,9 @@
 package com.xupt.bookshop.model.bookdetails;
 
-import com.xupt.bookshop.model.enums.Category;
+import com.xupt.bookshop.model.enums.OrderState;
 import com.xupt.bookshop.model.enums.State;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  *
@@ -48,7 +47,7 @@ public class BookDetail {
     /**
      * 类别
      */
-    private Category category;
+    private OrderState orderState;
     /**
      * 状态
      */
@@ -95,8 +94,8 @@ public class BookDetail {
         return discount;
     }
 
-    public Category getCategory() {
-        return category;
+    public OrderState getCategory() {
+        return orderState;
     }
 
     public State getState() {
@@ -139,8 +138,8 @@ public class BookDetail {
         this.discount = discount;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategory(OrderState orderState) {
+        this.orderState = orderState;
     }
 
     public void setState(State state) {

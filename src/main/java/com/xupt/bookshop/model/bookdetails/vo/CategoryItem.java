@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 public class CategoryItem {
 
     //购物车信息： 商品名称 价格 折扣价 购买数量 商铺
+    String userName;
     String bookID;
     String bookName;
     BigDecimal price;
@@ -61,5 +62,13 @@ public class CategoryItem {
 
     public void setShopName(String shopName) {
         this.shopName = shopName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

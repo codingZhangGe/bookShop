@@ -4,6 +4,7 @@ package com.xupt.bookshop.service.auctiondetails.impl;
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.NoItemFoundException;
 import com.xupt.bookshop.dao.BookDetailDao;
+import com.xupt.bookshop.dao.CategoryDao;
 import com.xupt.bookshop.model.bookdetails.dto.ResultOfJudgeAuction;
 import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
@@ -31,6 +32,8 @@ public class BookDetailsServiceImpl implements BookDetailService {
     @Resource
     BookDetailDao bookDetailDao;
     @Resource ImgService imgService;
+    @Resource
+    CategoryDao categoryDao;
 
 
 
@@ -113,6 +116,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
        CategoryItem categoryItem=new CategoryItem();
       categoryItem.setBookName(bookDetail.getBookName());
+        categoryItem.setUserName(addCategoryParam.getCurrentBidderQtalk());
         categoryItem.setBookID(bookDetail.getBookId());
         categoryItem.setCurrentPrice(bookDetail.getCurrentPrice());
         categoryItem.setBuyNum(addCategoryParam.getBuyNumber());
@@ -125,7 +129,8 @@ public class BookDetailsServiceImpl implements BookDetailService {
         resultOfJudgeAuction.setCode(Constants.ADD_CATEGORY_SUCC);
         resultOfJudgeAuction.setMessage("添加购物车成功");
         resultOfJudgeAuction.setData(categoryItem);
-        //TODO 插入数据库
+        //TODO 插入数据库 用户登陆在购物车中插入一条记录，生成购物车id,每添加一条购物车信息，给购物车详情里面加入，根据用户id 插入
+        categoryDao.insertCategoryitem(categoryItem);
         return resultOfJudgeAuction;
     }
 

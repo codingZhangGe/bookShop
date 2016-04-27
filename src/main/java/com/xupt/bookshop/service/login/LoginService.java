@@ -12,4 +12,5 @@ public interface LoginService {
      * @return
      */
     public User queryByName(String name);
+
 }

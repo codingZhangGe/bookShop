@@ -40,9 +40,20 @@
       <index name="book_id" unique="true" columns="book_id"/>
     </table>
     <table name="cart" schema="" catalog="bookshop" type="TABLE">
-      <column name="BookID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="CartID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <index name="unique_UID" unique="true" columns="UID"/>
+    </table>
+    <table name="cart_item" schema="" catalog="bookshop" type="TABLE">
+      <column name="usr_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="book_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="discount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="current_price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="shop_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="usr_id"/>
+      <index name="unique_usr_id" unique="true" columns="usr_id"/>
     </table>
     <table name="category" schema="" catalog="bookshop" type="TABLE">
       <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>

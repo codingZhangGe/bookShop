@@ -6,6 +6,7 @@ import com.xupt.bookshop.common.utils.SHA1;
 import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.login.User;
 import com.xupt.bookshop.model.login.param.LoginPara;
+import com.xupt.bookshop.service.category.CategoryService;
 import com.xupt.bookshop.service.login.LoginService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -42,7 +43,8 @@ public class LoginController {
     private LoginManager<String> loginManager;
     @Resource
     LoginService loginService;
-
+    @Resource
+    CategoryService categoryService;
 
     /**
      * 登陆
@@ -64,11 +66,12 @@ public class LoginController {
                 }
                 else{
                  CookieUtil.addCookie((HttpServletResponse) httpServletRequest,"login_id",loginPara.getUsername());
+                    //TODO 购物车表插入信息，用id ,生成购物车id;
+                    categoryService.createCategoryWithUser(loginPara.getUsername());
                     return JsonResult.succ();
                 }
             } else {
                 return JsonResult.fail("用户不存在");
-
             }
         } else
             return JsonResult.fail(ParameterCheckUtil.checkBingResultParam(result));

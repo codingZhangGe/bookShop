@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.Range;
 
 
 /**
- * @author yunfeng.yang created on 16-4-23
+ * @author ge.zhang created on 16-4-23
  * @version 1.0
  */
 public class AddCategoryParam {
@@ -31,7 +31,7 @@ public class AddCategoryParam {
     /**
      * 购买者id 通过cookie获得
      */
-    private String currentBidderQtalk;
+    private String userName;
 
     public String getItemId() {
         return itemId;
@@ -58,10 +58,10 @@ public class AddCategoryParam {
     }
 
     public String getCurrentBidderQtalk() {
-        return currentBidderQtalk;
+        return userName;
     }
 
     public void setCurrentBidderQtalk(String currentBidderQtalk) {
-        this.currentBidderQtalk = currentBidderQtalk;
+        this.userName = currentBidderQtalk;
     }
 }

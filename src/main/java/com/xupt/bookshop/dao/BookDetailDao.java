@@ -2,6 +2,7 @@ package com.xupt.bookshop.dao;
 
 import com.xupt.bookshop.model.bookdetails.BookDetail;
 import com.xupt.bookshop.model.bookdetails.AuctionMoney;
+import com.xupt.bookshop.model.bookdetails.vo.CategoryItem;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -24,6 +25,7 @@ public interface BookDetailDao {
 
     //TODO  sql 语句更新
     int updateBrowserCount(@Param("bookId") String itemId);
+
 
 
 }

@@ -2,6 +2,8 @@ package com.xupt.bookshop.service.common.impl;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import com.qiniu.common.QiniuException;
+import com.qiniu.http.Response;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
 import com.xupt.bookshop.common.utils.FileUtils;
@@ -118,6 +120,32 @@ public class ImgServiceImpl implements ImgService {
     //    StoredObject object = swiftContainer.getContainer().getObject(pictureId);
 
 //        object.uploadObject(bytes);
+
+        try {
+            FilePaths.add("/home/zhangge/图片/2.jpg");
+            FilePaths.add("/home/zhangge/图片/1.jpg");
+
+            //调用put方法上传
+            Response res = null;
+            for(String str:FilePaths) {
+                String key = str;
+                res = uploadManager.put(str, key, getUpToken());
+            }
+            //打印返回的信息
+            System.out.println(res.bodyString());
+        } catch (QiniuException e) {
+            Response r = e.response;
+            // 请求失败时打印的异常的信息
+            System.out.println(r.toString());
+            try {
+                //响应的文本信息
+                System.out.println(r.bodyString());
+            } catch (QiniuException e1) {
+                //ignore
+            }
+        }
+
+
         ImgModel model = new ImgModel();
         model.setItemId(itemId);
         model.getPictureId().add(pictureId);

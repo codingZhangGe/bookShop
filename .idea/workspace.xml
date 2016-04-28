@@ -5,75 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CookieUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/CategoryDao.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/enums/State.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/enums/BookState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code" afterPath="$PROJECT_DIR$/Code" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/HomeDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/HomeDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/HomeService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/HomeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/ItemUploadController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/ItemUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/OrderDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/OrderDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/OrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/ParameterCheckUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/ParameterCheckUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/SwiftClient.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/SwiftClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/SwiftContainer.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/SwiftContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/job/TaskOfCart.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/job/TaskOfCart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/upload/UploadItem.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/upload/UploadItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/UploadItemDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/UploadItemDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/interceptor/AdminAuthorityInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/interceptor/AdminAuthorityInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AdministratorDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/AdministratorDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/admin/impl/AdministratorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/admin/impl/AdministratorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/BookDetail.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/BookDetail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/FinishedItemInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/FinishedItemInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/FinishedItemInfoForQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/FinishedItemInfoForQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/impl/ImgServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/impl/ImgServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/ItemModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/ItemModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/OrderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/OrderDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/OrderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/orderService/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/orderService/OrderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/ParameterCheckUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/dto/ResultOfTakeOff.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/dto/ResultOfTakeOff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/SwiftClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/SwiftClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/job/TaskOfCart.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/job/TaskOfCart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/UUIDGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/UUIDGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/UnfinishedItemFixedInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/common/UnfinishedItemFixedInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/UnfinishedItemForQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/admin/UnfinishedItemForQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/upload/UploadItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/upload/UploadItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/UploadItemDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/UploadItemDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UploadItemDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UploadItemDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/UploadItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/UploadItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/userauction/impl/UserAucitonServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/userauction/impl/UserAucitonServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOrderFail.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/UserAuctionOrderFail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOrderFailVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/userauction/vo/UserAuctionOrderFailVo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookshop.iml" afterPath="$PROJECT_DIR$/bookshop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/bookshop_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/bookshop_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -205,8 +137,8 @@
       <file leaf-file-name="UploadDemo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/UploadDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70522386" vertical-offset="576" max-vertical-offset="1458">
-              <caret line="53" column="9" selection-start-line="41" selection-start-column="12" selection-end-line="53" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.5796703" vertical-offset="730" max-vertical-offset="1458">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#849#850#0" expanded="true" />
@@ -1406,12 +1338,12 @@
       <workItem from="1461652427672" duration="27578000" />
       <workItem from="1461737638321" duration="17296000" />
       <workItem from="1461758023081" duration="22443000" />
-      <workItem from="1461830395219" duration="11589000" />
+      <workItem from="1461830395219" duration="12508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116701000" />
+    <option name="totallyTimeSpent" value="117620000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1442,7 +1374,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18562232" sideWeight="0.2621212" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18562232" sideWeight="0.2621212" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.021212121" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1462,7 +1394,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16008538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41761827" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17769477" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3916309" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3916309" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37093276" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1993,8 +1925,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/UploadDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70522386" vertical-offset="576" max-vertical-offset="1458">
-          <caret line="53" column="9" selection-start-line="41" selection-start-column="12" selection-end-line="53" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.5796703" vertical-offset="730" max-vertical-offset="1458">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#849#850#0" expanded="true" />

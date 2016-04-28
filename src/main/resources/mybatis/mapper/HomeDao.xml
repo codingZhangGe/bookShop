@@ -43,6 +43,7 @@
         ORDER BY buy_count
     </select>
 
+    <!--类别查询-->
     <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
@@ -53,7 +54,32 @@
         WHERE category_id=#{category_id}
         ORDER BY buy_count
     </select>
-<!--根据状态选取图书-->
 
+    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
+        SELECT
+        <include refid="selectFields"/>
+        FROM book
+        LEFT JOIN book_dynamic_info
+        AS  bdi
+        ON book.book_id=bdi.book_id
+        WHERE state=#{state}
+        ORDER BY buy_count
+    </select>
+
+<!--图书总数-->
+ <select id="queryBookPages"  resultType="int">
+     SELECT COUNT (*) FROM book
+ </select>
+
+<!--根据状态查询总数-->
+    <select id="queryBookPagesByState"  parameterType="int" resultType="int">
+        SELECT COUNT (*) FROM book
+        WHERE state=#{state}
+    </select>
+<!--根据类别查询总数-->
+    <select id="queryBookPagesByCategory" parameterType="int" resultType="int">
+        SELECT COUNT(*) FROM book
+        WHERE category_id =#{categoryId}
+    </select>
 
 </mapper>

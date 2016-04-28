@@ -3,8 +3,8 @@ package com.xupt.bookshop.common.utils;
 import java.util.Random;
 import java.util.UUID;
 
-/**
- * Created by liuyanjiang on 16-4-18.
+/** 生成商品的随机编码
+ * Created by ge.zhang on 16-4-18.
  */
 public class UUIDGenerator {
     public UUIDGenerator() {

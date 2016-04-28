@@ -10,7 +10,6 @@ import com.xupt.bookshop.model.admin.Administrator;
 import com.xupt.bookshop.model.admin.FinishedItemInfoForQuery;
 import com.xupt.bookshop.model.admin.UnfinishedItemForQuery;
 import com.xupt.bookshop.model.common.Category;
-import com.xupt.bookshop.model.enums.State;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;
 

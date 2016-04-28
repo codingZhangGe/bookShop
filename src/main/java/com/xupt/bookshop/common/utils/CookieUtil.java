@@ -1,11 +1,12 @@
 package com.xupt.bookshop.common.utils;
 
-import com.xupt.bookshop.common.exceptions.ParameterException;
-import org.apache.commons.lang3.StringUtils;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.xupt.bookshop.common.exceptions.ParameterException;
+import org.apache.commons.lang3.StringUtils;
+
 
 /**
  * @author yunfeng.yang created on 16-4-14
@@ -25,7 +26,7 @@ public class CookieUtil {
     /**
      * 增加cookie
      */
-    public static void addCookie(HttpServletResponse response, String cookieName, String cookieValue) {
+    public static void addCookie(HttpServletResponse response, String cookieName, String cookieValue,int maxAge) {
         Cookie cookie = new Cookie(cookieName, cookieValue);
         cookie.setPath("/");
         response.addCookie(cookie);

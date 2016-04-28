@@ -1,6 +1,6 @@
 package com.xupt.bookshop.model.admin.dto;
 
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 import qunar.api.pojo.Money;
 
 /**
@@ -19,7 +19,7 @@ public class ResultOfTakeOff {
     /**
      * 竞拍物品当前状态
      */
-    private State itemState;
+    private BookState itemBookState;
     /**
      * 竞拍物品名字
      */
@@ -53,12 +53,12 @@ public class ResultOfTakeOff {
         this.bidderQtalk = bidderQtalk;
     }
 
-    public State getItemState() {
-        return itemState;
+    public BookState getItemBookState() {
+        return itemBookState;
     }
 
-    public void setItemState(State itemState) {
-        this.itemState = itemState;
+    public void setItemBookState(BookState itemBookState) {
+        this.itemBookState = itemBookState;
     }
 
     public String getItemName() {

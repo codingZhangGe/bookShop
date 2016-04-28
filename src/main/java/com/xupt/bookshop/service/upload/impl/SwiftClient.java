@@ -11,7 +11,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 
 /**
- * Created by liuyanjiang on 16-4-17.
+ * Created by ge.zhang on 16-4-17.
  */
 public class SwiftClient {
     private static Logger logger = LoggerFactory.getLogger(SwiftClient.class);

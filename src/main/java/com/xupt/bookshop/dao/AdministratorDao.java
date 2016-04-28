@@ -7,7 +7,7 @@ import com.xupt.bookshop.model.admin.FinishedItemInfoForQuery;
 import com.xupt.bookshop.model.admin.UnfinishedItemForQuery;
 import com.xupt.bookshop.model.common.Category;
 import com.xupt.bookshop.model.common.UnfinishedItemFixedInfo;
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Repository;
@@ -23,7 +23,7 @@ import com.xupt.bookshop.model.common.UnfinishedItemDynamicInfo;
 public interface AdministratorDao {
     List<FinishedItemInfoForQuery> queryFinishedItemList(RowBounds rowBounds);
 
-    List<UnfinishedItemForQuery> queryUnfinishedItemList(RowBounds rowBounds, @Param("state") State state);
+    List<UnfinishedItemForQuery> queryUnfinishedItemList(RowBounds rowBounds, @Param("state") BookState bookState);
 
     void addAdministrator(@Param("administrator") Administrator administrator);
 

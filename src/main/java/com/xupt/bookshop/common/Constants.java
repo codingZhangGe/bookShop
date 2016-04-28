@@ -46,7 +46,7 @@ public interface Constants {
     /**
      * Cookie相关常量
      */
-    String QTALK = "login_id";
+    String USERCOOKIE = "login_id";
 
     /**
      * 邮件相关常量

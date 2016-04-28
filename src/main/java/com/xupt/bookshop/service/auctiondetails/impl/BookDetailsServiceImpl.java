@@ -10,7 +10,7 @@ import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
 import com.xupt.bookshop.model.bookdetails.BookDetail;
 import com.xupt.bookshop.model.cart.CartItem;
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 import com.xupt.bookshop.service.auctiondetails.BookDetailService;
 import com.xupt.bookshop.service.common.ImgService;
 import org.slf4j.Logger;
@@ -138,10 +138,10 @@ public class BookDetailsServiceImpl implements BookDetailService {
     private ResultOfRequest judgeItemBookState(BookDetail bookDetail) {
         ResultOfRequest resultOfRequest = new ResultOfRequest();
         // 判断竞拍物品状态
-        State state = bookDetail.getState();
+        BookState bookState = bookDetail.getBookState();
         String itemId = bookDetail.getBookId();
         //无货
-        if (State.OUT_OF_STOCK == state || bookDetail.getSurplus()< 0) {
+        if (BookState.OUT_OF_STOCK == bookState || bookDetail.getSurplus()< 0) {
             resultOfRequest.setResult(false);
             resultOfRequest.setCode(Constants.OUT_OF_STOCK);
             resultOfRequest.setMessage("商品无货");
@@ -149,7 +149,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
             return resultOfRequest;
         }
         //下架
-        if (State.UNDER_CARRIAGE== state) {
+        if (BookState.UNDER_CARRIAGE== bookState) {
             resultOfRequest.setResult(false);
             resultOfRequest.setCode(Constants.Item_Take_Off_State);
             resultOfRequest.setMessage("商品已经下架" + itemId);

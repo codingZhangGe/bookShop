@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xupt.bookshop.dao.BookDetailDao">
+
+    <!--查询商品的详细信息
+    图书id，图书名称，
+     描述，价格，
+    折扣，折扣价，
+    作家，出版社，
+    购买人数，浏览人数,
+    剩余数量,商铺
+    出版时间，分类
+    收藏人数 ，状态-->
+    <resultMap id="BookDetail" type="com.xupt.bookshop.model.bookdetails.BookDetail">
+        <result column="book_id" property="bookId"/>
+        <result column="book_name" property="bookName"/>
+        <result column="description" property="description"/>
+        <result column="category" property="category" typeHandler="EnumTypeHandler"/>
+        <result column="price" property="price" />
+        <result column="discount" property="discount" />
+        <result column="current_price" property="currentPrice" />
+        <result column="author" property="author" />
+        <result column="publish" property="publish"  />
+        <result column="state" property="state"/>
+        <result column="publish_date" property="publishDate" typeHandler="DateTimeTypeHandler"/>
+        <result column="surplus" property="surplus"/>
+        <result column="buy_count" property="buyCount"/>
+        <result column="collect_count" property="collectCount"/>
+        <result column="browse_count" property="browseCount"/>
+    </resultMap>
+
+    <select id="queryBookDetail" parameterType="String" resultMap="BookDetail">
+        SELECT book.book_id,
+        book.book_name,
+        book.description,
+        book.category_id,
+        book.price,
+        book.discount,
+        book.current_price,
+        book.author,
+        book.publish,
+        book.publish_date,
+        book.surplus,
+        book.state,
+        book_dynamic_info.browse_count,
+        book_dynamic_info.buy_count,
+        book_dynamic_info.collect_count
+        FROM
+        book
+        LEFT JOIN
+        (book_dynamic_info
+        ON book.book_id=book_dynamic_info.book_id
+        WHERE unfinished_item_fixed_info.item_id=#{itemId})
+
+    </select>
+
+    <resultMap id="AuctionItem" type="com.xupt.bookshop.model.bookdetails.AuctionMoney">
+        <result column="item_Id" property="itemId"/>
+        <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
+        <result column="reserve_price" property="reservePrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
+        <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
+                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
+    </resultMap>
+    <select id="queryAuctionItem" parameterType="String" resultMap="AuctionItem">
+        SELECT item_id,step_price,reserve_price,start_price FROM unfinished_item_fixed_info
+        WHERE item_id=#{itemId}
+    </select>
+
+
+</mapper>

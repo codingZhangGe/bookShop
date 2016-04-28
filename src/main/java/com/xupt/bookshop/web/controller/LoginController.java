@@ -65,7 +65,7 @@ public class LoginController {
                     return  JsonResult.fail("密码输入错误");
                 }
                 else{
-                 CookieUtil.addCookie((HttpServletResponse) httpServletRequest,"login_id",loginPara.getUsername());
+             //    CookieUtil.addCookie((HttpServletResponse) httpServletRequest,"login_id",loginPara.getUsername());
                     //TODO 购物车表插入信息，用id ,生成购物车id;
                     categoryService.createCategoryWithUser(loginPara.getUsername());
                     return JsonResult.succ();

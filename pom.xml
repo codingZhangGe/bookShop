@@ -98,12 +98,7 @@
                 <artifactId>meerkat-mybatis</artifactId>
                 <version>${meerkat-mybatis.version}</version>
             </dependency>
-            <!-- qconfig -->
-            <dependency>
-                <groupId>qunar.tc.qconfig</groupId>
-                <artifactId>qconfig-client</artifactId>
-                <version>${qconfig-client.version}</version>
-            </dependency>
+
             <!--tomcat-->
             <dependency>
                 <groupId>qunar.common</groupId>
@@ -115,67 +110,6 @@
                 <artifactId>common-core</artifactId>
                 <version>${qunar.common.version}</version>
 
-            </dependency>
-            <!--qschedule-->
-            <dependency>
-                <groupId>qunar.tc.qschedule</groupId>
-                <artifactId>qschedule-client</artifactId>
-                <version>${qschedule-client.version}</version>
-            </dependency>
-            <!-- qmq-client qschedule依赖 -->
-            <dependency>
-                <groupId>qunar.tc</groupId>
-                <artifactId>qmq-client</artifactId>
-                <version>${qmq.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>qunar.tc</groupId>
-                        <artifactId>common-zookeeper</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.alibaba</groupId>
-                        <artifactId>fastjson</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <!-- qmq-api qschedule依赖 -->
-            <dependency>
-                <groupId>qunar.tc</groupId>
-                <artifactId>qmq-api</artifactId>
-                <version>${qmq.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>${netty-all.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty</artifactId>
-                <version>${netty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.zookeeper</groupId>
-                <artifactId>zookeeper</artifactId>
-                <version>${zookeeper.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>slf4j-log4j12</artifactId>
-                        <groupId>org.slf4j</groupId>
-                    </exclusion>
-                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -239,26 +173,7 @@
             <groupId>qunar.common</groupId>
             <artifactId>common-core</artifactId>
         </dependency>
-        <!-- qconfig -->
-        <dependency>
-            <groupId>qunar.tc.qconfig</groupId>
-            <artifactId>qconfig-client</artifactId>
-        </dependency>
-        <!--qschedule-->
-        <dependency>
-            <groupId>qunar.tc.qschedule</groupId>
-            <artifactId>qschedule-client</artifactId>
-        </dependency>
-        <!-- qmq-client qschedule依赖 -->
-        <dependency>
-            <groupId>qunar.tc</groupId>
-            <artifactId>qmq-client</artifactId>
-        </dependency>
-        <!-- qmq-api qschedule依赖 -->
-        <dependency>
-            <groupId>qunar.tc</groupId>
-            <artifactId>qmq-api</artifactId>
-        </dependency>
+
 
         <!--================================-->
         <!--        database packages       -->
@@ -348,16 +263,18 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <!--img uplod-->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>7.0.0</version>
+        </dependency>
         <!--javaswift-->
         <dependency>
             <groupId>org.javaswift</groupId>
             <artifactId>joss</artifactId>
         </dependency>
-        <!-- QSSO -->
-        <dependency>
-            <groupId>com.qunar.security</groupId>
-            <artifactId>qsso-client</artifactId>
-        </dependency>
+
         <!-- orika -->
         <dependency>
             <groupId>ma.glasnost.orika</groupId>

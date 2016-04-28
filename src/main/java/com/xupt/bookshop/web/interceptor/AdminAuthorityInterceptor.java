@@ -24,7 +24,7 @@ public class AdminAuthorityInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        String qtalk = CookieUtil.getCookieValue(request, Constants.QTALK);
+        String qtalk = CookieUtil.getCookieValue(request, Constants.USERCOOKIE);
         if (Strings.isNullOrEmpty(qtalk)) {
             response.sendRedirect("/administrator/noAuthority");
             return false;

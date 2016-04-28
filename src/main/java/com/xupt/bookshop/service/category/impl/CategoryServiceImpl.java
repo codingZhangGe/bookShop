@@ -3,6 +3,7 @@ package com.xupt.bookshop.service.category.impl;
 import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.service.category.CategoryService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.List;
 /**购物车操作
  * Created by zhangge on 16-4-27.
  */
+
+@Service("CategoryService")
 public class CategoryServiceImpl implements CategoryService{
 
     @Resource

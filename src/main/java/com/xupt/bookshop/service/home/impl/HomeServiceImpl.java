@@ -1,6 +1,7 @@
 package com.xupt.bookshop.service.home.impl;
 
 import com.google.common.collect.Lists;
+import com.xupt.bookshop.common.utils.PageResult;
 import com.xupt.bookshop.common.utils.beanmapper.BeanMapper;
 import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
 import com.xupt.bookshop.model.common.Category;
@@ -20,7 +21,7 @@ import java.util.List;
  * 主页详细信息展示
  * service
  */
-@Service
+@Service("HomeService")
 public class HomeServiceImpl implements HomeService {
 
     @Resource
@@ -45,10 +46,10 @@ public class HomeServiceImpl implements HomeService {
     
 
     @Override
-    public List<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize) {
+    public PageResult<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize) {
 
-        List<BookingVo> BookingVos = Lists.newArrayList();
-        RowBounds rowBounds = new RowBounds(currentPage, pageSize);
+        List<BookingVo> bookingVos = Lists.newArrayList();
+        RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
         List<BookingPo> AuctioningPos = homeDao.queryBookingPo( rowBounds);
 
         for (BookingPo po : AuctioningPos) {
@@ -56,15 +57,15 @@ public class HomeServiceImpl implements HomeService {
             auctioningVo=orikaBeanMapper.map(po,BookingVo.class);
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
 
-            BookingVos.add(auctioningVo);
+            bookingVos.add(auctioningVo);
         }
-        return BookingVos;
+       return new PageResult<>(homeDao.queryBookPages(),bookingVos);
     }
 
-    @Override public List<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize) {
+    @Override public PageResult<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize) {
 
         List<BookingVo> BookingVos = Lists.newArrayList();
-        RowBounds rowBounds = new RowBounds(currentPage, pageSize);
+        RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
         List<BookingPo> BookingPos = homeDao.queryBookingPoByCategory(categoryId, rowBounds);
 
         for (BookingPo po : BookingPos) {
@@ -74,6 +75,28 @@ public class HomeServiceImpl implements HomeService {
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
             BookingVos.add(auctioningVo);
         }
-        return BookingVos;
+        return new PageResult<>(homeDao.queryBookPagesByCategory(categoryId),BookingVos);
+    }
+
+    @Override
+    public int queryBookPages() {
+        return homeDao.queryBookPages();
+    }
+
+    @Override
+    public PageResult<BookingVo> queryItemByState(int state, int currentPage, int pageSize) {
+        List<BookingVo> BookingVos = Lists.newArrayList();
+        RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
+        List<BookingPo> BookingPos = homeDao.queryBookingPoByState(state, rowBounds);
+
+        for (BookingPo po : BookingPos) {
+
+            BookingVo auctioningVo ;
+            auctioningVo=orikaBeanMapper.map(po, BookingVo.class);
+            auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
+            BookingVos.add(auctioningVo);
+            //TODO 插入图片
+        }
+        return new PageResult<>(homeDao.queryBookPagesByCategory(state),BookingVos);
     }
 }

@@ -1,5 +1,6 @@
 package com.xupt.bookshop.service.home;
 
+import com.xupt.bookshop.common.utils.PageResult;
 import com.xupt.bookshop.model.home.BookingVo;
 import com.xupt.bookshop.model.common.Category;
 import org.springframework.stereotype.Service;
@@ -28,10 +29,18 @@ public interface HomeService {
      * state = 1 : 正在竞拍
      * state = 2 : 即将竞拍
      */
-    List<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize);
+    PageResult<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize);
 
     /**
      * 通过类别查询正在竞拍中的物品信息
      */
-    List<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize);
+    PageResult<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize);
+
+    /**
+     * 查询总数
+     * @return 总数
+     */
+    int queryBookPages();
+
+    PageResult<BookingVo> queryItemByState(int state,int currentPage,int pageSize);
 }

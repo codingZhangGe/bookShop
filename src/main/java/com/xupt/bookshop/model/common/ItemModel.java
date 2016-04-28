@@ -1,7 +1,7 @@
 package com.xupt.bookshop.model.common;
 
 import com.xupt.bookshop.model.enums.OrderState;
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 import org.joda.time.DateTime;
 import qunar.api.pojo.Money;
 
@@ -43,7 +43,7 @@ public class ItemModel {
     /**
      * 拍品状态 1-未开始, 2-竞拍中, 3-竞拍成功, 4-竞拍失败
      */
-    private State state;
+    private BookState bookState;
     /**
      * 拍品描述, 不超过100字
      */
@@ -141,12 +141,12 @@ public class ItemModel {
         this.buyerQtalk = buyerQtalk;
     }
 
-    public State getState() {
-        return state;
+    public BookState getBookState() {
+        return bookState;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState;
     }
 
     public String getDescription() {

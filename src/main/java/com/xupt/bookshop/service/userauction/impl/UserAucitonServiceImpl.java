@@ -201,7 +201,7 @@ public class UserAucitonServiceImpl implements UserAucitonService {
         userAuctionOrderFailVo.setAuctionTime(userAuctionOrderFail.getAuctionTime());
         userAuctionOrderFailVo.setAuctionPrice(userAuctionOrderFail.getAuctionPrice());
         userAuctionOrderFailVo.setSellerQtalk(userAuctionOrderFail.getSellerQtalk());
-        userAuctionOrderFailVo.setState(userAuctionOrderFail.getState());
+        userAuctionOrderFailVo.setBookState(userAuctionOrderFail.getBookState());
 
         return userAuctionOrderFailVo;
     }

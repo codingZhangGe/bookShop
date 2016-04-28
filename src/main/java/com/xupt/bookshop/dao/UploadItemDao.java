@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 
 /**
- * Created by liuyanjiang on 16-4-19.
+ * Created by ge.zhang on 16-4-19.
  */
 @Repository
 public interface UploadItemDao {

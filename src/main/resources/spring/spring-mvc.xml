@@ -24,17 +24,14 @@
     <task:annotation-driven scheduler="qbScheduler" mode="proxy"/>
     <task:scheduler id="qbScheduler" pool-size="10"/>
 
-    <!--拦截器拦截详情页-->
+    <!--拦截器 统计浏览人数-->
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/auction/details"/>
             <!--拦截的路径-->
             <bean class="com.xupt.bookshop.web.interceptor.BrowserInterceptor"/>
         </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/administrator/*"/>
-            <bean class="com.xupt.bookshop.web.interceptor.AdminAuthorityInterceptor" />
-        </mvc:interceptor>
+
     </mvc:interceptors>
 
     <!-- 对静态资源文件的访问 -->

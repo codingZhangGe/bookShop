@@ -1,7 +1,7 @@
 package com.xupt.bookshop.model.bookdetails;
 
 import com.xupt.bookshop.model.enums.OrderState;
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 
 import java.math.BigDecimal;
 
@@ -51,7 +51,7 @@ public class BookDetail {
     /**
      * 状态
      */
-    private State state;
+    private BookState bookState;
     /**
      * 出版社
      */
@@ -98,8 +98,8 @@ public class BookDetail {
         return orderState;
     }
 
-    public State getState() {
-        return state;
+    public BookState getBookState() {
+        return bookState;
     }
 
     public String getPublish() {
@@ -142,8 +142,8 @@ public class BookDetail {
         this.orderState = orderState;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState;
     }
 
     public void setPublish(String publish) {

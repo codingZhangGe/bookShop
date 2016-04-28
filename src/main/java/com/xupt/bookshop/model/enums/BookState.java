@@ -6,13 +6,13 @@ package com.xupt.bookshop.model.enums;
  * @author yunfeng.yang created on 16-4-19
  * @version 1.0
  */
-public enum State {
+public enum BookState {
     OK_TO_ORDER(1, "有货"), OUT_OF_STOCK(2, "无货"), UNDER_CARRIAGE(3, "下架");
 
     private int code;
     private String description;
 
-    State(int code, String description) {
+    BookState(int code, String description) {
         this.code = code;
         this.description = description;
     }
@@ -21,9 +21,9 @@ public enum State {
         return getCode();
     }
 
-    public static State codeOf(int code) {
-        State[] values = values();
-        for (State value : values) {
+    public static BookState codeOf(int code) {
+        BookState[] values = values();
+        for (BookState value : values) {
             if (value.getCode() == code) {
                 return value;
             }
@@ -32,7 +32,7 @@ public enum State {
     }
 
 
-    public static State byString(String src) {
+    public static BookState byString(String src) {
         if (src.equals(OUT_OF_STOCK.toString())) {
             return OUT_OF_STOCK;
         } else if (src.equals(UNDER_CARRIAGE.toString())) {

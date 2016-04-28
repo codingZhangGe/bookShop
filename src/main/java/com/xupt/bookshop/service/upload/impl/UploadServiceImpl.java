@@ -14,7 +14,7 @@ import com.google.common.base.Preconditions;
 
 
 /**
- * Created by liuyanjiang on 16-4-19.
+ * Created by ge.zhang on 16-4-19.
  */
 @Service
 public class UploadServiceImpl implements UploadItemService {
@@ -26,10 +26,10 @@ public class UploadServiceImpl implements UploadItemService {
     @Override
     public void uploadItem(UploadItem item){
         Preconditions.checkNotNull(item);
-        Preconditions.checkNotNull(item.getItemId());
-        logger.info("upload item,item id={},itemName={", item.getItemId(), item.getItemName());
+        Preconditions.checkNotNull(item.getBookId());
+        logger.info("upload item,item id={},itemName={", item.getBookId(), item.getBookId());
         uploadItemDao.insertItem(item);
-        logger.info("update unfinished item list,itemId:{}",item.getItemId());
+        logger.info("update unfinished item list,itemId:{}",item.getBookId());
         uploadItemDao.insertUnfinishedItem(item);
     }
 }

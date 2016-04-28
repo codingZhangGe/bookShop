@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Description: XSS转义过滤器过滤器
  *
- * @author zhangge
+ * @author ge.zhang
  * @version 2016-04-18 15:40
  */
 public class XSSFilter implements Filter {

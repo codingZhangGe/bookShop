@@ -1,6 +1,6 @@
 package com.xupt.bookshop.model.bookdetails.vo;
 
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -64,7 +64,7 @@ public class BookInfoVo {
     /**
      * 状态
      */
-    State state;
+    BookState bookState;
     /**
      * 图片
      */
@@ -83,8 +83,8 @@ public class BookInfoVo {
         Descrption = descrption;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState;
     }
 
     public void setPrice(BigDecimal price) {
@@ -175,8 +175,8 @@ public class BookInfoVo {
         return shopId;
     }
 
-    public State getState() {
-        return state;
+    public BookState getBookState() {
+        return bookState;
     }
 
     public List<String> getUrlList() {

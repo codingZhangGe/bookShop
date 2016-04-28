@@ -90,24 +90,11 @@ public class ParameterCheckUtil {
      */
     public static JsonV2 checkUploadItem(UploadItem item) {
         Preconditions.checkNotNull(item);
-        if (item.getStartTime() == null || item.getEndTime() == null) {
-            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "开始和结束时间不能为空", "");
-        }
-        if (item.getItemName() == null || item.getReservePrice() == null || item.getStartPrice() == null
-                || item.getStepPrice() == null) {
-            return new JsonV2(CodeMessage.SYSTEM_ERROR, "产品名称,保留价格,开始价格,加价幅度不能为空", "");
-        }
+
+
         DateTime dateTime = DateTime.now();
-        if (dateTime.isAfter(item.getStartTime())) {
-            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "开始时间不正确", format.print(item.getEndTime()));
-        }
-        if (dateTime.isAfter(item.getEndTime())) {
-            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "结束时间不正确", format.print(item.getEndTime()));
-        }
-        if (item.getStartTime().plusHours(Constants.BETWEEN_HOUR).isAfter(item.getEndTime())) {
-            return new JsonV2(CodeMessage.SYSTEM_ERROR, "拍卖时间至少一小时", "");
-        }
-        if (StringUtils.isBlank(item.getItemId())) {
+
+        if (StringUtils.isBlank(item.getBookId())) {
             return new JsonV2(CodeMessage.SYSTEM_ERROR, "itemId不能为空", "");
         }
         return new JsonV2(CodeMessage.OK, "信息校验正确", "");

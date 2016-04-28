@@ -2,127 +2,171 @@ package com.xupt.bookshop.model.upload;
 
 import java.math.BigDecimal;
 
+import com.xupt.bookshop.model.enums.BookState;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.joda.time.DateTime;
 
 import qunar.api.pojo.Money;
 
-
+/**
+ * 上传图书商品信息
+ */
 
 public class UploadItem {
 
     /**
-     * 拍品id
+     * 图书id
      */
-    private String itemId;
+    private String bookId;
     /**
-     * 拍品名字
+     * 图书名字
      */
-    private String itemName;
+    private String bookName;
 
     /**
      * 类别id
      */
     private int categoryId;
     /**
-     * 卖家qtalk
+     * 出版社
      */
-    @JsonIgnore
-    private String sellerQtalk;
+
+    private String publish;
 
     /**
      * 拍品描述, 不超过100字
      */
     private String description = "";
     /**
-     * 拍卖开始时间
+     * 作家
      */
-    private DateTime startTime;
+    private String author;
     /**
-     * 拍卖结束时间
+     * 价格
      */
 
-    private DateTime endTime;
+    private BigDecimal price;
     /**
-     * 起拍价
+     * 折扣价
      */
-    private Money startPrice;
+    private BigDecimal currentPrice;
     /**
-     * 加价幅度, 默认1, 单位元
+     * 折扣 默认100
      */
-    private Money stepPrice;
+    private BigDecimal discount;
+
     /**
-     * 保留价格, 当最终拍卖价格小于保留价格, 则流拍
+     * 出版日期
      */
-    private Money reservePrice;
 
-    public String getItemId() {
-        return itemId;
-    }
+    DateTime publishDate;
+    /**
+     * 状态  默认是有货
+     */
+    BookState state=BookState.OK_TO_ORDER;
 
-    public void setItemId(String itemId) {
-        this.itemId = itemId;
-    }
+    /**
+     * 库存
+     */
 
-    public String getItemName() {
-        return itemName;
-    }
+    int surplus;
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
+
 
 
     public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = Integer.valueOf(categoryId);
-    }
-
-    public String getSellerQtalk() {
-        return sellerQtalk;
-    }
-
-    public void setSellerQtalk(String sellerQtalk) {
-        this.sellerQtalk = sellerQtalk;
+    public String getPublish() {
+        return publish;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public BigDecimal getCurrentPrice() {
+        return currentPrice;
+    }
+
+    public BigDecimal getDiscount() {
+        return discount;
+    }
+
+    public DateTime getPublishDate() {
+        return publishDate;
+    }
+
+    public int getSurplus() {
+        return surplus;
+    }
+
+    public String getBookId() {
+        return bookId;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public BookState getState() {
+        return state;
+    }
+
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public void setPublish(String publish) {
+        this.publish = publish;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public DateTime getStartTime() {
-        return startTime;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public Money getStartPrice() {
-        return startPrice;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public void setStartPrice(String startPrice) {
-        this.startPrice = Money.of(new BigDecimal(startPrice));
+    public void setCurrentPrice(BigDecimal currentPrice) {
+        this.currentPrice = currentPrice;
     }
 
-    public Money getStepPrice() {
-        return stepPrice;
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
     }
 
-    public void setStepPrice(String stepPrice) {
-        this.stepPrice = Money.of(new BigDecimal(stepPrice));
+    public void setPublishDate(DateTime publishDate) {
+        this.publishDate = publishDate;
     }
 
-    public Money getReservePrice() {
-        return reservePrice;
+    public void setState(BookState state) {
+        this.state = state;
     }
 
-    public void setReservePrice(String reservePrice) {
-        this.reservePrice = Money.of(new BigDecimal(reservePrice));
+    public void setSurplus(int surplus) {
+        this.surplus = surplus;
     }
-
 }

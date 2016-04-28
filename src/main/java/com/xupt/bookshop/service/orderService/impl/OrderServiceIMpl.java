@@ -1,6 +1,6 @@
 package com.xupt.bookshop.service.orderService.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
+
 import com.google.common.base.Preconditions;
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.dao.CartDao;
@@ -8,10 +8,12 @@ import com.xupt.bookshop.dao.OrderDao;
 import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.model.enums.OrderState;
+import com.xupt.bookshop.model.enums.BookState;
 import com.xupt.bookshop.model.order.OrderItem;
 import com.xupt.bookshop.model.order.param.OrderParam;
 import com.xupt.bookshop.service.orderService.OrderService;
 import org.joda.time.DateTime;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
@@ -20,7 +22,7 @@ import java.util.List;
 /**订单业务
  * Created by zhangge on 16-4-27.
  */
-@Service
+@Service("OrderService")
 public class OrderServiceIMpl implements OrderService {
 
     @Resource
@@ -67,6 +69,19 @@ public class OrderServiceIMpl implements OrderService {
 
     @Override
     public int updateOrderStatus(String OrderId) {
-        return 0;
+        int count = orderDao.updateOrderStatus(BookState.OUT_OF_STOCK);
+        return count;
+    }
+
+    /**
+     * 选择订单失效的订单id
+     * @return
+     */
+    @Override
+    public List<String > selectOrderitemWithTime() {
+
+        List<String> list = orderDao.selectOrderItemWithTime(DateTime.now(), OrderState.ORDER_NO_PAY);
+
+        return list;
     }
 }

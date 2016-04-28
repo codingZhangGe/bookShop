@@ -39,10 +39,10 @@ public class OrderController {
       }
 
 
-    //TODO  更改订单状态
+    //TODO  更改订单状态(权限)
    public JsonResult updateOrderStatus(@RequestParam("categoryId") String categoryId){
  return null;
    }
-    //TODO  取消订单(权限)
-    //TODO  修改订单(权限)
+    //TODO  删除订单(权限)
+    //TODO  修改订单(权限) 表示已经下单成功的订单
 }

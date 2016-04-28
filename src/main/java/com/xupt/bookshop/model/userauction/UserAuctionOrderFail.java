@@ -1,6 +1,6 @@
 package com.xupt.bookshop.model.userauction;
 
-import com.xupt.bookshop.model.enums.State;
+import com.xupt.bookshop.model.enums.BookState;
 import org.joda.time.DateTime;
 import qunar.api.pojo.Money;
 
@@ -20,7 +20,7 @@ public class UserAuctionOrderFail {
 
     private String sellerQtalk;
 
-    private State state;
+    private BookState bookState;
 
     public String getItemId() {
         return itemId;
@@ -62,11 +62,11 @@ public class UserAuctionOrderFail {
         this.sellerQtalk = sellerQtalk;
     }
 
-    public State getState() {
-        return state;
+    public BookState getBookState() {
+        return bookState;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState;
     }
 }

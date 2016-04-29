@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xupt.bookshop.dao.HomeDao">
+
+    <sql id="selectFields">
+             book_id,book_name,price,current_price,discount,browse_count,buy_count
+    </sql>
+
+    <select id="queryAllCategory" resultType="com.xupt.bookshop.model.common.Category">
+        SELECT
+        *
+        FROM category
+    </select>
+
+    <!--首页展示的拍品信息
+            商品id ,    类别id,
+            浏览人数,   购买人数,
+            当前价格,   折扣价格,
+            商品名称     折扣
+            -->
+    <resultMap id="queryBoookItem" type="com.xupt.bookshop.model.home.BookingPo">
+        <!-- 静态信息 -->
+        <result column="book_Id" property="bookId"/>
+        <result column="book_name" property="bookName"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="current_price" property="currentPrice" />
+        <result column="price" property="Price" />
+        <result column="discount" property="discount"/>
+        <!-- 动态信息 -->
+        <result column="browse_count" property="browseCount"/>
+        <result column="buy_count" property="buyCount"/>
+
+    </resultMap>
+    <!--order by  buy Count-->
+    <select id="queryBookingPo" resultMap="queryBoookItem">
+        SELECT
+        <include refid="selectFields"/>
+        FROM book
+        LEFT JOIN book_dynamic_info
+        AS  bdi
+        ON book.book_id=bdi.book_id
+        ORDER BY buy_count
+    </select>
+
+    <!--类别查询-->
+    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
+        SELECT
+        <include refid="selectFields"/>
+        FROM book
+        LEFT JOIN book_dynamic_info
+        AS  bdi
+        ON book.book_id=bdi.book_id
+        WHERE category_id=#{category_id}
+        ORDER BY buy_count
+    </select>
+
+    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
+        SELECT
+        <include refid="selectFields"/>
+        FROM book
+        LEFT JOIN book_dynamic_info
+        AS  bdi
+        ON book.book_id=bdi.book_id
+        WHERE state=#{state}
+        ORDER BY buy_count
+    </select>
+
+<!--图书总数-->
+ <select id="queryBookPages"  resultType="int">
+     SELECT COUNT (*) FROM book
+ </select>
+
+<!--根据状态查询总数-->
+    <select id="queryBookPagesByState"  parameterType="int" resultType="int">
+        SELECT COUNT (*) FROM book
+        WHERE state=#{state}
+    </select>
+<!--根据类别查询总数-->
+    <select id="queryBookPagesByCategory" parameterType="int" resultType="int">
+        SELECT COUNT(*) FROM book
+        WHERE category_id =#{categoryId}
+    </select>
+
+</mapper>

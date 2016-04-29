@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!-- 使全局的映射器启用或禁用缓存 -->
+        <setting name="cacheEnabled" value="false"/>
+        <!-- 将 foo_bar 样式的数据库字段映射为 fooBar 样式的 Java 字段 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 允许 JDBC 支持生成的键。需要适合的驱动。如果设置为true则这个设置强制生成的键被使用，尽管一些驱动拒绝兼容但仍然有效（比如 Derby） -->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!-- 配置默认的执行器。SIMPLE 执行器没有什么特别之处。REUSE 执行器重用预处理语句。BATCH 执行器重用语句和批量更新 -->
+        <setting name="defaultExecutorType" value="REUSE"/>
+        <!-- 设置超时时间，它决定驱动等待一个数据库响应的时间 -->
+        <setting name="defaultStatementTimeout" value="600"/>
+        <!-- 懒加载 -->
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <!-- 嵌套语句中是否允许使用RowBounds -->
+        <setting name="safeRowBoundsEnabled" value="false"/>
+    </settings>
+
+    <!-- 别名定义 -->
+    <typeAliases>
+        <typeAlias type="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler" alias="MoneyTypeHandler"/>
+        <typeAlias type="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" alias="DateTimeTypeHandler"/>
+        <typeAlias type="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler" alias="CodeEnumTypeHandler"/>
+        <typeAlias type="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler" alias="EnumTypeHandler"/>
+    </typeAliases>
+
+    <!-- 全局typeHandler   -->
+    <typeHandlers>
+        <typeHandler handler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"
+                javaType="com.xupt.bookshop.model.enums.BookState"  jdbcType="TINYINT"/>
+        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler"
+                 javaType="com.xupt.bookshop.model.enums.OrderState"   jdbcType="TINYINT"/>
+        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" javaType="org.joda.time.DateTime"
+                     jdbcType="TIMESTAMP"/>
+        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler" jdbcType="DECIMAL"
+                     javaType="qunar.api.pojo.Money"/>
+    </typeHandlers>
+
+    <!-- 分页插件 -->
+    <plugins>
+        <plugin interceptor="com.qunar.base.meerkat.orm.mybatis.support.ResultSetHandlerInterceptor"/>
+        <plugin interceptor="com.qunar.base.meerkat.orm.mybatis.support.StatementHandlerInterceptor"/>
+    </plugins>
+
+</configuration>

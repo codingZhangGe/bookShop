@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - bookshop@localhost" uuid="7cb93cba-36e9-4784-981d-42461a16d1ec">
+    <database-info product="MySQL" version="5.5.47-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="bookshop"/>
+    <table name="admin" schema="" catalog="bookshop" type="TABLE">
+      <column name="AdminID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="AName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="APwd" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="AdminID"/>
+    </table>
+    <table name="book" schema="" catalog="bookshop" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
+      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzEn" remarks="5Zu+5LmmaWQ="/>
+      <column name="book_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5Zu+5Lmm5ZCN56ew"/>
+      <column name="description" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="5o+P6L+w"/>
+      <column name="price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" def="MA==" remarks="5Lu35qC8"/>
+      <column name="current_price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3" def="MA==" remarks="5b2T5YmN5Lu35qC8"/>
+      <column name="discount" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MTAw" remarks="5oqY5omj"/>
+      <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ==" remarks="57G75YiraWQ="/>
+      <column name="publish" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="5Ye654mI56S+"/>
+      <column name="author" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" def="J+S9muWQjSc=" remarks="5L2c6ICF"/>
+      <column name="surplus" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Ymp5L2Z6YeP"/>
+      <column name="publish_date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="state" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="book_id" unique="true" columns="book_id"/>
+    </table>
+    <table name="book_dynamic_info" schema="" catalog="bookshop" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
+      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzEn" remarks="5pyq57uT5p2f56ue5ZOB55qEaWQ="/>
+      <column name="collect_count" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pS26JeP5Lq65pWw"/>
+      <column name="buy_count" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="6LSt5Lmw5Lq65pWw"/>
+      <column name="browse_count" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5rWP6KeI5Lq65pWw"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="book_id" unique="true" columns="book_id"/>
+    </table>
+    <table name="cart" schema="" catalog="bookshop" type="TABLE">
+      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CartID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <index name="unique_UID" unique="true" columns="UID"/>
+    </table>
+    <table name="cart_item" schema="" catalog="bookshop" type="TABLE">
+      <column name="usr_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="book_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="book_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="discount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="current_price" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
+      <column name="buy_num" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="usr_id"/>
+      <index name="unique_usr_id" unique="true" columns="usr_id"/>
+    </table>
+    <table name="category" schema="" catalog="bookshop" type="TABLE">
+      <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="category_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="category_id"/>
+      <index name="category_name" unique="true" columns="category_name"/>
+    </table>
+    <table name="comments" schema="" catalog="bookshop" type="TABLE">
+      <column name="BookID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comments" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="orders" schema="" catalog="bookshop" type="TABLE">
+      <column name="OrderID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Address" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Telphone" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="OrderTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="CartID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Status" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="OrderID"/>
+    </table>
+    <table name="seller" schema="" catalog="bookshop" type="TABLE">
+      <column name="SellerID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SPwd" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TEL" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IDCard" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="SellerID"/>
+      <index name="IDCard" unique="true" columns="IDCard"/>
+      <index name="SName" unique="true" columns="SName"/>
+    </table>
+    <table name="user" schema="" catalog="bookshop" type="TABLE">
+      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="UName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="UPwd" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TEL" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="UID"/>
+      <index name="UName" unique="true" columns="UName"/>
+    </table>
+  </data-source>
+</component>

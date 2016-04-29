@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xupt.bookshop.dao.UserAuctionDao">
+
+    <resultMap id="UserAuctionInNow" type="com.xupt.bookshop.model.userauction.UserAuctionInNow">
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="current_price" property="currentPrice"
+                jdbcType="DECIMAL" javaType="qunar.api.pojo.Money" typeHandler="MoneyTypeHandler"/>
+        <result column="end_time" property="endTime"
+                jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime" typeHandler="DateTimeTypeHandler"/>
+        <result column="seller_qtalk" property="sellerQtalk"/>
+    </resultMap>
+    <select id="queryUserAuctionInNow" resultMap="UserAuctionInNow">
+        SELECT
+        fixed.item_id,
+        fixed.item_name,
+
+        dynamic.current_price,
+
+        fixed.end_time,
+        fixed.seller_qtalk
+        FROM
+        unfinished_item_fixed_info AS fixed,
+        unfinished_item_dynamic_info AS dynamic,
+        LEFT JOIN
+        auction_order AS ord
+        WHERE
+        fixed.item_id=ord.item_id
+        AND
+        ord.bidder_qtalk=#{qtalk}
+    </select>
+
+    <resultMap id="UserAuctionInAfter" type="com.xupt.bookshop.model.userauction.UserAuctionInAfter">
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="final_price" property="finalPrice"
+                jdbcType="DECIMAL" javaType="qunar.api.pojo.Money" typeHandler="MoneyTypeHandler"/>
+        <result column="end_time" property="endTime"
+                jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime" typeHandler="DateTimeTypeHandler"/>
+        <result column="seller_qtalk" property="sellerQtalk"/>
+    </resultMap>
+    <select id="queryUserAuctionInAfter" resultMap="UserAuctionInAfter">
+        SELECT
+        finished.item_id,
+        finished.item_name,
+        finished.final_price,
+        finished.end_time,
+        finished.seller_qtalk
+        FROM
+        finished_item_fixed_info AS finished,
+        LEFT JOIN
+        auction_order AS ord
+        ON
+        finished.item_id=ord.item_id
+        WHERE
+        ord.bidder_qtalk=#{qtalk}
+    </select>
+
+    <resultMap id="UserAuctionOutBefore" type="com.xupt.bookshop.model.userauction.UserAuctionOutBefore">
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="start_price" property="startPrice"
+                jdbcType="DECIMAL" javaType="qunar.api.pojo.Money" typeHandler="MoneyTypeHandler"/>
+        <result column="start_time" property="startTime"
+                jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime" typeHandler="DateTimeTypeHandler"/>
+    </resultMap>
+    <select id="queryMyAuctionOutBefore" resultMap="UserAuctionOutBefore">
+        SELECT
+        fixed.item_id,
+        fixed.item_name,
+        fixed.start_price,
+        fixed.start_time
+        FROM
+        unfinished_item_fixed_info AS fixed
+        WHERE
+        fixed.seller_qtalk=#{qtalk}
+        AND
+        fixed.state=1
+    </select>
+
+    <resultMap id="UserAuctionOutNow" type="com.xupt.bookshop.model.userauction.UserAuctionOutNow">
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="current_price" property="currentPrice"
+                jdbcType="DECIMAL" javaType="qunar.api.pojo.Money" typeHandler="MoneyTypeHandler"/>
+        <result column="end_time" property="endTime"
+                jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime" typeHandler="DateTimeTypeHandler"/>
+    </resultMap>
+    <select id="queryMyAuctionOutNow" resultMap="UserAuctionOutNow">
+        SELECT
+        fixed.item_id,
+        fixed.item_name,
+
+        dynamic.current_price,
+
+        fixed.end_time
+        FROM
+        unfinished_item_fixed_info AS fixed,
+        unfinished_item_dynamic_info AS dynamic
+        WHERE
+        fixed.seller_qtalk=#{qtalk}
+        AND
+        fixed.state=2
+    </select>
+
+    <resultMap id="UserAuctionOutAfter" type="com.xupt.bookshop.model.userauction.UserAuctionOutAfter">
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="final_price" property="fianlPrice"
+                jdbcType="DECIMAL" javaType="qunar.api.pojo.Money" typeHandler="MoneyTypeHandler"/>
+        <result column="end_time" property="endTime"
+                jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime" typeHandler="DateTimeTypeHandler"/>
+        <result column="buyer_qtalk" property="buyerQtalk"/>
+    </resultMap>
+    <select id="queryMyAuctionOutAfter" resultMap="UserAuctionOutAfter">
+        SELECT
+        finished.item_id,
+        finished.item_name,
+        finished.final_price,
+        finished.end_time,
+        finished.buyer_qtalk
+        FROM
+        finished_item_fixed_info AS finished
+        WHERE
+        finished.seller_qtalk=#{qtalk}
+    </select>
+
+    <resultMap id="UserAuctionOrderSuccess" type="com.xupt.bookshop.model.userauction.UserAuctionOrderSuccess">
+        <result column="item_Id" property="itemId"/>
+        <result column="item_name" property="itemName"/>
+        <result column="auction_time" property="auctionTime"
+                jdbcType="TIMESTAMP" javaType="org.joda.time.DateTime" typeHandler="DateTimeTypeHandler"/>
+        <result column="auction_price" property="auctionPrice"
+                jdbcType="DECIMAL" javaType="qunar.api.pojo.Money" typeHandler="MoneyTypeHandler"/>
+        <result column="buyer_qtalk" property="buyerQtalk"/>
+    </resultMap>
+    <select id="queryUserAuctionOrder" resultMap="UserAuctionOrderSuccess">
+        SELECT
+        finished.item_id,
+        finished.item_name,
+
+        ord.auction_time,
+        ord.auction_price,
+
+        finished.seller_qtalk
+        FROM
+        finished_item_fixed_info AS finished,
+        auction_order AS ord
+        WHERE
+        finished.item_id=ord.item_id
+        AND 
+        ord.bidder_qtalk=#{qtalk}
+    </select>
+
+</mapper>

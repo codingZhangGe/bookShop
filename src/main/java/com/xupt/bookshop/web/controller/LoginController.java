@@ -37,10 +37,9 @@ import java.util.concurrent.TimeUnit;
  */
 
 @Controller
+@RequestMapping("/xupt")
 public class LoginController {
 
-    @Resource
-    private LoginManager<String> loginManager;
     @Resource
     LoginService loginService;
     @Resource
@@ -50,12 +49,12 @@ public class LoginController {
      * 登陆
      *index.jsp
      * @param httpServletRequest
-     * @param response
+     *
      * @return
      */
-    @RequestMapping(value = "login.json", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse response, @Valid LoginPara loginPara, BindingResult result) {
+    public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse ,@Valid LoginPara loginPara, BindingResult result) {
 
         if (ParameterCheckUtil.checkBingResultParam(result).equals("true")) {
             User user = loginService.queryByName(loginPara.getUsername());
@@ -65,7 +64,7 @@ public class LoginController {
                     return  JsonResult.fail("密码输入错误");
                 }
                 else{
-             //    CookieUtil.addCookie((HttpServletResponse) httpServletRequest,"login_id",loginPara.getUsername());
+                    CookieUtil.addCookie(httpServletResponse,"login_id",loginPara.getUsername(),60);
                     //TODO 购物车表插入信息，用id ,生成购物车id;
                     categoryService.createCategoryWithUser(loginPara.getUsername());
                     return JsonResult.succ();

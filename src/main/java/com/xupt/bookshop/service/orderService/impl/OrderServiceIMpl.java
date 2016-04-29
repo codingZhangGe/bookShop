@@ -13,6 +13,7 @@ import com.xupt.bookshop.model.order.OrderItem;
 import com.xupt.bookshop.model.order.param.OrderParam;
 import com.xupt.bookshop.service.orderService.OrderService;
 import org.joda.time.DateTime;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

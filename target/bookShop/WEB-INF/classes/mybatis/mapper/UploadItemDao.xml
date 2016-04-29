@@ -6,26 +6,35 @@
 <mapper namespace="com.xupt.bookshop.dao.UploadItemDao">
     <sql id="selectField">
         (
-        item_id,item_name,old_degree,category_id,seller_qtalk,
-        description,start_time,end_time,start_price,
-        step_price,reserve_price
+           book_id,book_name,description,price,current_price,discount,category_id,publish,author,
+           surplus,publish_date,state
         )
     </sql>
-    <insert id="insertItem" parameterType="com.xupt.bookshop.model.upload.UploadItem">
-        INSERT INTO unfinished_item_fixed_info
+    <insert id="insertItem" parameterType="com.xupt.bookshop.model.upload.UploadItemParam">
+        INSERT INTO book
         <include refid="selectField"/>
         VALUES(
-         #{item.itemId}
-        ,#{item.itemName}
-        ,#{item.oldDegree}
-        ,#{item.categoryId}
-        ,#{item.sellerQtalk}
+         #{item.bookId}
+        ,#{item.bookName}
         ,#{item.description}
-        ,#{item.startTime,typeHandler=DateTimeTypeHandler}
-        ,#{item.endTime,typeHandler=DateTimeTypeHandler}
-        ,#{item.startPrice,typeHandler=MoneyTypeHandler}
-        ,#{item.stepPrice,typeHandler=MoneyTypeHandler}
-        ,#{item.reservePrice,typeHandler=MoneyTypeHandler}
+        ,#{item.price}
+        ,#{item.currentPrice}
+        ,#{item.discount}
+        ,#{item.publishDate,typeHandler=DateTimeTypeHandler}
+        ,#{item.categoryId}
+        ,#{item.publish}
+        ,#{item.author}
+        ,#{item.state,typeHandler=EnumTypeHandler}
+        ,#{surplus}
         )
+    </insert>
+
+
+    <insert id="insertBookDynamicItem" parameterType="com.xupt.bookshop.model.upload.UploadItemParam">
+        INSERT INTO book_dynamic_info(book_id)
+        VALUES(
+        #{item.bookId}
+        )
+
     </insert>
 </mapper>

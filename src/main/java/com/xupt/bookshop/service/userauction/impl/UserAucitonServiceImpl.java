@@ -30,7 +30,7 @@ import javax.annotation.Resource;
  *
  * Created by yangsongbao on 16-4-18.
  */
-@Service
+@Service("UserAucitonService")
 public class UserAucitonServiceImpl implements UserAucitonService {
 
     @Resource

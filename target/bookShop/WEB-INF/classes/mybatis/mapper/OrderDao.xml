@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xupt.bookshop.dao.OrderDao">
+
+    <parameterMap id="orderParamType" type="com.xupt.bookshop.model.order.OrderItem">
+        <parameter property="linkman" />
+        <parameter property="telphone"/>
+        <parameter property="totalPrice"/>
+        <parameter property="status" javaType="com.xupt.bookshop.model.enums.OrderState" jdbcType="TINYINT" typeHandler="EnumTypeHandler"/>
+        <parameter property="orderTime"  typeHandler="DateTimeTypeHandler"/>
+        <parameter property="address" />
+        <!--<parameter property="bookName"/>-->
+
+    </parameterMap>
+
+<resultMap id="orderItemresult" type="com.xupt.bookshop.model.order.OrderItem">
+  <result column="OrderID" property="OrderId"/>
+    <result column="UID" property="linkman"/>
+    <result column="Address" property="address"/>
+    <result column="Telphone" property="telphone"/>
+    <result column="OrderTime" property="orderTime" typeHandler="DateTimeTypeHandler"/>
+    <result column="Status" property="status" jdbcType="TINYINT" javaType="com.xupt.bookshop.model.enums.OrderState"/>
+</resultMap>
+
+    <select id="queryOrderDetails" resultMap="orderItemresult" parameterType="String">
+        SELECT OrderID,UID,Address,Telphone,OrderTime,Status FROM orders
+        WHERE UID= #{username};
+    </select>
+</mapper>

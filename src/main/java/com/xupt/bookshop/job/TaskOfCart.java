@@ -18,7 +18,7 @@ public class TaskOfCart {
     Logger logger= LoggerFactory.getLogger(TaskOfCart.class);
     @Resource
     OrderService orderService;
-    @Scheduled(cron = "0/5 * * * * ?") //5秒执行一次
+ //   @Scheduled(cron = "0/5 * * * * ?") //5秒执行一次
     public  void doTask(){
       logger.info("<TaskOfCart> doing");
         List<String> orderItems=orderService.selectOrderitemWithTime();

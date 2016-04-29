@@ -23,22 +23,17 @@
 
     <!-- 别名定义 -->
     <typeAliases>
-        <typeAlias type="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler" alias="MoneyTypeHandler"/>
         <typeAlias type="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" alias="DateTimeTypeHandler"/>
-        <typeAlias type="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler" alias="CodeEnumTypeHandler"/>
         <typeAlias type="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler" alias="EnumTypeHandler"/>
     </typeAliases>
 
     <!-- 全局typeHandler   -->
     <typeHandlers>
-        <typeHandler handler="com.qunar.base.meerkat.orm.mybatis.type.CodeEnumTypeHandler"
-                javaType="com.xupt.bookshop.model.enums.BookState"  jdbcType="TINYINT"/>
         <typeHandler handler="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler"
                  javaType="com.xupt.bookshop.model.enums.OrderState"   jdbcType="TINYINT"/>
         <typeHandler handler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" javaType="org.joda.time.DateTime"
                      jdbcType="TIMESTAMP"/>
-        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler" jdbcType="DECIMAL"
-                     javaType="qunar.api.pojo.Money"/>
+
     </typeHandlers>
 
     <!-- 分页插件 -->

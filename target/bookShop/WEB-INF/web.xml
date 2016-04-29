@@ -5,6 +5,10 @@
          version="3.0">
     <!--###########注意, 此段listener和filter直接放置在web.xml顶端########-->
     <!--###########连这段注释一起放, 避免其他同学copy时忽略此信息#########-->
+    <!-- Spring监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
 
     <filter>
@@ -34,31 +38,27 @@
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
-    <!-- Spring监听器 -->
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 
     <!--登陆过滤器-->
 
-    <!--<filter>-->
-        <!--<filter-name>loginFilter</filter-name>-->
-        <!--<filter-class>LoginFilter</filter-class>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-        <!--<filter-name>loginFilter</filter-name>-->
-        <!--<url-pattern>/*</url-pattern>-->
-    <!--</filter-mapping>-->
-
-
     <filter>
-        <filter-name>xssFilter</filter-name>
-        <filter-class>com.xupt.bookshop.web.filter.XSSFilter</filter-class>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.xupt.bookshop.web.filter.LoginFilter</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>xssFilter</filter-name>
+        <filter-name>loginFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+
+    <!--<filter>-->
+        <!--<filter-name>xssFilter</filter-name>-->
+        <!--<filter-class>com.xupt.bookshop.web.filter.XSSFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>xssFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
 
     <!-- 防止Spring内存溢出监听器 -->
     <listener>

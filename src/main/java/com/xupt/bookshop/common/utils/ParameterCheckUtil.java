@@ -16,7 +16,7 @@ import qunar.api.pojo.json.JsonV2;
 
 import com.google.common.base.Preconditions;
 import com.xupt.bookshop.common.exceptions.ParameterException;
-import com.xupt.bookshop.model.upload.UploadItem;
+import com.xupt.bookshop.model.upload.UploadItemParam;
 
 /**
  * @author yunfeng.yang created on 16-4-14
@@ -88,7 +88,7 @@ public class ParameterCheckUtil {
     /**
      * 检查上传信息的合法性
      */
-    public static JsonV2 checkUploadItem(UploadItem item) {
+    public static JsonV2 checkUploadItem(UploadItemParam item) {
         Preconditions.checkNotNull(item);
 
 

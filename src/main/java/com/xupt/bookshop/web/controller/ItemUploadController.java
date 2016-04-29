@@ -1,17 +1,15 @@
 package com.xupt.bookshop.web.controller;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.common.utils.*;
 import com.xupt.bookshop.model.common.Category;
 import com.xupt.bookshop.model.upload.ImgModel;
-import com.xupt.bookshop.model.upload.UploadItem;
+import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.common.ImgService;
 import com.xupt.bookshop.service.home.HomeService;
 import com.xupt.bookshop.service.upload.UploadItemService;
@@ -23,11 +21,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
-
 import qunar.api.pojo.CodeMessage;
 import qunar.api.pojo.json.JsonV2;
 import qunar.web.spring.annotation.JsonBody;
-
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
@@ -45,13 +41,14 @@ public class ItemUploadController extends BaseController {
     private UploadItemService uploadItemService;
     @Resource
     private HomeService homeService;
-    @Resource
- //   private AuctionMessage message;
+  //  @Resource
+  //  private AuctionMessage message;
 
     @RequestMapping(value = "/imageUpload", method = RequestMethod.POST)
     @JsonBody
     public Object uploadImg(@RequestParam(value = "file", required = true) CommonsMultipartFile[] files,
             HttpServletRequest request, HttpServletResponse response) throws Exception {
+        //生成一个id
         String itemId = UUIDGenerator.getUUID();
         logger.info("上传图片,图片数量={},用户id={}", files.length, CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
         Preconditions.checkNotNull(files);
@@ -63,14 +60,14 @@ public class ItemUploadController extends BaseController {
             logger.warn("上传的并非图片,用户:{}", CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
             return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "不合法的图片名,文件要以图片名结尾", "");
         }
-        List<String> list = Lists.newArrayList();
+        List<String> imgList = Lists.newArrayList();
         for (CommonsMultipartFile file : files) {
-            list.add(imgService.upLoadImg(file.getBytes(), itemId, file.getFileItem().getName()));
+            imgList.add(imgService.upLoadImg(file, itemId, file.getFileItem().getName()));
         }
-        if (list.size() != files.length) {
+        if (imgList.size() != files.length) {
 
             logger.warn("部分图片上传失败，成功数量:{},用户:{}", CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
-            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "部分图片上传失败,系统错误", files.length - list.size());
+            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "部分图片上传失败,系统错误", files.length - imgList.size());
         }
         logger.info("图片上传成功，数量:{},生成的itemId:{}", files.length, itemId);
 
@@ -78,41 +75,41 @@ public class ItemUploadController extends BaseController {
         // 安全防护，防止别人盗用生成的uploadItemId,从而造成的安全漏洞
         CookieUtil.addCookie(response, "itemIdCookiePassword",
                 SHA1.hexSha1(itemId + CookieUtil.getCookieValue(request,Constants.USERCOOKIE )), 60);
-        return new JsonV2<>(CodeMessage.OK, "上传成功", new ImgModel(itemId, list));
+        return new JsonV2<>(CodeMessage.OK, "上传成功", new ImgModel(itemId, imgList));
     }
 
     @RequestMapping(value = "/itemUpload", method = RequestMethod.POST)
     @JsonBody
-    public Object uploadItem(@RequestBody UploadItem uploadItem, HttpServletRequest request) throws ParameterException {
-        Preconditions.checkNotNull(uploadItem);
+    public Object uploadItem(@RequestBody UploadItemParam uploadItemParam, HttpServletRequest request) throws ParameterException {
+        Preconditions.checkNotNull(uploadItemParam);
         // 验证传递的cookie的合法性
-        SHA1.hexSha1(uploadItem.getBookId() + CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
+        SHA1.hexSha1(uploadItemParam.getBookId() + CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
 
-        JsonV2 jsonV2 = ParameterCheckUtil.checkUploadItem(uploadItem);
+        JsonV2 jsonV2 = ParameterCheckUtil.checkUploadItem(uploadItemParam);
         if (jsonV2.status < 0) {
             logger.warn("用户参数校验失败,message:{},data:{}",  jsonV2.message,
                     jsonV2.data);
             return jsonV2;
         }
-        logger.info("上传商品信息id:{}", uploadItem.getBookId());
-        List<String> picturesUrl = imgService.getPictureUrl(uploadItem.getBookId());
+        logger.info("上传商品信息id:{}", uploadItemParam.getBookId());
+        List<String> picturesUrl = imgService.getPictureUrl(uploadItemParam.getBookId());
         if (picturesUrl == null || picturesUrl.size() <= 0) {
-            logger.warn("该拍卖物品图片并未上传，拍卖信息上传失败:itemId={}", uploadItem.getBookId());
-            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "该拍卖品图片并没有成功上传", uploadItem.getBookId());
+            logger.warn("该拍卖物品图片并未上传，拍卖信息上传失败:itemId={}", uploadItemParam.getBookId());
+            return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "该拍卖品图片并没有成功上传", uploadItemParam.getBookId());
         }
         List<Category> categories = homeService.queryAllCategory();
         boolean flag = false;
         for (Category category : categories) {
-            if (category.getId() == uploadItem.getCategoryId()) {
+            if (category.getId() == uploadItemParam.getCategoryId()) {
                 flag = true;
             }
         }
         if (!flag) {
-            logger.warn("没有该物品类别id:categoryId={}", uploadItem.getCategoryId());
+            logger.warn("没有该物品类别id:categoryId={}", uploadItemParam.getCategoryId());
             return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "没有该物品类别信息", "");
         }
-        uploadItemService.uploadItem(uploadItem);
-        logger.info("拍卖信息上传成功:itemId={}", uploadItem.getBookId());
+        uploadItemService.uploadItem(uploadItemParam);
+        logger.info("拍卖信息上传成功:itemId={}", uploadItemParam.getBookId());
         return new JsonV2<>(CodeMessage.OK, "成功上传该拍物品", "");
     }
 }

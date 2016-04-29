@@ -12,15 +12,6 @@
     </context:component-scan>
 
 
-    <!--swift account config-->
-    <bean id="swiftClient" class="com.xupt.bookshop.service.upload.impl.SwiftClient" init-method="initAccount">
-        <property name="swiftName" value="${swift.username}"/>
-        <property name="swiftPassWord" value="${swift.password}"/>
-        <property name="authUrl" value="${swift.authUrl}"/>
-    </bean>
-    <bean id="swiftContainer" class="com.xupt.bookshop.service.upload.impl.SwiftContainer" init-method="initContainer">
-        <property name="name" value="${swift.img}"/>
-    </bean>
 
     <!--   bean 映射 -->
     <bean id="beanMapper" class="com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper">

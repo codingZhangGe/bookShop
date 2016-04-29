@@ -2,12 +2,14 @@ package com.xupt.bookshop.dao;
 
 import com.xupt.bookshop.model.cart.CartItem;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * Created by zhangge on 16-4-27.
  */
+@Repository
 public interface CartDao {
 
     //TODO sql 语句插入购物车详情

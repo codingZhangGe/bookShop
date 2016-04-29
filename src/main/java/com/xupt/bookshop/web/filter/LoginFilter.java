@@ -2,12 +2,8 @@ package com.xupt.bookshop.web.filter;
 
 import com.google.common.base.Strings;
 import com.xupt.bookshop.common.Monitor;
-import com.xupt.bookshop.common.exceptions.ParameterException;
-import com.xupt.bookshop.common.utils.CookieUtil;
-import com.xupt.bookshop.common.utils.LogUtils;
-import com.xupt.bookshop.common.utils.SHA1;
 import com.xupt.bookshop.common.utils.SessionUtil;
-import com.xupt.bookshop.dao.UserDao;
+import com.xupt.bookshop.dao.LoginDao;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -45,8 +41,8 @@ public class LoginFilter implements Filter {
 
         //如果现在处在登陆界面
 
-        if (httpServletRequest.getServletPath().contains("login.json")) {
-            filterChain.doFilter(httpServletRequest, httpServletResponse);
+        if (httpServletRequest.getServletPath().contains("login")) {
+            filterChain.doFilter(request, response);
             return;
         }
 
@@ -61,7 +57,7 @@ public class LoginFilter implements Filter {
         String username = null;
         //cookie 中存在内容获取到对应的值
         for (Cookie cookie : cookies) {
-            if ("username".equals(cookie.getName())) {
+            if ("login_id".equals(cookie.getName())) {
                 username = cookie.getValue();
                 break;
             }
@@ -72,8 +68,8 @@ public class LoginFilter implements Filter {
 
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(
                 (httpServletRequest).getSession().getServletContext());
-        UserDao userDao = webApplicationContext.getBean(UserDao.class);
-        SessionUtil.setUserSession(userDao.queryByName(username));
+        LoginDao loginDao = webApplicationContext.getBean(LoginDao.class);
+        SessionUtil.setUserSession(loginDao.queryByName(username));
         filterChain.doFilter(httpServletRequest, httpServletResponse);
         SessionUtil.closeSession();
     }

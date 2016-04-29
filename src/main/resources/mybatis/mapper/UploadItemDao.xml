@@ -10,7 +10,7 @@
            surplus,publish_date,state
         )
     </sql>
-    <insert id="insertItem" parameterType="com.xupt.bookshop.model.upload.UploadItem">
+    <insert id="insertItem" parameterType="com.xupt.bookshop.model.upload.UploadItemParam">
         INSERT INTO book
         <include refid="selectField"/>
         VALUES(
@@ -30,7 +30,7 @@
     </insert>
 
 
-    <insert id="insertBookDynamicItem" parameterType="com.qunar.qauction.model.upload.UploadItem">
+    <insert id="insertBookDynamicItem" parameterType="com.xupt.bookshop.model.upload.UploadItemParam">
         INSERT INTO book_dynamic_info(book_id)
         VALUES(
         #{item.bookId}

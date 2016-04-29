@@ -3,7 +3,7 @@ package com.xupt.bookshop.service.upload.impl;
 import javax.annotation.Resource;
 
 import com.xupt.bookshop.dao.UploadItemDao;
-import com.xupt.bookshop.model.upload.UploadItem;
+import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.upload.UploadItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,12 +24,12 @@ public class UploadServiceImpl implements UploadItemService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public void uploadItem(UploadItem item){
+    public void uploadItem(UploadItemParam item){
         Preconditions.checkNotNull(item);
         Preconditions.checkNotNull(item.getBookId());
         logger.info("upload item,item id={},itemName={", item.getBookId(), item.getBookId());
         uploadItemDao.insertItem(item);
         logger.info("update unfinished item list,itemId:{}",item.getBookId());
-        uploadItemDao.insertUnfinishedItem(item);
+        uploadItemDao.insertBookDynamicItem(item);
     }
 }

@@ -55,7 +55,7 @@
         ORDER BY buy_count
     </select>
 
-    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
+    <select id="queryBookingPoByState" parameterType="Integer" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book

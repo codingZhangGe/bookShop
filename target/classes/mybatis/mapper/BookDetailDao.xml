@@ -50,23 +50,11 @@
         LEFT JOIN
         (book_dynamic_info
         ON book.book_id=book_dynamic_info.book_id
-        WHERE unfinished_item_fixed_info.item_id=#{itemId})
+        WHERE book.book_id=#{itemId})
 
     </select>
 
-    <resultMap id="AuctionItem" type="com.xupt.bookshop.model.bookdetails.AuctionMoney">
-        <result column="item_Id" property="itemId"/>
-        <result column="step_price" property="stepPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
-        <result column="reserve_price" property="reservePrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
-        <result column="start_price" property="startPrice" jdbcType="DECIMAL" javaType="qunar.api.pojo.Money"
-                typeHandler="com.xupt.bookshop.dao.typeHandler.MoneyTypeHandler"/>
-    </resultMap>
-    <select id="queryAuctionItem" parameterType="String" resultMap="AuctionItem">
-        SELECT item_id,step_price,reserve_price,start_price FROM unfinished_item_fixed_info
-        WHERE item_id=#{itemId}
-    </select>
+
 
 
 </mapper>

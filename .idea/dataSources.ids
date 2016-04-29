@@ -66,14 +66,19 @@
       <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="comments" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
     </table>
+    <table name="item_picture" schema="" catalog="bookshop" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
+      <column name="item_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzEn" remarks="56ue5ZOB55qEaWQ="/>
+      <column name="picture_id" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="56ue5ouN54mp5ZOBcGljdHVyZUlk"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="orders" schema="" catalog="bookshop" type="TABLE">
       <column name="OrderID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="Address" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
       <column name="Telphone" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="OrderTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="CartID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <column name="Status" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
       <primary-key name="PRIMARY" columns="OrderID"/>
     </table>
     <table name="seller" schema="" catalog="bookshop" type="TABLE">
@@ -89,12 +94,12 @@
     </table>
     <table name="user" schema="" catalog="bookshop" type="TABLE">
       <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <column name="UName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="UPwd" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="TEL" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tel" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="UID"/>
-      <index name="UName" unique="true" columns="UName"/>
+      <index name="UName" unique="true" columns="user_name"/>
     </table>
   </data-source>
 </component>

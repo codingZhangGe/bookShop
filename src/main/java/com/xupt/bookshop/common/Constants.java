@@ -14,13 +14,13 @@ public interface Constants {
     int NO_ITEM_FOUND_CODE = -3;
     int DO_ORDER_FAILURE_ = -4;
     int DO_ORDER_SUCCESS = -5;
-    int BIDDER_FAILURE_CODE = -6;
-    int SAME_BIDDER_CODE = -7;
+    int DELETE_CATEGORY_FAIL = -6;
+    int DELETE_CATEGORY_SUCC = -7;
     int ADD_CATEGORY_SUCC = -8;
     int Item_Take_Off_State = -9;
     int OUT_OF_STOCK = -10;
     int LESS_NUM_CODE = -11;
-    int FAILURE_UPDATE_CODE = -12;
+    int ADD_CATEGORY_FAIL = -12;
     int FAILURE_CREATE_ORDER_CODE = -13;
 
     /**

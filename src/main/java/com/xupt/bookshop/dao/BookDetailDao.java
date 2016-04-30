@@ -22,7 +22,6 @@ public interface BookDetailDao {
 
     AuctionMoney queryAuctionItem(String itemId);
 
-    //TODO  sql 语句更新
     int updateBrowserCount(@Param("bookId") String itemId);
 
 

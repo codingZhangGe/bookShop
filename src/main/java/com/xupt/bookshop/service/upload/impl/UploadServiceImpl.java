@@ -29,7 +29,7 @@ public class UploadServiceImpl implements UploadItemService {
         Preconditions.checkNotNull(item.getBookId());
         logger.info("upload item,item id={},itemName={", item.getBookId(), item.getBookId());
         uploadItemDao.insertItem(item);
-        logger.info("update unfinished item list,itemId:{}",item.getBookId());
+        logger.info("update dynamic item list,itemId:{}",item.getBookId());
         uploadItemDao.insertBookDynamicItem(item);
     }
 }

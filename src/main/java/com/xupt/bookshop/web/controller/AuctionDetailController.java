@@ -54,8 +54,7 @@ public class AuctionDetailController extends BaseController {
     public JsonV2<Object> addCategory(@Valid AddCategoryParam doOrderParam, @CookieValue("login_id") String username)
     {
         checkArgument(!Strings.isNullOrEmpty(username),"username 不能是空");
-        //TODO 判断图书的状态 如果是可以进行购买的状态 进行购买
-        ResultOfRequest resultOfRequest =new ResultOfRequest();
+        ResultOfRequest resultOfRequest ;
         resultOfRequest =bookDetailService.judgeItemAddCategory(doOrderParam);
         if (!resultOfRequest.getResult()) {
             return new JsonV2<>(resultOfRequest.getCode(), resultOfRequest.getMessage(), null);

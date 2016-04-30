@@ -65,7 +65,7 @@ public class LoginController {
                 }
                 else{
                     CookieUtil.addCookie(httpServletResponse,"login_id",loginPara.getUsername(),60);
-                    //TODO 购物车表插入信息，用id ,生成购物车id;
+                    //用户登陆创建购物车
                     categoryService.createCategoryWithUser(loginPara.getUsername());
                     return JsonResult.succ();
                 }

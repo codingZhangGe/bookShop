@@ -53,7 +53,10 @@
         WHERE book.book_id=#{itemId})
 
     </select>
-
+   <update id="updateBrowserCount" parameterType="String">
+       UPDATE  book_dynamic_info set browse_count=browse_count+1
+       WHERE  book_id=#{bookId}
+   </update>
 
 
 

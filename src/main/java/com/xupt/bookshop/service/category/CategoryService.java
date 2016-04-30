@@ -1,5 +1,6 @@
 package com.xupt.bookshop.service.category;
 
+import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.cart.CartItem;
 
 import java.util.List;
@@ -10,5 +11,6 @@ import java.util.List;
 public interface CategoryService {
 
     List<CartItem> categoryDetail(String username);
-    public void createCategoryWithUser(String username);
+    public ResultOfRequest createCategoryWithUser(String username);
+    public ResultOfRequest deleteCartItem(String bookId);
 }

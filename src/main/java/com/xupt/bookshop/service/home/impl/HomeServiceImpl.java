@@ -95,7 +95,6 @@ public class HomeServiceImpl implements HomeService {
             auctioningVo=orikaBeanMapper.map(po, BookingVo.class);
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
             BookingVos.add(auctioningVo);
-            //TODO 插入图片
         }
         return new PageResult<>(homeDao.queryBookPagesByCategory(state),BookingVos);
     }

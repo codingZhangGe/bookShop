@@ -65,7 +65,7 @@ public class OrderServiceIMpl implements OrderService {
 
     @Override
     public OrderItem queryOrderWithUser(String username) {
-        return null;
+        return orderDao.queryOrderDetails(username);
     }
 
     @Override

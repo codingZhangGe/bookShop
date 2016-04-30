@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public final class UserContainer {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(UserContainer.class);
-    private static ThreadLocal<String> qUserSession = new ThreadLocal<>(); // 用户名Session
+    private static ThreadLocal<String> UserSession = new ThreadLocal<>(); // 用户名Session
 
     private UserContainer() {
         LOGGER.error("[ERROR]: <UserContainer>: Cannot instantiate this class");
@@ -23,21 +23,21 @@ public final class UserContainer {
      * 初始化会话
      */
     public static void initSession(String username) {
-        qUserSession.set(username);
+        UserSession.set(username);
     }
 
     /**
      * 获取当前QUser
      */
     public static String getQUser() {
-        return qUserSession.get();
+        return UserSession.get();
     }
 
     /**
      * 关闭会话
      */
     public static void closeSession() {
-        qUserSession.remove();
+        UserSession.remove();
     }
 
 }

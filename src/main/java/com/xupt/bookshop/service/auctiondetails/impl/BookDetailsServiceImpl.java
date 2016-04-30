@@ -3,6 +3,8 @@ package com.xupt.bookshop.service.auctiondetails.impl;
 
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.NoItemFoundException;
+import com.xupt.bookshop.common.utils.beanmapper.BeanMapper;
+import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
 import com.xupt.bookshop.dao.BookDetailDao;
 import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.model.ResultOfRequest;
@@ -83,7 +85,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
             ResultOfRequest resultOfRequest = new ResultOfRequest();
             resultOfRequest.setResult(false);
             resultOfRequest.setCode(Constants.NO_ITEM_FOUND_CODE);
-            resultOfRequest.setMessage("竞拍物品不存在或者已经下架, itemId = " + doOrderParam.getItemId());
+            resultOfRequest.setMessage("购买物品不存在或者已经下架, itemId = " + doOrderParam.getItemId());
             return resultOfRequest;
         }
         //no null 检查传递进来的购买数量和此商品的状态是否正确
@@ -94,7 +96,8 @@ public class BookDetailsServiceImpl implements BookDetailService {
     private ResultOfRequest judgeItemBookLegal(BookDetail bookDetail,AddCategoryParam addCategoryParam){
 
         ResultOfRequest resultOfRequest = judgeItemBookState(bookDetail);
-        //判断图书状态是否合法
+        //判断图书状态和剩余数量是否合法
+        resultOfRequest=judgeItemBookState(bookDetail);
         if (!resultOfRequest.getResult()) {
             return resultOfRequest;
         }
@@ -104,8 +107,6 @@ public class BookDetailsServiceImpl implements BookDetailService {
         if (!resultOfRequest.getResult()) {
             return resultOfRequest;
         }
-
-        //TODO  判断购买者是否合法，商铺店家不能购买自己的东西
 
 
         //购物车信息： 商品名称 价格 折扣价 购买数量 商铺
@@ -122,13 +123,12 @@ public class BookDetailsServiceImpl implements BookDetailService {
         cartItem.setBuyNum(addCategoryParam.getBuyNumber());
         cartItem.setPrice(bookDetail.getPrice());
 
-        //TODO 返回数据
+
         ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
         resultOfRequest.setResult(true);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);
         resultOfRequest.setMessage("添加购物车成功");
         resultOfRequest.setData(cartItem);
-        //TODO 插入数据库 用户登陆在购物车中插入一条记录，生成购物车id,每添加一条购物车信息，给购物车详情里面加入，根据用户id 插入
         cartDao.insertCategoryitem(cartItem);
         return resultOfRequest;
     }
@@ -137,7 +137,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
     private ResultOfRequest judgeItemBookState(BookDetail bookDetail) {
         ResultOfRequest resultOfRequest = new ResultOfRequest();
-        // 判断竞拍物品状态
+        // 判断物品状态
         BookState bookState = bookDetail.getBookState();
         String itemId = bookDetail.getBookId();
         //无货
@@ -178,6 +178,9 @@ public class BookDetailsServiceImpl implements BookDetailService {
     }
 
 
+
+
+
     private BookInfoVo dealWithBookItemDetails(String itemId) throws Exception {
         BookDetail bookDetail = bookDetailDao.queryBookDetail(itemId);
         if (null == bookDetail) {
@@ -190,6 +193,8 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
     public BookInfoVo bookPoToVo(BookDetail bookDetail){
         BookInfoVo bookInfoVo=new BookInfoVo();
-        return bookInfoVo;
+        OrikaBeanMapper mapper = null;
+        BookInfoVo infoVo = mapper.map(bookDetail, BookInfoVo.class);
+        return infoVo;
     }
 }

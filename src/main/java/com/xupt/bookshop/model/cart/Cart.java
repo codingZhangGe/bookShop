@@ -1,0 +1,25 @@
+package com.xupt.bookshop.model.cart;
+
+/**购物车类
+ * Created by zhangge on 16-4-30.
+ */
+public class Cart {
+    String userName;
+    String cartId;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getCartId() {
+        return cartId;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setCartId(String cartId) {
+        this.cartId = cartId;
+    }
+}

@@ -5,57 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/Monitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/UploadDemo.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/AuctionDetailController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/AuctionDetailController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/AuctionDetailController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/AuctionDetailController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/CartDao.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/CartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/CartDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/CartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/CategoryController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/CategoryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/CategoryController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/CategoryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/category/CategoryService.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/category/CategoryService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/category/CategoryService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/category/CategoryService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/category/impl/CategoryServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code" afterPath="$PROJECT_DIR$/Code" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/Constants.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/OrderController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/OrderController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/OrderController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/OrderController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/exceptions/TakeOffFailureException.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/exceptions/TakeOffFailureException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/exceptions/TakeOffFailureException.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/exceptions/TakeOffFailureException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/UserContainer.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/UserContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/UserContainer.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/UserContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/AuthorityException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/AuthorityException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/BaseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/BookDetailDao.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/BookDetailDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/BookDetailDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/BookDetailDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/BusinessException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/BusinessException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/ExternalException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/ExternalException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/ImgDao.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/ImgDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/ImgDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/ImgDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/NoItemFoundException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/NoItemFoundException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/NumberToLargeException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/NumberToLargeException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/ParameterException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/ParameterException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/PutOnFailureException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/PutOnFailureException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/TakeOffFailureException.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/exceptions/TakeOffFailureException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1563,12 +1513,12 @@
       <workItem from="1461902600933" duration="960000" />
       <workItem from="1461909043536" duration="23489000" />
       <workItem from="1461976626111" duration="7697000" />
-      <workItem from="1462067122157" duration="3875000" />
+      <workItem from="1462067122157" duration="4489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164459000" />
+    <option name="totallyTimeSpent" value="165073000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1591,7 +1541,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="21" width="1366" height="747" extended-state="7" />
+    <frame x="0" y="21" width="1366" height="747" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />

@@ -5,7 +5,7 @@ import qunar.api.pojo.CodeMessage;
 import com.xupt.bookshop.common.Constants;
 
 /**
- * @author yunfeng.yang created on 16-4-20
+ * @author ge.zhang created on 16-4-20
  * @version 1.0
  */
 public class PutOnFailureException extends Exception implements CodeMessage {

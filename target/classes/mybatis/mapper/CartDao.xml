@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xupt.bookshop.dao.CartDao">
+
+    <insert id="insertCategory" parameterType="com.xupt.bookshop.model.cart.Cart">
+        INSERT INTO cart (user_name, cart_id)
+        VALUES (#{cart.userName},#{cart.cartId})
+    </insert>
+
+<update id="insertCategoryitem" parameterType="com.xupt.bookshop.model.cart.CartItem">
+  INSERT  INTO  cart_item (book_id,book_name,price,current_price,buy_num)
+  VALUES (#{cartItem,bookId}
+  ,#{cartItem.bookName}
+  ,#{cartItem.price}
+  ,#{cartItem.currentPrice}
+  ,#{cartItem.buyNum})
+</update>
+
+    <select id="queryCategoryDetail" parameterType="String" resultType="com.xupt.bookshop.model.cart.CartItem">
+        SELECT * FROM cart_item where usr_id
+        in
+         SELECT usr_id
+         FROM bookshop.user
+         where user_name=#{username}
+    </select>
+
+    <delete id="deleteCategoryItem" parameterType="String">
+        DELETE FROM cart_item where book_id=#{bookId}
+    </delete>
+
+    <delete id="deleteCategoryItemByuser" parameterType="String">
+        DELETE  FROM cart_item WHERE  cart_id IN
+        (
+        SELECT cart_id FROM cart
+        WHERE  user_name=#{username}
+        )
+    </delete>
+    <delete id="removeCartItem" parameterType="String">
+        DELETE  FROM
+        cart
+        WHERE
+        user_name=#{userName}
+    </delete>
+
+
+</mapper>

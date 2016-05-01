@@ -11,7 +11,7 @@ import com.xupt.bookshop.common.Constants;
 public class TakeOffFailureException extends Exception implements CodeMessage {
 
     /**
-     * 下架商品失败时, 该商品的itemId
+     * 更改订单失败时, 该商品的itemId
      */
     private String itemName;
 
@@ -25,7 +25,7 @@ public class TakeOffFailureException extends Exception implements CodeMessage {
     }
 
     public TakeOffFailureException() {
-        super("下架商品失败错误");
+        super("订单状态更改失败错误");
     }
 
     public String getItemName() {

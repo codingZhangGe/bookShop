@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Description: Login
  *
- * @author zhangge
+ * @author ge.zhang
  * @version 2016-04-18 13:02
  */
 
@@ -83,4 +83,8 @@ public class LoginController {
 
         return "redirect:/login";
     }
+
+
+
+    //todo 用户注册功能
 }

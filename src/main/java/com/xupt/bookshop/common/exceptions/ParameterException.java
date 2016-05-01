@@ -4,7 +4,7 @@ import qunar.api.pojo.CodeMessage;
 
 
 /**
- * @author yunfeng.yang created on 16-4-14
+ * @author ge.zhang created on 16-4-14
  * @version 1.0
  */
 public class ParameterException extends Exception implements CodeMessage {

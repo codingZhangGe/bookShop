@@ -1,7 +1,7 @@
 package com.xupt.bookshop.common.exceptions;
 
 /**
- * Created by liuyanjiang on 16-4-19. 上传的文件数量太多异常
+ * Created by ge.zhang on 16-4-19. 上传的文件数量太多异常
  */
 public class NumberToLargeException extends Exception {
 

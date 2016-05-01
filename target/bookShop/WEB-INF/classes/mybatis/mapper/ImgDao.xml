@@ -31,4 +31,5 @@
     <delete id="deleteImgByItemId" parameterType="String">
         DELETE FROM item_picture WHERE item_id=#{itemId}
     </delete>
+    
 </mapper>

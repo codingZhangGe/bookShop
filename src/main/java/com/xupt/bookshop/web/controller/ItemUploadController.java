@@ -27,9 +27,9 @@ import qunar.web.spring.annotation.JsonBody;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-
 /**
- * Created by ge.zhang on 16-4-18. upLoadImg 图片上传,上传后会生成唯一的uuid,将此uuid存入数据库里面 上传过程会检测图片数量,是否为合法图片
+ * Created by ge.zhang on 16-4-18.
+ * upLoadImg 图片上传,上传后会生成唯一的uuid,将此uuid存入数据库里面 上传过程会检测图片数量,是否为合法图片
  */
 @Controller
 @RequestMapping("/item")
@@ -41,19 +41,20 @@ public class ItemUploadController extends BaseController {
     private UploadItemService uploadItemService;
     @Resource
     private HomeService homeService;
-  //  @Resource
-  //  private AuctionMessage message;
+    // @Resource
+    // private AuctionMessage message;
 
     @RequestMapping(value = "/imageUpload", method = RequestMethod.POST)
     @JsonBody
     public Object uploadImg(@RequestParam(value = "file", required = true) CommonsMultipartFile[] files,
             HttpServletRequest request, HttpServletResponse response) throws Exception {
-        //生成一个id
+        // 生成一个id
         String itemId = UUIDGenerator.getUUID();
         logger.info("上传图片,图片数量={},用户id={}", files.length, CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
         Preconditions.checkNotNull(files);
         if (files.length > Constants.DEFAULT_SIZE) {
-            logger.error("图片上传失败,数量过多,数量:{},用户:{}", files.length, CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
+            logger.error("图片上传失败,数量过多,数量:{},用户:{}", files.length,
+                    CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
             return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "图片上传数量超过五张", files.length);
         }
         if (!FileUtils.isPictures(files)) {
@@ -74,21 +75,21 @@ public class ItemUploadController extends BaseController {
         // 安全防护，防止别人盗用生成的uploadItemId,从而造成的安全漏洞
         // 安全防护，防止别人盗用生成的uploadItemId,从而造成的安全漏洞
         CookieUtil.addCookie(response, "itemIdCookiePassword",
-                SHA1.hexSha1(itemId + CookieUtil.getCookieValue(request,Constants.USERCOOKIE )), 60);
+                SHA1.hexSha1(itemId + CookieUtil.getCookieValue(request, Constants.USERCOOKIE)), 60);
         return new JsonV2<>(CodeMessage.OK, "上传成功", new ImgModel(itemId, imgList));
     }
 
     @RequestMapping(value = "/itemUpload", method = RequestMethod.POST)
     @JsonBody
-    public Object uploadItem(@RequestBody UploadItemParam uploadItemParam, HttpServletRequest request) throws ParameterException {
+    public Object uploadItem(@RequestBody UploadItemParam uploadItemParam, HttpServletRequest request)
+            throws ParameterException {
         Preconditions.checkNotNull(uploadItemParam);
         // 验证传递的cookie的合法性
         SHA1.hexSha1(uploadItemParam.getBookId() + CookieUtil.getCookieValue(request, Constants.USERCOOKIE));
 
         JsonV2 jsonV2 = ParameterCheckUtil.checkUploadItem(uploadItemParam);
         if (jsonV2.status < 0) {
-            logger.warn("用户参数校验失败,message:{},data:{}",  jsonV2.message,
-                    jsonV2.data);
+            logger.warn("用户参数校验失败,message:{},data:{}", jsonV2.message, jsonV2.data);
             return jsonV2;
         }
         logger.info("上传商品信息id:{}", uploadItemParam.getBookId());

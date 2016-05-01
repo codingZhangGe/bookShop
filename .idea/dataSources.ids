@@ -41,7 +41,7 @@
     </table>
     <table name="cart" schema="" catalog="bookshop" type="TABLE">
       <column name="user_name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <column name="cart_id" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cart_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
       <index name="unique_UID" unique="true" columns="user_name"/>
     </table>
     <table name="cart_item" schema="" catalog="bookshop" type="TABLE">

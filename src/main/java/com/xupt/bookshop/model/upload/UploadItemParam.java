@@ -3,9 +3,11 @@ package com.xupt.bookshop.model.upload;
 import java.math.BigDecimal;
 
 import com.ning.http.util.DateUtil;
+import com.sun.istack.internal.NotNull;
 import com.xupt.bookshop.common.utils.DateTimeUtil;
 import com.xupt.bookshop.model.enums.BookState;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
 import qunar.api.pojo.Money;
@@ -14,7 +16,7 @@ import qunar.api.pojo.Money;
  * 上传图书商品信息
  */
 
-public class UploadItemParam {
+public class   UploadItemParam {
 
     /**
      * 图书id
@@ -23,12 +25,14 @@ public class UploadItemParam {
     /**
      * 图书名字
      */
+    @NotEmpty
+    @NotNull
     private String bookName;
 
     /**
      * 类别id
      */
-    private int categoryId;
+    private String categoryName;
     /**
      * 出版社
      */
@@ -46,7 +50,7 @@ public class UploadItemParam {
     /**
      * 价格
      */
-
+@NotNull
     private BigDecimal price;
 
     /**
@@ -68,13 +72,15 @@ public class UploadItemParam {
      * 库存
      */
 
+
     BigDecimal currentPrice;
+    @NotNull
     int surplus;
 
 
 
-    public int getCategoryId() {
-        return categoryId;
+    public String getCategoryId() {
+        return categoryName;
     }
 
     public String getPublish() {
@@ -93,7 +99,17 @@ public class UploadItemParam {
         return price;
     }
 
+    public String getCategoryName() {
+        return categoryName;
+    }
 
+    public void setState(BookState state) {
+        this.state = state;
+    }
+
+    public void setCurrentPrice(BigDecimal currentPrice) {
+        this.currentPrice = currentPrice;
+    }
 
     public BigDecimal getDiscount() {
         return discount;
@@ -127,8 +143,8 @@ public class UploadItemParam {
         this.bookName = bookName;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategoryName(String categoryId) {
+        this.categoryName = categoryId;
     }
 
     public void setPublish(String publish) {
@@ -157,8 +173,8 @@ public class UploadItemParam {
         this.publishDate = publishDate;
     }
 
-    public void setState(BookState state) {
-        this.state = state;
+    public void setState(String state) {
+        this.state = BookState.codeOf(Integer.valueOf(state));
     }
 
     public void setSurplus(int surplus) {

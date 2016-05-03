@@ -8,5 +8,6 @@ import com.xupt.bookshop.model.upload.UploadItemParam;
  */
 public interface UploadItemService {
     public void uploadItem(UploadItemParam item);
+    public void uploadCategory(String name);
 
 }

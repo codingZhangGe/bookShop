@@ -3,6 +3,7 @@ package com.xupt.bookshop.service.upload.impl;
 import javax.annotation.Resource;
 
 import com.xupt.bookshop.dao.UploadItemDao;
+import com.xupt.bookshop.model.common.Category;
 import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.upload.UploadItemService;
 import org.slf4j.Logger;
@@ -28,8 +29,16 @@ public class UploadServiceImpl implements UploadItemService {
         Preconditions.checkNotNull(item);
         Preconditions.checkNotNull(item.getBookId());
         logger.info("upload item,item id={},itemName={", item.getBookId(), item.getBookId());
+        item.setCurrentPrice(item.getPrice(),item.getDiscount());
         uploadItemDao.insertItem(item);
         logger.info("update dynamic item list,itemId:{}",item.getBookId());
         uploadItemDao.insertBookDynamicItem(item);
+    }
+
+    @Override
+    public void uploadCategory(String name) {
+        Category category=new Category();
+        category.setCategoryName(name);
+        uploadItemDao.insertCategory(category);
     }
 }

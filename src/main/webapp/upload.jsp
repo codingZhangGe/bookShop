@@ -1,5 +1,4 @@
-<%@ page import="java.util.List" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: zhangge
@@ -51,41 +50,86 @@
     </style>
 
 </head>
+<%--<body>--%>
+<%--<form name="userForm2" action="/item/imageUpload" enctype="multipart/form-data" method="post">--%>
+    <%--<div id="newUpload">--%>
+        <%--源文件 <input type="file" name="file">--%>
+        <%--<br/>--%>
+        <%--目标文件 <input type="file" name="file">--%>
+
+
+    <%--</div>--%>
+    <%--<input type="submit" value="上传">--%>
+
+<%--</form>--%>
+<%--</body>--%>
 <body>
-<form name="userForm2" action="/item/imageUpload" enctype="multipart/form-data" method="post">
-    <div id="newUpload">
-        源文件 <input type="file" name="file">
-        <br/>
-        目标文件 <input type="file" name="file">
+<form name="info" action="/item/itemUpload" enctype="application/x-www-form-urlencoded" method="post">
 
+    <table>
+        <tr>
+            <td>
+itemid
+            </td>
+            <td><input name="bookId"></td>
+        </tr>
 
-    </div>
-    <input type="submit" value="上传">
+        <tr>
 
-</form>
-
-<form name="info" action="/item/itemUpload" method="post"/>
-
-itemid <input type="text" name="bookId">
-<br/>
-bookname <input type="text" name="bookName">
-<br/>
-category<input type="text" name="categoryId">
-<br/>
-publish <input type="text" name="publish">
-<br/>
-<br/>
-description <input type="text" name="description">
-<br/>
-author <input type="text" name="author">
-<br/>
-price <input type="text" name="price">
-<br/>
-discount <input type="text" name="discount">
-<br/>
-surplus <input type="text" name="surplus">
+<td>bookname </td>
+            <td><input  name="bookName"></td>
+        </tr>
+        <tr>
+            <td>
+category</td> <td><input  name="categoryName"></td>
+        </tr>
+        <tr>
+            <td>
+publish </td><td><input  name="publish"></td>
+        </tr>
+        <tr>
+            <td>
+description </td><td><input  name="description"></td>
+        </tr>
+        <tr>
+            <td>
+author </td><td><input  name="author"></td>
+</tr>
+        <tr>
+            <td>
+price</td><td> <input name="price"></td>
+        </tr>
+        <tr>
+            <td>
+discount </td><td><input  name="discount"></td>
+        </tr>
+        <tr>
+            <td>
+surplus </td><td><input type="text" name="surplus"></td>
+        </tr>
 <input type="submit" value="上传">
+    </table>
 </form>
+
+
+
+<form name="info" action="/item/category" enctype="application/x-www-form-urlencoded" method="post">
+
+    <table>
+
+
+        <tr>
+
+            <td>categoryname </td>
+            <td><input  name="category"></td>
+        </tr>
+
+
+        <input type="submit" value="上传">
+    </table>
+</form>
+
+
 
 </body>
 </html>

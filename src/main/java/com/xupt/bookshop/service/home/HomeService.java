@@ -25,16 +25,14 @@ public interface HomeService {
     List<Category> queryAllCategory();
 
     /**
-     * 通过状态分页查询所有最近竞拍物品
-     * state = 1 : 正在竞拍
-     * state = 2 : 即将竞拍
+     * 通过状态分页查询所有最近商品
      */
     PageResult<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize);
 
     /**
      * 通过类别查询正在竞拍中的物品信息
      */
-    PageResult<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize);
+    PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize);
 
     /**
      * 查询总数

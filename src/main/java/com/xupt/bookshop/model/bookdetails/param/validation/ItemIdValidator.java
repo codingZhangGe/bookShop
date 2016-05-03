@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @Documented
 @NotBlank
 public @interface ItemIdValidator {
-    String message() default "{com.qunar.qauction.model.auctiondetails.validation.ItemIdValidator.message}";
+    String message() default " {com.xupt.bookshop.model.bookDetails}";
 
     Class<?>[] groups() default {};
 

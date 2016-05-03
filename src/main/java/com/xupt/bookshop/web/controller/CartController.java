@@ -23,12 +23,12 @@ import java.util.List;
  * Created by zhangge on 16-4-26.
  */
 @Controller
-@RequestMapping("/category")
-public class CategoryController {
+@RequestMapping("/cart")
+public class CartController {
 
     @Resource
     CategoryService categoryService;
-    Logger logger= LoggerFactory.getLogger(CategoryController.class);
+    Logger logger= LoggerFactory.getLogger(CartController.class);
 
     @RequestMapping("/")
     @JsonBody

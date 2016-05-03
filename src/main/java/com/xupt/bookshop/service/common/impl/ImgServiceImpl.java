@@ -115,10 +115,12 @@ public class ImgServiceImpl implements ImgService {
 
     @Override
     public String getFirstPictureUrl(String itemId) {
-//        logger.warn("query picture from server itemId={}", itemId);
-//        String pictureId = imgDao.selectFirstPicture(itemId);
-//        return swiftContainer.getContainer().getObject(pictureId).getPublicURL();
-        return "imgUrl";
+       logger.warn("query picture from server itemId={}", itemId);
+        String pictureId = imgDao.selectFirstPicture(itemId);
+        String downloadUrl="http://zhangge//"+pictureId;
+        String pictureUrl =auth.privateDownloadUrl(downloadUrl);
+
+        return pictureId;
     }
 
 }

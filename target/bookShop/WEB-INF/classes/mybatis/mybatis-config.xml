@@ -25,12 +25,13 @@
     <typeAliases>
         <typeAlias type="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" alias="DateTimeTypeHandler"/>
         <typeAlias type="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler" alias="EnumTypeHandler"/>
+        <typeAlias type="com.xupt.bookshop.dao.typeHandler.BookStateEnumTypeHandler" alias="BookStateEnumTypeHandler"/>
     </typeAliases>
 
     <!-- 全局typeHandler   -->
     <typeHandlers>
-        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler"
-                 javaType="com.xupt.bookshop.model.enums.OrderState"   jdbcType="TINYINT"/>
+        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.EnumTypeHandler" javaType="com.xupt.bookshop.model.enums.OrderState" jdbcType="TINYINT"/>
+        <typeHandler handler="com.xupt.bookshop.dao.typeHandler.BookStateEnumTypeHandler" javaType="com.xupt.bookshop.model.enums.BookState" jdbcType="TINYINT"/>
         <typeHandler handler="com.xupt.bookshop.dao.typeHandler.DateTimeTypeHandler" javaType="org.joda.time.DateTime"
                      jdbcType="TIMESTAMP"/>
 

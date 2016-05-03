@@ -6,7 +6,7 @@
 <mapper namespace="com.xupt.bookshop.dao.UploadItemDao">
     <sql id="selectField">
         (
-           book_id,book_name,description,price,current_price,discount,category_id,publish,author,
+           book_id,book_name,description,price,current_price,discount,category_name,publish,author,
            surplus,publish_date,state
         )
     </sql>
@@ -20,12 +20,13 @@
         ,#{item.price}
         ,#{item.currentPrice}
         ,#{item.discount}
-        ,#{item.publishDate,typeHandler=DateTimeTypeHandler}
-        ,#{item.categoryId}
+        ,#{item.categoryName}
         ,#{item.publish}
         ,#{item.author}
-        ,#{item.state,typeHandler=EnumTypeHandler}
-        ,#{surplus}
+        ,#{item.surplus}
+        ,#{item.publishDate,typeHandler=DateTimeTypeHandler}
+        ,#{item.state,typeHandler=BookStateEnumTypeHandler}
+
         )
     </insert>
 
@@ -37,4 +38,15 @@
         )
 
     </insert>
+
+
+    <!--添加分类-->
+
+    <insert id="insertCategory"  useGeneratedKeys="true" keyColumn="category_id" keyProperty="category.id" parameterType="com.xupt.bookshop.model.common.Category">
+        INSERT INTO
+        category(category_name)
+        values
+        (#{category.categoryName})
+    </insert>
+
 </mapper>

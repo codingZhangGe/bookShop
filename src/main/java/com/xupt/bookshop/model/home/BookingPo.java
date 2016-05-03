@@ -39,7 +39,7 @@ public class BookingPo {
     /**
      * 类别id
      */
-    private int categoryId;
+    private String categoryName;
 
     public String getBookId() {
         return bookId;
@@ -69,8 +69,8 @@ public class BookingPo {
         return buyCount;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public String getCategoryName() {
+        return categoryName;
     }
 
     public void setBookId(String bookId) {
@@ -101,7 +101,9 @@ public class BookingPo {
         this.buyCount = buyCount;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
+
+
 }

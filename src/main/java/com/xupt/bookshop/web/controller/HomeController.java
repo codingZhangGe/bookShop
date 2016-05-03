@@ -59,11 +59,8 @@ public class HomeController {
     @RequestMapping(value = "/index/queryCategory", method = RequestMethod.GET)
     public Object queryCategory() {
         List<Category> categories = homeService.queryAllCategory();
-        Map<Long, String> data = Maps.newHashMap();
-        for (Category category : categories) {
-            data.put(category.getId(), category.getCategoryName());
-        }
-        return new JsonV2<>(CodeMessage.OK,"成功获取分类",data);
+
+        return new JsonV2<>(CodeMessage.OK,"成功获取分类",categories);
     }
 
     /**
@@ -72,14 +69,14 @@ public class HomeController {
      */
     @JsonBody
     @RequestMapping(value = "/index/queryItemByCategory", method = RequestMethod.GET)
-    public PageResult<BookingVo> queryItemByCategory(   @RequestParam(value = "categoryId", required = false, defaultValue = "1") Integer categoryId,
+    public PageResult<BookingVo> queryItemByCategory(   @RequestParam(value = "categoryName", required = false, defaultValue = "1") String  categoryName,
                                                   @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
                                                   @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize) {
 
-        checkArgument(categoryId != null && categoryId > 0, "categoryId参数错误");
+        checkArgument(categoryName != null && categoryName.length() > 0, "categoryId参数错误");
         checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
         checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-        return homeService.queryItemByCategory(categoryId, currentPage, pageSize);
+        return homeService.queryItemByCategory(categoryName, currentPage, pageSize);
     }
 
 

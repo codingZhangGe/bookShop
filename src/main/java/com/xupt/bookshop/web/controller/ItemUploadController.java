@@ -4,6 +4,8 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
+
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.common.utils.*;
@@ -81,7 +83,7 @@ public class ItemUploadController extends BaseController {
 
     @RequestMapping(value = "/itemUpload", method = RequestMethod.POST)
     @JsonBody
-    public Object uploadItem(@RequestBody UploadItemParam uploadItemParam, HttpServletRequest request)
+    public Object uploadItem(@Valid UploadItemParam uploadItemParam, HttpServletRequest request)
             throws ParameterException {
         Preconditions.checkNotNull(uploadItemParam);
         // 验证传递的cookie的合法性
@@ -101,8 +103,9 @@ public class ItemUploadController extends BaseController {
         List<Category> categories = homeService.queryAllCategory();
         boolean flag = false;
         for (Category category : categories) {
-            if (category.getId() == uploadItemParam.getCategoryId()) {
+            if (category.getCategoryName().equals(uploadItemParam.getCategoryId()) ) {
                 flag = true;
+                break;
             }
         }
         if (!flag) {
@@ -113,4 +116,14 @@ public class ItemUploadController extends BaseController {
         logger.info("拍卖信息上传成功:itemId={}", uploadItemParam.getBookId());
         return new JsonV2<>(CodeMessage.OK, "成功上传该拍物品", "");
     }
+
+
+
+    @RequestMapping("/category")
+    @JsonBody
+    public Object insertCategory(@RequestParam("category") String categoryname){
+        uploadItemService.uploadCategory(categoryname);
+        return new JsonV2<>(CodeMessage.OK, "成功上传类别", "");
+    }
+
 }

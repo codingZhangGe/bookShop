@@ -13,13 +13,13 @@ public class BookDetailParam {
     /**
      * 竞拍物品的itemId
      */
-    @ItemIdValidator(message = "竞拍物品的itemId不满足要求")
+    @ItemIdValidator(message = "商品的itemId不满足要求")
     private String bookId;
 
     /**
      * 竞拍物品的状态state
      */
-    @Range(min = 1, max = 4, message = "竞拍物品状态取值只能是1, 2, 3, 4")
+    @Range(min = 1, max = 4, message = "竞拍物品状态取值只能是1, 2, 3")
     private Integer state;
 
     public String getItemId() {

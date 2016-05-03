@@ -15,7 +15,7 @@
         <result column="book_id" property="bookId"/>
         <result column="book_name" property="bookName"/>
         <result column="description" property="description"/>
-        <result column="category" property="category" typeHandler="EnumTypeHandler"/>
+        <result column="category_name" property="categoryName"/>
         <result column="price" property="price" />
         <result column="discount" property="discount" />
         <result column="current_price" property="currentPrice" />
@@ -33,7 +33,7 @@
         SELECT book.book_id,
         book.book_name,
         book.description,
-        book.category_id,
+        book.category_name,
         book.price,
         book.discount,
         book.current_price,

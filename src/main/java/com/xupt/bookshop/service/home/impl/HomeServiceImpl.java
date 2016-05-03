@@ -62,11 +62,11 @@ public class HomeServiceImpl implements HomeService {
        return new PageResult<>(homeDao.queryBookPages(),bookingVos);
     }
 
-    @Override public PageResult<BookingVo> queryItemByCategory(Integer categoryId, Integer currentPage, Integer pageSize) {
+    @Override public PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize) {
 
         List<BookingVo> BookingVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
-        List<BookingPo> BookingPos = homeDao.queryBookingPoByCategory(categoryId, rowBounds);
+        List<BookingPo> BookingPos = homeDao.queryBookingPoByCategory(categoryName, rowBounds);
 
         for (BookingPo po : BookingPos) {
 
@@ -75,7 +75,7 @@ public class HomeServiceImpl implements HomeService {
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
             BookingVos.add(auctioningVo);
         }
-        return new PageResult<>(homeDao.queryBookPagesByCategory(categoryId),BookingVos);
+        return new PageResult<>(homeDao.queryBookPagesByCategory(categoryName),BookingVos);
     }
 
     @Override
@@ -96,6 +96,6 @@ public class HomeServiceImpl implements HomeService {
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
             BookingVos.add(auctioningVo);
         }
-        return new PageResult<>(homeDao.queryBookPagesByCategory(state),BookingVos);
+        return new PageResult<>(homeDao.queryBookPagesByState(state),BookingVos);
     }
 }

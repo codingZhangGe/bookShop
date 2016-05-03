@@ -4,16 +4,16 @@
 <mapper namespace="com.xupt.bookshop.dao.HomeDao">
 
     <sql id="selectFields">
-             book_id,book_name,price,current_price,discount,browse_count,buy_count
+             book.book_id,book.book_name,book.price,book.current_price,book.discount,book_dynamic_info.browse_count,book_dynamic_info.buy_count
     </sql>
 
     <select id="queryAllCategory" resultType="com.xupt.bookshop.model.common.Category">
         SELECT
-        *
+        category_id,category_name
         FROM category
     </select>
 
-    <!--首页展示的拍品信息
+    <!--首页展示的拍品信息 默认标准,全部类别商品,价格随机排序,
             商品id ,    类别id,
             浏览人数,   购买人数,
             当前价格,   折扣价格,
@@ -23,7 +23,7 @@
         <!-- 静态信息 -->
         <result column="book_Id" property="bookId"/>
         <result column="book_name" property="bookName"/>
-        <result column="category_id" property="categoryId"/>
+        <result column="category_name" property="categoryName"/>
         <result column="current_price" property="currentPrice" />
         <result column="price" property="Price" />
         <result column="discount" property="discount"/>
@@ -38,20 +38,18 @@
         <include refid="selectFields"/>
         FROM book
         LEFT JOIN book_dynamic_info
-        AS  bdi
-        ON book.book_id=bdi.book_id
+        ON book.book_id=book_dynamic_info.book_id
         ORDER BY buy_count
     </select>
 
     <!--类别查询-->
-    <select id="queryBookingPoByCategory" parameterType="Integer" resultMap="queryBoookItem">
+    <select id="queryBookingPoByCategory" parameterType="String" resultMap="queryBoookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book
         LEFT JOIN book_dynamic_info
-        AS  bdi
-        ON book.book_id=bdi.book_id
-        WHERE category_id=#{category_id}
+        ON book.book_id=book_dynamic_info.book_id
+        WHERE category_name=#{categoryName}
         ORDER BY buy_count
     </select>
 
@@ -60,26 +58,25 @@
         <include refid="selectFields"/>
         FROM book
         LEFT JOIN book_dynamic_info
-        AS  bdi
-        ON book.book_id=bdi.book_id
+        ON book.book_id=book_dynamic_info.book_id
         WHERE state=#{state}
         ORDER BY buy_count
     </select>
 
 <!--图书总数-->
- <select id="queryBookPages"  resultType="int">
-     SELECT COUNT (*) FROM book
+ <select id="queryBookPages"  resultType="Integer">
+     SELECT COUNT(id) FROM book
  </select>
 
 <!--根据状态查询总数-->
-    <select id="queryBookPagesByState"  parameterType="int" resultType="int">
-        SELECT COUNT (*) FROM book
+    <select id="queryBookPagesByState"  parameterType="int" resultType="Integer">
+        SELECT COUNT(id) FROM book
         WHERE state=#{state}
     </select>
 <!--根据类别查询总数-->
-    <select id="queryBookPagesByCategory" parameterType="int" resultType="int">
-        SELECT COUNT(*) FROM book
-        WHERE category_id =#{categoryId}
+    <select id="queryBookPagesByCategory" parameterType="int" resultType="Integer">
+        SELECT COUNT(id) FROM book
+        WHERE category_name =#{categoryName}
     </select>
 
 </mapper>

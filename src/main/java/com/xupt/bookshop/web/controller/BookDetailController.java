@@ -24,9 +24,9 @@ import static com.google.common.base.Preconditions.checkArgument;
 
 @Controller
 @RequestMapping("/bookshop")
-public class AuctionDetailController extends BaseController {
+public class BookDetailController extends BaseController {
 
-    private static Logger logger = org.slf4j.LoggerFactory.getLogger(AuctionDetailController.class);
+    private static Logger logger = org.slf4j.LoggerFactory.getLogger(BookDetailController.class);
     @Resource
     BookDetailService bookDetailService;
 

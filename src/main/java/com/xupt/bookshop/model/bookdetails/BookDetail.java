@@ -31,6 +31,7 @@ public class BookDetail {
      * 图书描述
      */
     private String description;
+
     /**
      * 价格
      */
@@ -47,7 +48,7 @@ public class BookDetail {
     /**
      * 类别
      */
-    private OrderState orderState;
+    private String categoryName;
     /**
      * 状态
      */
@@ -94,9 +95,7 @@ public class BookDetail {
         return discount;
     }
 
-    public OrderState getCategory() {
-        return orderState;
-    }
+
 
     public BookState getBookState() {
         return bookState;
@@ -138,9 +137,6 @@ public class BookDetail {
         this.discount = discount;
     }
 
-    public void setCategory(OrderState orderState) {
-        this.orderState = orderState;
-    }
 
     public void setBookState(BookState bookState) {
         this.bookState = bookState;
@@ -188,5 +184,13 @@ public class BookDetail {
 
     public void setCollectCount(int collectCount) {
         this.collectCount = collectCount;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

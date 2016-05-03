@@ -14,15 +14,14 @@ public interface BookDetailDao {
     /**
      * 查询拍卖详情页面所需要显示的信息
      *
-     * @param itemId
      * @return
      */
 
-    BookDetail queryBookDetail(String itemId);
+    BookDetail queryBookDetail(@Param("bookId")String bookId);
 
     AuctionMoney queryAuctionItem(String itemId);
 
-    int updateBrowserCount(@Param("bookId") String itemId);
+    int updateBrowserCount(@Param("bookId") String bookId);
 
 
 

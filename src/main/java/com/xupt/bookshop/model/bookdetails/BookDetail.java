@@ -2,6 +2,7 @@ package com.xupt.bookshop.model.bookdetails;
 
 import com.xupt.bookshop.model.enums.OrderState;
 import com.xupt.bookshop.model.enums.BookState;
+import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
 
@@ -60,12 +61,12 @@ public class BookDetail {
     /**
      *作者
      */
-    private String athor;
+    private String author;
     /**
      * 剩余
      */
     private int surplus;
-
+    private DateTime publishDate;
   private String shopName;
     private int buyCount;
     private int browseCount;
@@ -95,7 +96,9 @@ public class BookDetail {
         return discount;
     }
 
-
+    public DateTime getPublishDate() {
+        return publishDate;
+    }
 
     public BookState getBookState() {
         return bookState;
@@ -106,7 +109,7 @@ public class BookDetail {
     }
 
     public String getAthor() {
-        return athor;
+        return author;
     }
 
     public int getSurplus() {
@@ -147,7 +150,7 @@ public class BookDetail {
     }
 
     public void setAthor(String athor) {
-        this.athor = athor;
+        this.author = athor;
     }
 
     public void setSurplus(int surplus) {
@@ -192,5 +195,9 @@ public class BookDetail {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public void setPublishDate(DateTime publishDate) {
+        this.publishDate = publishDate;
     }
 }

@@ -192,7 +192,6 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
 
     public BookInfoVo bookPoToVo(BookDetail bookDetail){
-        BookInfoVo bookInfoVo=new BookInfoVo();
         OrikaBeanMapper mapper = null;
         BookInfoVo infoVo = mapper.map(bookDetail, BookInfoVo.class);
         return infoVo;

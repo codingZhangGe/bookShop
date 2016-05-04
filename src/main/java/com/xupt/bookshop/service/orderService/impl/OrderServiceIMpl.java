@@ -37,7 +37,7 @@ public class OrderServiceIMpl implements OrderService {
         BigDecimal totalPrice = new BigDecimal(Double.valueOf("0"));
         OrderItem orderItem=new OrderItem();
         //查询出来购物车的信息
-        List<CartItem> cartItems = cartDao.queryCategoryDetail(username);
+        List<CartItem> cartItems = cartDao.queryCartDetail(username);
 
         for(CartItem cartItem : cartItems){
             if(cartItem.getCurrentPrice()==null)
@@ -54,7 +54,7 @@ public class OrderServiceIMpl implements OrderService {
         orderItem.setStatus(OrderState.ORDER_NO_PAY);
         //创建订单
         orderDao.createOrder(orderItem);
-        //下单成功,删除购物车记录,返回成功状态
+        //下单成功,清空购物车记录,返回成功状态
         cartDao.removeCartItem(username);
         resultOfRequest.setCode(Constants.DO_ORDER_SUCCESS);
         resultOfRequest.setResult(true);
@@ -70,7 +70,7 @@ public class OrderServiceIMpl implements OrderService {
 
     @Override
     public int updateOrderStatus(String OrderId) {
-        int count = orderDao.updateOrderStatus(BookState.OUT_OF_STOCK);
+        int count = orderDao.updateOrderStatus(OrderState.OUT_OF_DATE);
         return count;
     }
 

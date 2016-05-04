@@ -1,12 +1,11 @@
-package com.xupt.bookshop.service.category.impl;
+package com.xupt.bookshop.service.cart.impl;
 
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.utils.UUIDGenerator;
 import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.model.ResultOfRequest;
-import com.xupt.bookshop.model.cart.Cart;
 import com.xupt.bookshop.model.cart.CartItem;
-import com.xupt.bookshop.service.category.CategoryService;
+import com.xupt.bookshop.service.cart.CartService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,8 +15,8 @@ import java.util.List;
  * Created by zhangge on 16-4-27.
  */
 
-@Service("CategoryService")
-public class CategoryServiceImpl implements CategoryService{
+@Service("CartService")
+public class CartServiceImpl implements CartService {
 
     @Resource
     CartDao cartDao;
@@ -30,17 +29,17 @@ public class CategoryServiceImpl implements CategoryService{
      */
     @Override
     public List<CartItem> categoryDetail(String username) {
-       return   cartDao.queryCategoryDetail(username);
+       return   cartDao.queryCartDetail(username);
 
     }
     // 用户登陆创建购物车
     @Override
     public ResultOfRequest createCategoryWithUser(String username) {
         ResultOfRequest resultOfRequest=new ResultOfRequest();
-        Cart cart=new Cart();
+        com.xupt.bookshop.model.cart.Cart cart=new com.xupt.bookshop.model.cart.Cart();
         cart.setUserName(username);
         cart.setCartId(UUIDGenerator.getUUID());
-        cartDao.insertCategory(cart);
+        cartDao.insertCart(cart);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);
         resultOfRequest.setResult(true);
         resultOfRequest.setMessage("创建用户购物车成功");

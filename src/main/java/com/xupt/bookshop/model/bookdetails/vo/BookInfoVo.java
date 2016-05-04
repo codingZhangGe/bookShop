@@ -21,7 +21,7 @@ public class BookInfoVo {
     /**
      * 图书描述
      */
-    String Descrption;
+    String description;
     /**
      * 图书价格
      */
@@ -56,11 +56,8 @@ public class BookInfoVo {
      * 剩余量
      */
     String  surplus;
-    /**
-     * 商铺
-     */
 
-   String shopId;
+
     /**
      * 状态
      */
@@ -70,63 +67,6 @@ public class BookInfoVo {
      */
     List<String> urlList;
 
-
-    public void setBookId(String bookId) {
-        BookId = bookId;
-    }
-
-    public void setBookName(String bookName) {
-        BookName = bookName;
-    }
-
-    public void setDescrption(String descrption) {
-        Descrption = descrption;
-    }
-
-    public void setBookState(BookState bookState) {
-        this.bookState = bookState;
-    }
-
-    public void setPrice(BigDecimal price) {
-        Price = price;
-    }
-
-    public void setDiscount(int discount) {
-        this.discount = discount;
-    }
-
-    public void setCurrentPrice(BigDecimal currentPrice) {
-        this.currentPrice = currentPrice;
-    }
-
-    public void setPublish(String publish) {
-        this.publish = publish;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setBrowseCount(String browseCount) {
-        this.browseCount = browseCount;
-    }
-
-    public void setBuyCount(String buyCount) {
-        this.buyCount = buyCount;
-    }
-
-    public void setSurplus(String surplus) {
-        this.surplus = surplus;
-    }
-
-    public void setShopId(String shopId) {
-        this.shopId = shopId;
-    }
-
-    public void setUrlList(List<String> urlList) {
-        this.urlList = urlList;
-    }
-
     public String getBookId() {
         return BookId;
     }
@@ -135,8 +75,8 @@ public class BookInfoVo {
         return BookName;
     }
 
-    public String getDescrption() {
-        return Descrption;
+    public String getDescription() {
+        return description;
     }
 
     public BigDecimal getPrice() {
@@ -171,15 +111,63 @@ public class BookInfoVo {
         return surplus;
     }
 
-    public String getShopId() {
-        return shopId;
-    }
-
     public BookState getBookState() {
         return bookState;
     }
 
     public List<String> getUrlList() {
         return urlList;
+    }
+
+    public void setBookId(String bookId) {
+        BookId = bookId;
+    }
+
+    public void setBookName(String bookName) {
+        BookName = bookName;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(BigDecimal price) {
+        Price = price;
+    }
+
+    public void setDiscount(int discount) {
+        this.discount = discount;
+    }
+
+    public void setCurrentPrice(BigDecimal currentPrice) {
+        this.currentPrice = currentPrice;
+    }
+
+    public void setPublish(String publish) {
+        this.publish = publish;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setBrowseCount(String browseCount) {
+        this.browseCount = browseCount;
+    }
+
+    public void setBuyCount(String buyCount) {
+        this.buyCount = buyCount;
+    }
+
+    public void setSurplus(String surplus) {
+        this.surplus = surplus;
+    }
+
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState;
+    }
+
+    public void setUrlList(List<String> urlList) {
+        this.urlList = urlList;
     }
 }

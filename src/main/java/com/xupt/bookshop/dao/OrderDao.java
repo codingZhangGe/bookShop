@@ -17,7 +17,7 @@ public interface OrderDao {
 
     public OrderItem queryOrderDetails(String username);
 
-    public int updateOrderStatus(BookState bookState);
+    public int updateOrderStatus(OrderState orderState);
 
 
     public List<String> selectOrderItemWithTime(DateTime now,OrderState state);

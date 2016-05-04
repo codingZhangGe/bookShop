@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import qunar.api.pojo.json.JsonV2;
 import qunar.web.spring.annotation.JsonBody;
 import javax.annotation.Resource;
@@ -40,7 +41,9 @@ public class BookDetailController extends BaseController {
     public BookInfoVo bookDescription(@Valid BookDetailParam bookDetailParam) {
 
        logger.info("query book details book id={}",bookDetailParam.getItemId());
-       return bookDetailService.queryBookDetail(bookDetailParam.getItemId());
+
+        BookInfoVo bookInfoVo = bookDetailService.queryBookDetail(bookDetailParam.getItemId());
+        return bookInfoVo;
 
     }
 
@@ -49,12 +52,13 @@ public class BookDetailController extends BaseController {
      *@param
      *@return 成功：返回商品id 和现 失败：返回失败信息
      */
-    @RequestMapping(value = "/category", method = RequestMethod.GET)
+    @RequestMapping(value = "/category", method = RequestMethod.POST)
     @JsonBody
     public JsonV2<Object> addCategory(@Valid AddCategoryParam doOrderParam, @CookieValue("login_id") String username)
     {
         checkArgument(!Strings.isNullOrEmpty(username),"username 不能是空");
         ResultOfRequest resultOfRequest ;
+        doOrderParam.setUserName(username);
         resultOfRequest =bookDetailService.judgeItemAddCategory(doOrderParam);
         if (!resultOfRequest.getResult()) {
             return new JsonV2<>(resultOfRequest.getCode(), resultOfRequest.getMessage(), null);

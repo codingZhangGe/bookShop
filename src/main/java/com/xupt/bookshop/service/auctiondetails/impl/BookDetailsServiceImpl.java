@@ -3,6 +3,7 @@ package com.xupt.bookshop.service.auctiondetails.impl;
 
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.NoItemFoundException;
+import com.xupt.bookshop.common.utils.CookieUtil;
 import com.xupt.bookshop.common.utils.beanmapper.BeanMapper;
 import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
 import com.xupt.bookshop.dao.BookDetailDao;
@@ -36,14 +37,16 @@ public class BookDetailsServiceImpl implements BookDetailService {
     @Resource ImgService imgService;
     @Resource
     CartDao cartDao;
-
+    @Resource
+    OrikaBeanMapper orikaBeanMapper;
 
 
 
     @Override
     public BookInfoVo queryBookDetail(String bookId) {
       logger.info("query book details from database book id is {}",bookId);
-        return bookPoToVo(bookDetailDao.queryBookDetail(bookId));
+        BookInfoVo bookInfoVo = bookPoToVo(bookDetailDao.queryBookDetail(bookId));
+        return bookInfoVo;
 
     }
 
@@ -115,21 +118,21 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
     private ResultOfRequest createCategoryWithBookItem(BookDetail bookDetail,AddCategoryParam addCategoryParam){
 
-       CartItem cartItem =new CartItem();
-      cartItem.setBookName(bookDetail.getBookName());
-        cartItem.setUserName(addCategoryParam.getCurrentBidderQtalk());
-        cartItem.setBookID(bookDetail.getBookId());
+        CartItem cartItem =new CartItem();
+        cartItem.setCartId(cartDao.queryCartId(addCategoryParam.getUserName()));
+        cartItem.setBookName(bookDetail.getBookName());
+        cartItem.setBookId(bookDetail.getBookId());
         cartItem.setCurrentPrice(bookDetail.getCurrentPrice());
         cartItem.setBuyNum(addCategoryParam.getBuyNumber());
         cartItem.setPrice(bookDetail.getPrice());
 
-
+        cartDao.insertCartitem(cartItem);
         ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
         resultOfRequest.setResult(true);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);
         resultOfRequest.setMessage("添加购物车成功");
         resultOfRequest.setData(cartItem);
-        cartDao.insertCategoryitem(cartItem);
+
         return resultOfRequest;
     }
 
@@ -192,8 +195,9 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
 
     public BookInfoVo bookPoToVo(BookDetail bookDetail){
-        OrikaBeanMapper mapper = null;
-        BookInfoVo infoVo = mapper.map(bookDetail, BookInfoVo.class);
+        BookInfoVo infoVo ;
+        infoVo=orikaBeanMapper.map(bookDetail,BookInfoVo.class);
+        infoVo.setUrlList(imgService.getPictureUrl(bookDetail.getBookId()));
         return infoVo;
     }
 }

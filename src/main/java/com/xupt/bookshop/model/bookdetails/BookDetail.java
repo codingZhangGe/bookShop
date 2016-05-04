@@ -96,8 +96,8 @@ public class BookDetail {
         return discount;
     }
 
-    public DateTime getPublishDate() {
-        return publishDate;
+    public String getCategoryName() {
+        return categoryName;
     }
 
     public BookState getBookState() {
@@ -108,12 +108,32 @@ public class BookDetail {
         return publish;
     }
 
-    public String getAthor() {
+    public String getAuthor() {
         return author;
     }
 
     public int getSurplus() {
         return surplus;
+    }
+
+    public DateTime getPublishDate() {
+        return publishDate;
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public int getBuyCount() {
+        return buyCount;
+    }
+
+    public int getBrowseCount() {
+        return browseCount;
+    }
+
+    public int getCollectCount() {
+        return collectCount;
     }
 
     public void setBookId(String bookId) {
@@ -140,6 +160,9 @@ public class BookDetail {
         this.discount = discount;
     }
 
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
 
     public void setBookState(BookState bookState) {
         this.bookState = bookState;
@@ -149,28 +172,16 @@ public class BookDetail {
         this.publish = publish;
     }
 
-    public void setAthor(String athor) {
-        this.author = athor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public void setSurplus(int surplus) {
         this.surplus = surplus;
     }
 
-    public String getShopName() {
-        return shopName;
-    }
-
-    public int getBuyCount() {
-        return buyCount;
-    }
-
-    public int getBrowseCount() {
-        return browseCount;
-    }
-
-    public int getCollectCount() {
-        return collectCount;
+    public void setPublishDate(DateTime publishDate) {
+        this.publishDate = publishDate;
     }
 
     public void setShopName(String shopName) {
@@ -187,17 +198,5 @@ public class BookDetail {
 
     public void setCollectCount(int collectCount) {
         this.collectCount = collectCount;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public void setPublishDate(DateTime publishDate) {
-        this.publishDate = publishDate;
     }
 }

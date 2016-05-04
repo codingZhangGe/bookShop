@@ -1,33 +1,30 @@
 package com.xupt.bookshop.web.controller;
 
+import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.common.utils.CookieUtil;
 import com.xupt.bookshop.common.utils.ParameterCheckUtil;
-import com.xupt.bookshop.common.utils.SHA1;
+import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.login.User;
 import com.xupt.bookshop.model.login.param.LoginPara;
-import com.xupt.bookshop.service.category.CategoryService;
+import com.xupt.bookshop.service.cart.CartService;
 import com.xupt.bookshop.service.login.LoginService;
-import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import qunar.web.security.LoginManager;
-import qunar.web.security.QssoClient;
+import qunar.web.spring.annotation.JsonBody;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Description: Login
@@ -40,10 +37,14 @@ import java.util.concurrent.TimeUnit;
 @RequestMapping("/xupt")
 public class LoginController {
 
+    private Logger logger= LoggerFactory.getLogger(LoginController.class);
     @Resource
     LoginService loginService;
     @Resource
-    CategoryService categoryService;
+    CartService cartService;
+    @Resource
+    CartDao cartDao;
+
 
     /**
      * 登陆
@@ -53,7 +54,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @ResponseBody
+    @JsonBody
     public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse ,@Valid LoginPara loginPara, BindingResult result) {
 
         if (ParameterCheckUtil.checkBingResultParam(result).equals("true")) {
@@ -66,7 +67,7 @@ public class LoginController {
                 else{
                     CookieUtil.addCookie(httpServletResponse,"login_id",loginPara.getUsername(),60);
                     //用户登陆创建购物车
-                    categoryService.createCategoryWithUser(loginPara.getUsername());
+                    cartService.createCategoryWithUser(loginPara.getUsername());
                     return JsonResult.succ();
                 }
             } else {
@@ -76,10 +77,25 @@ public class LoginController {
             return JsonResult.fail(ParameterCheckUtil.checkBingResultParam(result));
     }
 
-
+    /**
+     * 退出登陆
+     * @param request
+     * @param response
+     * @return
+     * @throws ServletException
+     * @throws IOException
+     */
     @RequestMapping("/logout")
+    @JsonBody
     public String logout(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //清除cookie 清除购物车
+        try {
+            cartDao.removeCartItem(CookieUtil.getCookieValue(request,"login_id"));
+            CookieUtil.deleteCookie(response,"login_id");
+        } catch (ParameterException e) {
+            logger.error("<LoginController>  logout get cookie exception {}",e);
+        }
 
         return "redirect:/login";
     }

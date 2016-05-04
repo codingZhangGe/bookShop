@@ -37,31 +37,31 @@ public class AddCategoryParam {
         return itemId;
     }
 
-    public void setItemId(String itemId) {
-        this.itemId = itemId;
-    }
-
     public Integer getState() {
         return state;
-    }
-
-    public void setState(Integer state) {
-        this.state = state;
     }
 
     public int getBuyNumber() {
         return buyNumber;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setItemId(String itemId) {
+        this.itemId = itemId;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
     public void setBuyNumber(int buyNumber) {
         this.buyNumber = buyNumber;
     }
 
-    public String getCurrentBidderQtalk() {
-        return userName;
-    }
-
-    public void setCurrentBidderQtalk(String currentBidderQtalk) {
-        this.userName = currentBidderQtalk;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

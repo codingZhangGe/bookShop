@@ -121,7 +121,7 @@ public class ItemUploadController extends BaseController {
 
     @RequestMapping("/category")
     @JsonBody
-    public Object insertCategory(@RequestParam("category") String categoryname){
+    public Object insertCategory(@RequestParam("cart") String categoryname){
         uploadItemService.uploadCategory(categoryname);
         return new JsonV2<>(CodeMessage.OK, "成功上传类别", "");
     }

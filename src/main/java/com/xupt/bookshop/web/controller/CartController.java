@@ -7,7 +7,7 @@ import com.xupt.bookshop.common.utils.SessionUtil;
 import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.model.common.JsonResult;
-import com.xupt.bookshop.service.category.CategoryService;
+import com.xupt.bookshop.service.cart.CartService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -27,14 +27,14 @@ import java.util.List;
 public class CartController {
 
     @Resource
-    CategoryService categoryService;
+    CartService cartService;
     Logger logger= LoggerFactory.getLogger(CartController.class);
 
     @RequestMapping("/")
     @JsonBody
     public Object categoryDetail(HttpServletRequest request) throws ParameterException {
         String login = CookieUtil.getCookieValue(request, "login_id");
-        List<CartItem> cartItem = categoryService.categoryDetail(login);
+        List<CartItem> cartItem = cartService.categoryDetail(login);
         if(null== cartItem){
             return  JsonResult.fail("加入购物车失败");
         }
@@ -42,11 +42,12 @@ public class CartController {
     }
 
    @RequestMapping("/deleteCart")
+   @JsonBody
     public Object deleteCartItem(@RequestParam("bookId") String bookId)
     {
         logger.info("<deleteCategoryItem>  bookid={}  username={}",bookId, SessionUtil.getUserSession().getName());
         Preconditions.checkNotNull(bookId!=null,"商品id 不存在");
-        ResultOfRequest resultOfRequest = categoryService.deleteCartItem(bookId);
+        ResultOfRequest resultOfRequest = cartService.deleteCartItem(bookId);
 
         return resultOfRequest;
     }

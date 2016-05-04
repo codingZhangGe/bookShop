@@ -8,17 +8,20 @@ import java.math.BigDecimal;
 public class CartItem {
 
     //购物车信息： 商品名称 价格 折扣价 购买数量 商铺
-    String categoryId;
-    String userName;
-    String bookID;
+    String cartId;
+    String bookId;
     String bookName;
     BigDecimal price;
     BigDecimal currentPrice;
     int buyNum;
 
+    public String getCartId() {
+        return cartId;
+    }
 
-    public String getBookID() {
-        return bookID;
+
+    public String getBookId() {
+        return bookId;
     }
 
     public String getBookName() {
@@ -37,9 +40,13 @@ public class CartItem {
         return buyNum;
     }
 
+    public void setCartId(String cartId) {
+        this.cartId = cartId;
+    }
 
-    public void setBookID(String bookID) {
-        this.bookID = bookID;
+
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
     public void setBookName(String bookName) {
@@ -56,22 +63,5 @@ public class CartItem {
 
     public void setBuyNum(int buyNum) {
         this.buyNum = buyNum;
-    }
-
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
     }
 }

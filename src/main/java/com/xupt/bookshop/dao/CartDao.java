@@ -13,12 +13,13 @@ import java.util.List;
 @Repository
 public interface CartDao {
 
-    void  insertCategoryitem(@Param("categoryItem")CartItem cartItem);
+    void  insertCartitem(@Param("cartItem")CartItem cartItem);
 
-    void insertCategory(@Param("cart") Cart cart);
+    void insertCart(@Param("cart") Cart cart);
 
-    List<CartItem> queryCategoryDetail(String username);
+    List<CartItem> queryCartDetail(String username);
 
+    String queryCartId(@Param("username")String username);
     int removeCartItem(String usrname);
 
      int deleteCategoryItem(String bookId);

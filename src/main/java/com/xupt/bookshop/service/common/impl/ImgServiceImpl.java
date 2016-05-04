@@ -50,10 +50,11 @@ public class ImgServiceImpl implements ImgService {
 
         logger.info("query image from server,item Id={}", itemId);
         List<String> imgsId = imgDao.selectImages(itemId);
-        String downloadUrl="http://zhangge//"+imgsId;
+        String downloadUrl;
         List<String> pictureUrl = Lists.newArrayList();
         for (String imgId : imgsId) {
-            pictureUrl.add(auth.privateDownloadUrl(downloadUrl));
+            downloadUrl="http://7xti7f.com2.z0.glb.clouddn.com/"+imgId;
+            pictureUrl.add(downloadUrl);
         }
         return pictureUrl;
     }

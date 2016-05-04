@@ -5,7 +5,7 @@ package com.xupt.bookshop.model.enums;
  * @version 1.0
  */
 public enum OrderState {
-    ORDER_NO_PAY(1, "未支付"), ORDER_PAY_SUCCESS(2, "支付成功"),HAS_REMOVED (3, "已取消");
+    ORDER_NO_PAY(1, "未支付"), ORDER_PAY_SUCCESS(2, "支付成功"),HAS_REMOVED (3, "已取消"), OUT_OF_DATE(4,"已过期");
 
     /**
      * 新旧程度的code

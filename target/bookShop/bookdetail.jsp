@@ -28,12 +28,12 @@
 <form action="/bookshop/details" method="post">
     <table border="0">
         <tr>
-            <td>itemId</td>
-            <td><input name="itemId" value="item_id1"/></td>
+            <td>bookId</td>
+            <td><input name="bookId" value="073d80ff029c46e399dab60f1e2d9088"/></td>
         </tr>
         <tr>
             <td>state</td>
-            <td><input name="state" value="2"/></td>
+            <td><input name="state" value="1"/></td>
         </tr>
 
     </table>

@@ -22,16 +22,16 @@ public class BookDetailParam {
     @Range(min = 1, max = 4, message = "竞拍物品状态取值只能是1, 2, 3")
     private Integer state;
 
-    public String getItemId() {
+    public String getBookId() {
         return bookId;
-    }
-
-    public void setItemId(String itemId) {
-        this.bookId = itemId;
     }
 
     public Integer getState() {
         return state;
+    }
+
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
     public void setState(Integer state) {

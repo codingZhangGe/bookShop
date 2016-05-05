@@ -3,6 +3,9 @@ package com.xupt.bookshop.service.orderService.impl;
 
 import com.google.common.base.Preconditions;
 import com.xupt.bookshop.common.Constants;
+import com.xupt.bookshop.common.utils.DateTimeUtil;
+import com.xupt.bookshop.common.utils.UUIDGenerator;
+import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
 import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.dao.OrderDao;
 import com.xupt.bookshop.model.ResultOfRequest;
@@ -10,6 +13,7 @@ import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.model.enums.OrderState;
 import com.xupt.bookshop.model.enums.BookState;
 import com.xupt.bookshop.model.order.OrderItem;
+import com.xupt.bookshop.model.order.OrderItemVo;
 import com.xupt.bookshop.model.order.param.OrderParam;
 import com.xupt.bookshop.service.orderService.OrderService;
 import org.joda.time.DateTime;
@@ -30,36 +34,47 @@ public class OrderServiceIMpl implements OrderService {
     OrderDao orderDao;
     @Resource
     CartDao cartDao;
+    @Resource
+    OrikaBeanMapper orikaBeanMapper;
+
+
     @Override
     public ResultOfRequest createOrder(String username,OrderParam orderParam) {
         Preconditions.checkNotNull(orderParam);
         ResultOfRequest resultOfRequest=new ResultOfRequest();
-        BigDecimal totalPrice = new BigDecimal(Double.valueOf("0"));
         OrderItem orderItem=new OrderItem();
+        orderItem.setOrderId(UUIDGenerator.getUUID());
         //查询出来购物车的信息
         List<CartItem> cartItems = cartDao.queryCartDetail(username);
-
+        BigDecimal totalPrice=new BigDecimal("0");
         for(CartItem cartItem : cartItems){
             if(cartItem.getCurrentPrice()==null)
-                totalPrice.add(cartItem.getPrice());
-            else{
-                totalPrice.add(cartItem.getCurrentPrice());
+            {
+                totalPrice=totalPrice.add(cartItem.getPrice());
             }
-            orderItem.getBookName().add(cartItem.getBookName());
+            else{
+                totalPrice=totalPrice.add(cartItem.getCurrentPrice());
+            }
         }
         orderItem.setTotalPrice(totalPrice);
         orderItem.setAddress(orderParam.getAddress());
         orderItem.setLinkman(orderParam.getLinkman());
+        orderItem.setTelphone(orderParam.getTelphone());
         orderItem.setOrderTime(DateTime.now());
         orderItem.setStatus(OrderState.ORDER_NO_PAY);
+        orderItem.setCartItems(cartItems);
         //创建订单
-        orderDao.createOrder(orderItem);
+        orderDao.createOrders(orderItem);
+        orderDao.createOrderItem(orderItem);
+        cartDao.updateCategoryItem();
+        OrderItemVo orderItemVo=new OrderItemVo();
+        orderItemVo=orikaBeanMapper.map(orderItem,OrderItemVo.class);
+        orderItemVo.setOrderTime(orderItem.getOrderTime());
         //下单成功,清空购物车记录,返回成功状态
-        cartDao.removeCartItem(username);
         resultOfRequest.setCode(Constants.DO_ORDER_SUCCESS);
         resultOfRequest.setResult(true);
         resultOfRequest.setMessage("下单成功");
-        resultOfRequest.setData(orderItem);
+        resultOfRequest.setData( orderItemVo);
         return resultOfRequest;
     }
 
@@ -75,13 +90,13 @@ public class OrderServiceIMpl implements OrderService {
     }
 
     /**
-     * 选择订单失效的订单id
+     * 选择时间超过付款时间但是还没有付款的订单
      * @return
      */
     @Override
     public List<String > selectOrderitemWithTime() {
 
-        List<String> list = orderDao.selectOrderItemWithTime(DateTime.now(), OrderState.ORDER_NO_PAY);
+        List<String> list = orderDao.selectOrderItemWithTime(DateTime.now(),OrderState.ORDER_NO_PAY);
 
         return list;
     }

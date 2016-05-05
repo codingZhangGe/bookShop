@@ -47,7 +47,7 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public ResultOfRequest deleteCartItem(String bookId) {
+    public ResultOfRequest deleteCartItem(List<String> bookId) {
         ResultOfRequest resultOfRequest=new ResultOfRequest();
         int result = cartDao.deleteCategoryItem(bookId);
         if(result<=0){

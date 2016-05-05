@@ -40,9 +40,9 @@ public class BookDetailController extends BaseController {
     @JsonBody
     public BookInfoVo bookDescription(@Valid BookDetailParam bookDetailParam) {
 
-       logger.info("query book details book id={}",bookDetailParam.getItemId());
+       logger.info("query book details book id={}",bookDetailParam.getBookId());
 
-        BookInfoVo bookInfoVo = bookDetailService.queryBookDetail(bookDetailParam.getItemId());
+        BookInfoVo bookInfoVo = bookDetailService.queryBookDetail(bookDetailParam.getBookId());
         return bookInfoVo;
 
     }

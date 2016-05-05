@@ -5,7 +5,7 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 /**
- * Created by liuyanjiang on 16-4-18.
+ * Created by ge.zhang on 16-4-18.
  */
 public class ImgModel {
     private List<String> pictureId = Lists.newArrayList();

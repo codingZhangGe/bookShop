@@ -32,7 +32,7 @@ public class CartController {
 
     @RequestMapping("/")
     @JsonBody
-    public Object categoryDetail(HttpServletRequest request) throws ParameterException {
+    public Object cartDetail(HttpServletRequest request) throws ParameterException {
         String login = CookieUtil.getCookieValue(request, "login_id");
         List<CartItem> cartItem = cartService.categoryDetail(login);
         if(null== cartItem){
@@ -43,7 +43,7 @@ public class CartController {
 
    @RequestMapping("/deleteCart")
    @JsonBody
-    public Object deleteCartItem(@RequestParam("bookId") String bookId)
+    public Object deleteCartItem(@RequestParam("bookId") List<String> bookId)
     {
         logger.info("<deleteCategoryItem>  bookid={}  username={}",bookId, SessionUtil.getUserSession().getName());
         Preconditions.checkNotNull(bookId!=null,"商品id 不存在");

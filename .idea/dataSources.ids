@@ -70,13 +70,20 @@
       <column name="picture_id" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="56ue5ouN54mp5ZOBcGljdHVyZUlk"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
+    <table name="order_item" schema="" catalog="bookshop" type="TABLE">
+      <column name="order_id" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="book_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzEn" remarks="5Zu+5Lmm5ZCN56ew"/>
+      <column name="price" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Lu35qC8"/>
+      <column name="current_price" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5oqY5ZCO5Lu35qC8"/>
+      <column name="buycount" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6LSt5Lmw5pWw6YeP"/>
+    </table>
     <table name="orders" schema="" catalog="bookshop" type="TABLE">
-      <column name="OrderID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <column name="Address" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
-      <column name="Telphone" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
-      <column name="OrderTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="Status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="OrderID" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6K6i5Y2V5Y+356CB"/>
+      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" remarks="6IGU57O75Lq6"/>
+      <column name="Address" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12" remarks="6IGU57O75Zyw5Z2A"/>
+      <column name="Telphone" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" remarks="6IGU57O75pa55byP"/>
+      <column name="order_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="Status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" remarks="6K6i5Y2V54q25oCB"/>
       <primary-key name="PRIMARY" columns="OrderID"/>
     </table>
     <table name="seller" schema="" catalog="bookshop" type="TABLE">

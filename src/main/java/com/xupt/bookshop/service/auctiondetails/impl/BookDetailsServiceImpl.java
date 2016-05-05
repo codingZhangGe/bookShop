@@ -34,7 +34,8 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
     @Resource
     BookDetailDao bookDetailDao;
-    @Resource ImgService imgService;
+    @Resource
+    ImgService imgService;
     @Resource
     CartDao cartDao;
     @Resource
@@ -127,6 +128,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
         cartItem.setPrice(bookDetail.getPrice());
 
         cartDao.insertCartitem(cartItem);
+        cartItem.setPictureUrl(imgService.getFirstPictureUrl(bookDetail.getBookId()));
         ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
         resultOfRequest.setResult(true);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);

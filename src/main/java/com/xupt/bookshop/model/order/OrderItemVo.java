@@ -1,5 +1,6 @@
 package com.xupt.bookshop.model.order;
 
+import com.xupt.bookshop.common.utils.DateTimeUtil;
 import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.model.enums.OrderState;
 import org.joda.time.DateTime;
@@ -7,10 +8,11 @@ import org.joda.time.DateTime;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**订单详情
- * Created by zhangge on 16-4-27.
+/**
+ * 返回前端对象
+ * Created by zhangge on 16-5-5.
  */
-public class OrderItem {
+public class OrderItemVo {
     /**
      *订单号
      */
@@ -34,17 +36,17 @@ public class OrderItem {
     /**
      * 下单时间
      */
-    DateTime orderTime;
+    String orderTime;
     /**
      * 地址
      */
     String address;
 
+    String pictureUrl;
     /**
      *商品名称
      */
     List<CartItem> cartItems;
-
 
     public String getOrderId() {
         return OrderId;
@@ -66,7 +68,7 @@ public class OrderItem {
         return status;
     }
 
-    public DateTime getOrderTime() {
+    public String getOrderTime() {
         return orderTime;
     }
 
@@ -74,7 +76,9 @@ public class OrderItem {
         return address;
     }
 
-
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
 
     public List<CartItem> getCartItems() {
         return cartItems;
@@ -101,13 +105,16 @@ public class OrderItem {
     }
 
     public void setOrderTime(DateTime orderTime) {
-        this.orderTime = orderTime;
+        this.orderTime = DateTimeUtil.getStandardStr(orderTime);
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
 
     public void setCartItems(List<CartItem> cartItems) {
         this.cartItems = cartItems;

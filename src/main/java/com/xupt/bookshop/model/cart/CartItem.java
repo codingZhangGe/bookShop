@@ -14,7 +14,7 @@ public class CartItem {
     BigDecimal price;
     BigDecimal currentPrice;
     int buyNum;
-
+    String pictureUrl;
     public String getCartId() {
         return cartId;
     }
@@ -63,5 +63,13 @@ public class CartItem {
 
     public void setBuyNum(int buyNum) {
         this.buyNum = buyNum;
+    }
+
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 }

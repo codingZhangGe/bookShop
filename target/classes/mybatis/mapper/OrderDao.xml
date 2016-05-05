@@ -7,10 +7,8 @@
         <parameter property="telphone"/>
         <parameter property="totalPrice"/>
         <parameter property="status" javaType="com.xupt.bookshop.model.enums.OrderState" jdbcType="TINYINT" typeHandler="EnumTypeHandler"/>
-        <parameter property="orderTime"  typeHandler="DateTimeTypeHandler"/>
+        <parameter property="orderTime"  javaType="org.joda.time.DateTime" jdbcType="TIMESTAMP" typeHandler="DateTimeTypeHandler"/>
         <parameter property="address" />
-        <!--<parameter property="bookName"/>-->
-
     </parameterMap>
 
 <resultMap id="orderItemresult" type="com.xupt.bookshop.model.order.OrderItem">
@@ -18,12 +16,38 @@
     <result column="UID" property="linkman"/>
     <result column="Address" property="address"/>
     <result column="Telphone" property="telphone"/>
-    <result column="OrderTime" property="orderTime" typeHandler="DateTimeTypeHandler"/>
-    <result column="Status" property="status" jdbcType="TINYINT" javaType="com.xupt.bookshop.model.enums.OrderState"/>
+    <result column="order_time" />
+    <result column="Status"/>
 </resultMap>
 
     <select id="queryOrderDetails" resultMap="orderItemresult" parameterType="String">
-        SELECT OrderID,UID,Address,Telphone,OrderTime,Status FROM orders
+        SELECT OrderID,UID,Address,Telphone,order_time,Status FROM orders
         WHERE UID= #{username};
     </select>
+    <insert id="createOrders" parameterType="com.xupt.bookshop.model.order.OrderItem">
+        INSERT into orders (OrderID, UID, Address, Telphone, order_time, Status)
+        VALUES (#{order.OrderId},#{order.linkman},#{order.address},#{order.telphone},#{order.orderTime,typeHandler=DateTimeTypeHandler},#{order.status,typeHandler=EnumTypeHandler})
+    </insert>
+
+    <insert id="createOrderItem" parameterType="com.xupt.bookshop.model.order.OrderItem">
+        INSERT into order_item(order_id, book_name, price, current_price, buycount)
+        VALUES
+        <foreach collection="orderItem.cartItems" separator="," item="item">
+            (#{orderItem.OrderId},#{item.bookName},#{item.price},#{item.currentPrice},#{item.buyNum})
+        </foreach>
+    </insert>
+
+
+
+    <select id="selectOrderItemWithTime" resultType="String">
+        SELECT  orders.OrderID FROM orders WHERE
+        (select date_sub(curdate(),interval 1 day))>order_time
+          AND Status=#{state,typeHandler=EnumTypeHandler}
+    </select>
+
+    <update id="updateOrderStatus">
+        UPDATE  orders SET Status=#{orderState,typeHandler=EnumTypeHandler}
+    </update>
+
+
 </mapper>

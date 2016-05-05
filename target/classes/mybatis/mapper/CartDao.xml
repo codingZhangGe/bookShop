@@ -31,15 +31,13 @@
         WHERE  user_name=#{username}
     </select>
     <delete id="deleteCategoryItem" parameterType="String">
-        DELETE FROM cart_item where book_id=#{bookId}
+        DELETE FROM cart_item
+        where
+        <foreach collection="list" item = "model" open="(" separator="," close=")">
+        book_id=#{bookId}
+        </foreach>
     </delete>
-    <delete id="deleteCategoryItemByuser" parameterType="String">
-        DELETE  FROM cart_item WHERE  cart_id IN
-        (
-        SELECT cart_id FROM cart
-        WHERE  user_name=#{username}
-        )
-    </delete>
+
     <delete id="removeCartItem" parameterType="String">
         DELETE  FROM
         cart
@@ -47,5 +45,7 @@
         user_name=#{userName}
     </delete>
 
-
+  <select id="updateCategoryItem">
+      TRUNCATE TABLE cart_item;
+  </select>
 </mapper>

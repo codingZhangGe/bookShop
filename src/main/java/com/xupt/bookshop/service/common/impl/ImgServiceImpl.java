@@ -6,6 +6,7 @@ import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
+import com.xupt.bookshop.common.datasource.DataSource;
 import com.xupt.bookshop.common.utils.FileUtils;
 import com.xupt.bookshop.common.utils.UUIDGenerator;
 import com.xupt.bookshop.dao.ImgDao;
@@ -45,6 +46,7 @@ public class ImgServiceImpl implements ImgService {
     UploadManager uploadManager = new UploadManager();
 
     @Override
+    @DataSource(DataSource.slave)
     // 通过itemId返回一个对应的图片URL list地址
     public List<String> getPictureUrl(String itemId) {
 
@@ -60,6 +62,7 @@ public class ImgServiceImpl implements ImgService {
     }
 
     @Override
+    @DataSource(value = DataSource.master)
     public void deleteImg(String pictureId) {
         logger.warn("delete picture pictureId={}", pictureId);
 
@@ -73,6 +76,7 @@ public class ImgServiceImpl implements ImgService {
     }
 
     @Override
+    @DataSource(value = DataSource.master)
     public String upLoadImg(CommonsMultipartFile file, String itemId, String fileName) {
         //生成图片上传的id
         String uuId = UUIDGenerator.getUUID();
@@ -115,11 +119,12 @@ public class ImgServiceImpl implements ImgService {
     }
 
     @Override
+    @DataSource(value = DataSource.slave)
     public String getFirstPictureUrl(String itemId) {
        logger.warn("query picture from server itemId={}", itemId);
         String pictureId = imgDao.selectFirstPicture(itemId);
-        String downloadUrl="http://zhangge//"+pictureId;
-        String pictureUrl =auth.privateDownloadUrl(downloadUrl);
+
+        String pictureUrl ="http://7xti7f.com2.z0.glb.clouddn.com/"+pictureId;
 
         return pictureId;
     }

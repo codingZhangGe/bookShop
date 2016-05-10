@@ -42,7 +42,7 @@ public class OrderItemVo {
      */
     String address;
 
-    String pictureUrl;
+
     /**
      *商品名称
      */
@@ -76,9 +76,7 @@ public class OrderItemVo {
         return address;
     }
 
-    public String getPictureUrl() {
-        return pictureUrl;
-    }
+
 
     public List<CartItem> getCartItems() {
         return cartItems;
@@ -110,10 +108,6 @@ public class OrderItemVo {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public void setPictureUrl(String pictureUrl) {
-        this.pictureUrl = pictureUrl;
     }
 
     public void setCartItems(List<CartItem> cartItems) {

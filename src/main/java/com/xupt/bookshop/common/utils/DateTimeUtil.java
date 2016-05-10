@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Date;
 
 /**
- * @author yunfeng.yang created on 16-4-14
+ * @author ge.zhang created on 16-4-14
  * @version 1.0
  */
 public class DateTimeUtil {

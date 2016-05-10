@@ -1,6 +1,7 @@
 package com.xupt.bookshop.service.home.impl;
 
 import com.google.common.collect.Lists;
+import com.xupt.bookshop.common.datasource.DataSource;
 import com.xupt.bookshop.common.utils.PageResult;
 import com.xupt.bookshop.common.utils.beanmapper.BeanMapper;
 import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
@@ -40,12 +41,14 @@ public class HomeServiceImpl implements HomeService {
     }
 
     @Override
+    @DataSource(value = DataSource.slave)
     public List<Category> queryAllCategory() {
         return homeDao.queryAllCategory();
     }
     
 
     @Override
+    @DataSource(value = DataSource.slave)
     public PageResult<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize) {
 
         List<BookingVo> bookingVos = Lists.newArrayList();
@@ -56,13 +59,15 @@ public class HomeServiceImpl implements HomeService {
             BookingVo auctioningVo ;
             auctioningVo=orikaBeanMapper.map(po,BookingVo.class);
             auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
-
+            auctioningVo.setBookState(po.getBookState());
             bookingVos.add(auctioningVo);
         }
        return new PageResult<>(homeDao.queryBookPages(),bookingVos);
     }
 
-    @Override public PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize) {
+    @Override
+    @DataSource(value = DataSource.slave)
+    public PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize) {
 
         List<BookingVo> BookingVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
@@ -79,11 +84,13 @@ public class HomeServiceImpl implements HomeService {
     }
 
     @Override
+    @DataSource(value = DataSource.slave)
     public int queryBookPages() {
         return homeDao.queryBookPages();
     }
 
     @Override
+    @DataSource(value = DataSource.slave)
     public PageResult<BookingVo> queryItemByState(int state, int currentPage, int pageSize) {
         List<BookingVo> BookingVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);

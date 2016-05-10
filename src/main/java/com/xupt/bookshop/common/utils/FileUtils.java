@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by liuyanjiang on 16-4-18.
+ * Created by ge.zhang on 16-4-18.
  */
 public class FileUtils {
     private static Pattern pattern = Pattern.compile(".*\\.(bmp|dib|gif|jpe|jpeg|jpg|png|tif|ico)$");

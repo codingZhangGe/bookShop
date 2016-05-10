@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by liuyanjiang on 16-4-18.
+ * Created by ge.zhang on 16-4-18.
  */
 @Repository
 public interface ImgDao {

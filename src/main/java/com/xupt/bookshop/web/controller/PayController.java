@@ -19,9 +19,9 @@ public class PayController {
     @RequestMapping("/paySend")
     public String  paymentSend(HttpServletRequest request,HttpServletResponse response){
 
-        String accountID = "10000432521";
+        String accountID = "10001126856";
         //测试商户：密钥
-        String keyValue = "8UPp0KE8sq73zVP370vko7C39403rtK1YwX40Td6irH216036H27Eb12792t";
+        String keyValue = "69cl522AV6q613Ii4W6u8K6XuW8vM1N6bFgyv769220IuYe9u37N4y7rI4Pl";
         //测试商户：商户接收支付成功数据的地址
         String accountCallbackURL = "http://127.0.0.1:8083/pay/payResult";
 

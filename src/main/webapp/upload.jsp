@@ -50,19 +50,19 @@
     </style>
 
 </head>
-<%--<body>--%>
-<%--<form name="userForm2" action="/item/imageUpload" enctype="multipart/form-data" method="post">--%>
-    <%--<div id="newUpload">--%>
-        <%--源文件 <input type="file" name="file">--%>
-        <%--<br/>--%>
-        <%--目标文件 <input type="file" name="file">--%>
+<body>
+<form name="userForm2" action="/item/imageUpload" enctype="multipart/form-data" method="post">
+    <div id="newUpload">
+        图片1 <input type="file" name="file">
+        <br/>
+        图片2<input type="file" name="file">
+        <br/>
 
+    </div>
+    <input type="submit" value="上传">
 
-    <%--</div>--%>
-    <%--<input type="submit" value="上传">--%>
-
-<%--</form>--%>
-<%--</body>--%>
+</form>
+</body>
 <body>
 <form name="info" action="/item/itemUpload" enctype="application/x-www-form-urlencoded" method="post">
 

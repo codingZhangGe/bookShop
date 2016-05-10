@@ -1,5 +1,6 @@
 package com.xupt.bookshop.model.home;
 
+import com.xupt.bookshop.model.enums.BookState;
 import org.joda.time.DateTime;
 import qunar.api.pojo.Money;
 
@@ -16,6 +17,10 @@ public class BookingVo {
      * 图书名字
      */
     private String bookName;
+    /**
+     * 图书状态
+     */
+    private String bookState;
     /**
      * 当期价格
      */
@@ -39,18 +44,23 @@ public class BookingVo {
     /**
      * 类别id
      */
-    private int categoryId;
+    private String categoryName;
 
     /**
      *图片url
      */
      String urlList;
+
     public String getBookId() {
         return bookId;
     }
 
     public String getBookName() {
         return bookName;
+    }
+
+    public String getBookState() {
+        return bookState;
     }
 
     public BigDecimal getCurrentPrice() {
@@ -73,8 +83,12 @@ public class BookingVo {
         return buyCount;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public String getUrlList() {
+        return urlList;
     }
 
     public void setBookId(String bookId) {
@@ -83,6 +97,10 @@ public class BookingVo {
 
     public void setBookName(String bookName) {
         this.bookName = bookName;
+    }
+
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState.getDescription();
     }
 
     public void setCurrentPrice(BigDecimal currentPrice) {
@@ -105,12 +123,8 @@ public class BookingVo {
         this.buyCount = buyCount;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public String getUrlList() {
-        return urlList;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public void setUrlList(String urlList) {

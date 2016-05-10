@@ -16,6 +16,10 @@ public class OrderItem {
      */
     String OrderId;
     /**
+     * 下单用户
+     */
+    String username;
+    /**
      * 联系人
      */
     String linkman;
@@ -74,7 +78,13 @@ public class OrderItem {
         return address;
     }
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public List<CartItem> getCartItems() {
         return cartItems;

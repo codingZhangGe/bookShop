@@ -41,7 +41,7 @@ public class CartController {
         return JsonResult.succ(cartItem);
     }
 
-   @RequestMapping("/deleteCart")
+   @RequestMapping("/deleteCartItem")
    @JsonBody
     public Object deleteCartItem(@RequestParam("bookId") List<String> bookId)
     {

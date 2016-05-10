@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
+/**处理图书状态
  * Created by zhangge on 16-5-1.
  */
 public class BookStateEnumTypeHandler implements TypeHandler<BookState> {

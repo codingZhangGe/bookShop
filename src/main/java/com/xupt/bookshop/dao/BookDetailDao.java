@@ -5,8 +5,10 @@ import com.xupt.bookshop.model.bookdetails.AuctionMoney;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
- * 拍卖详情 Created by zhangge on 16-4-18.
+ * 图书详情 Created by zhangge on 16-4-18.
  */
 
 @Repository
@@ -19,9 +21,10 @@ public interface BookDetailDao {
 
     BookDetail queryBookDetail(@Param("bookId")String bookId);
 
-    AuctionMoney queryAuctionItem(String itemId);
 
     int updateBrowserCount(@Param("bookId") String bookId);
+    int updateBuyCount(@Param("bookId") String bookId);
+    int updateSurplus(@Param("bookId") String bookId,@Param("buy") int buy);
 
 
 

@@ -1,6 +1,7 @@
 package com.xupt.bookshop.service.login;
 
 import com.xupt.bookshop.model.login.User;
+import com.xupt.bookshop.model.login.param.RegisterParam;
 
 /**
  * Created by zhangge on 16-4-25.
@@ -12,5 +13,7 @@ public interface LoginService {
      * @return
      */
     public User queryByName(String name);
+
+    public  void createUser(RegisterParam registerParamr);
 
 }

@@ -12,9 +12,9 @@ public class AuthorityException extends Exception implements CodeMessage {
     private static final long serialVersionUID = -824774517021673880L;
 
     /**
-     * 权限异常时, 该用户的qtalk
+     * 权限异常时, 该用户的用户名
      */
-    private String qtalk;
+    private String username;
 
     /**
      * 字符串参数构造
@@ -29,8 +29,8 @@ public class AuthorityException extends Exception implements CodeMessage {
         super("权限错误");
     }
 
-    private void setQtalk(String qtalk) {
-        this.qtalk = qtalk;
+    private void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -40,6 +40,6 @@ public class AuthorityException extends Exception implements CodeMessage {
 
     @Override
     public Object getData() {
-        return qtalk;
+        return username;
     }
 }

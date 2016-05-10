@@ -21,22 +21,21 @@
 </resultMap>
 
     <select id="queryOrderDetails" resultMap="orderItemresult" parameterType="String">
-        SELECT OrderID,UID,Address,Telphone,order_time,Status FROM orders
-        WHERE UID= #{username};
+        SELECT OrderID,user_name,linkman,Address,Telphone,order_time,Status FROM orders
+         WHERE user_name=#{username}
     </select>
     <insert id="createOrders" parameterType="com.xupt.bookshop.model.order.OrderItem">
-        INSERT into orders (OrderID, UID, Address, Telphone, order_time, Status)
-        VALUES (#{order.OrderId},#{order.linkman},#{order.address},#{order.telphone},#{order.orderTime,typeHandler=DateTimeTypeHandler},#{order.status,typeHandler=EnumTypeHandler})
+        INSERT into orders (OrderID, user_name,linkman, Address, Telphone, order_time, Status)
+        VALUES (#{order.OrderId},#{order.username},#{order.linkman},#{order.address},#{order.telphone},#{order.orderTime,typeHandler=DateTimeTypeHandler},#{order.status,typeHandler=EnumTypeHandler})
     </insert>
 
     <insert id="createOrderItem" parameterType="com.xupt.bookshop.model.order.OrderItem">
-        INSERT into order_item(order_id, book_name, price, current_price, buycount)
+        INSERT into order_item(order_id,book_name,price,current_price,buycount)
         VALUES
         <foreach collection="orderItem.cartItems" separator="," item="item">
             (#{orderItem.OrderId},#{item.bookName},#{item.price},#{item.currentPrice},#{item.buyNum})
         </foreach>
     </insert>
-
 
 
     <select id="selectOrderItemWithTime" resultType="String">
@@ -45,9 +44,39 @@
           AND Status=#{state,typeHandler=EnumTypeHandler}
     </select>
 
+    <select id="queryOrderByState" resultMap="orderItemresult">
+       SELECT * FROM orders
+       WHERE
+       user_name=#{username}
+       AND
+       Status=#{state}
+
+    </select>
+
+
+    <select id="queryOrderPagesWithState" resultType="int">
+       SELECT COUNT(*) FROM orders
+       WHERE
+       user_name=#{username}
+       AND
+       Status=#{state}
+
+    </select>
+
+
+    <select id="queryOrderPages" resultType="int">
+        SELECT COUNT(*) FROM orders
+        WHERE user_name=#{username}
+
+    </select>
+
     <update id="updateOrderStatus">
         UPDATE  orders SET Status=#{orderState,typeHandler=EnumTypeHandler}
     </update>
 
 
+    <update id="insertTotalPrice" >
+        UPDATE  orders SET
+        total_price=#{totalPrice}
+    </update>
 </mapper>

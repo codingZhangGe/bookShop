@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import qunar.web.spring.annotation.JsonBody;
 
 /**
- * @author yunfeng.yang created on 16-4-14
+ * @author ge.zhang created on 16-4-14
  * @version 1.0
  */
 public class BaseController {

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
+/**购物车
  * Created by zhangge on 16-4-27.
  */
 @Repository

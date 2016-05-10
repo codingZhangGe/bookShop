@@ -1,6 +1,7 @@
 package com.xupt.bookshop.dao;
 
 import com.xupt.bookshop.model.login.User;
+import com.xupt.bookshop.model.login.param.RegisterParam;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -16,4 +17,10 @@ public interface LoginDao {
      * @return
      */
     public User queryByName(@Param("name")String name);
+
+    /**
+     * 创建用户
+     * @param registerParam
+     */
+    public void addUser(@Param("user")RegisterParam registerParam);
 }

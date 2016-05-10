@@ -19,7 +19,7 @@ import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.model.upload.UploadItemParam;
 
 /**
- * @author yunfeng.yang created on 16-4-14
+ * @author ge.zhang created on 16-4-14
  * @version 1.0
  */
 public class ParameterCheckUtil {

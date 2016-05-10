@@ -1,7 +1,7 @@
 package com.xupt.bookshop.model.common;
 
 /**
- * @author yunfeng.yang created on 16-4-18
+ * @author ge.zhang created on 16-4-18
  * @version 1.0
  */
 public class Category {

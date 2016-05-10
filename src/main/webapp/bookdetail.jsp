@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: yunfeng.yang
+  User: ge.zhang
   Date: 16-4-21
   Time: 下午2:47
   To change this template use File | Settings | File Templates.
@@ -11,21 +11,11 @@
     <title></title>
 </head>
 <body>
-<form action="/auction/doAuction" method="post">
-    <table border="0">
-        <tr>
-            <td>姓名</td>
-            <td><input name="itemId" value="item_id1"/></td>
-            <td><input name="state" value="2"/></td>
-            <td><input name="auctionPrice" value="12"/></td>
-        </tr>
-    </table>
-    <input type="submit">
-</form>
 
 <br>
 
 <form action="/bookshop/details" method="post">
+    图书详情
     <table border="0">
         <tr>
             <td>bookId</td>
@@ -43,7 +33,8 @@
 
 <br>
 
-<form action="/bookshop/category" method="post">
+<form action="/bookshop/cart" method="post">
+    加入购物车
     <table border="0">
         <tr>
             <td>itemid</td>
@@ -65,6 +56,7 @@
 
 <form action="/Order/doOrder" method="post">
     <table border="0">
+        下单
         <tr>
             <td>cartId</td>
             <td><input name="cartId" value="item_id4"/></td>

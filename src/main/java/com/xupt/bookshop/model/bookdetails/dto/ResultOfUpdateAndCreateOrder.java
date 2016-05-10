@@ -1,7 +1,7 @@
 package com.xupt.bookshop.model.bookdetails.dto;
 
 /**
- * @author yunfeng.yang created on 16-4-24
+ * @author ge.zhang created on 16-4-24
  * @version 1.0
  */
 public class ResultOfUpdateAndCreateOrder {

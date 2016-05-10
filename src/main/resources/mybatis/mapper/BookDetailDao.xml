@@ -58,6 +58,14 @@
        WHERE  book_id=#{bookId}
    </update>
 
+    <update id="updateBuyCount" parameterType="String">
+        UPDATE  book_dynamic_info SET buy_count=buy_count+1
+        WHERE book_id=#{bookId}
+    </update>
 
+    <update id="updateSurplus">
+        UPDATE book SET surplus =surplus-#{buy}
+        WHERE book_id=#{bookId}
+    </update>
 
 </mapper>

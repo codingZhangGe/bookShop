@@ -3,7 +3,7 @@ package com.xupt.bookshop.common.utils;
 /**
  * Description: Login
  *
- * @author lingtong.fu
+ * @author ge.zhang
  * @version 2016-04-6 15:40
  */
 public class SHA1 {

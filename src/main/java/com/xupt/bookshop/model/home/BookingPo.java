@@ -2,6 +2,8 @@ package com.xupt.bookshop.model.home;
 
 
 
+import com.xupt.bookshop.model.enums.BookState;
+
 import java.math.BigDecimal;
 
 /**
@@ -40,6 +42,12 @@ public class BookingPo {
      * 类别id
      */
     private String categoryName;
+
+    /**
+     *图书状态
+     */
+
+    BookState bookState;
 
     public String getBookId() {
         return bookId;
@@ -105,5 +113,11 @@ public class BookingPo {
         this.categoryName = categoryName;
     }
 
+    public BookState getBookState() {
+        return bookState;
+    }
 
+    public void setBookState(BookState bookState) {
+        this.bookState = bookState;
+    }
 }

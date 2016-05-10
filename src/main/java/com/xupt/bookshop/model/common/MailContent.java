@@ -4,7 +4,7 @@ import com.xupt.bookshop.common.Constants;
 
 /**
  *
- * Created by liuyanjiang on 16-4-14.
+ * Created by ge.zhang on 16-4-14.
  */
 public class MailContent {
     private String toEmail;

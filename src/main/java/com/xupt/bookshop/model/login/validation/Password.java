@@ -17,7 +17,7 @@ import javax.validation.constraints.Pattern;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {})
 public @interface Password {
-String message() default " 密码检测信息-----";
+String message() default " 以字母开头，长度在6~18之间，只能包含字符、数字和下划线。";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

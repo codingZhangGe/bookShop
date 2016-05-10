@@ -43,9 +43,9 @@ public class HomeController {
      */
     @JsonBody
     @RequestMapping(value = "/index/queryBooking", method = RequestMethod.GET)
-    public Object queryAuctioning(  @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
+    public Object queryBooking(  @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
                                              @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize) {
-        logger.info("query ");
+        logger.info("home of book ");
         checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
         checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
         return  homeService.queryBookingVo(currentPage,pageSize);

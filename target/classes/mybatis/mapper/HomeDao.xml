@@ -4,7 +4,7 @@
 <mapper namespace="com.xupt.bookshop.dao.HomeDao">
 
     <sql id="selectFields">
-             book.book_id,book.book_name,book.price,book.current_price,book.discount,book_dynamic_info.browse_count,book_dynamic_info.buy_count
+             book.book_id,book.book_name,book.price,book.category_name,book.state,book.current_price,book.discount,book_dynamic_info.browse_count,book_dynamic_info.buy_count
     </sql>
 
     <select id="queryAllCategory" resultType="com.xupt.bookshop.model.common.Category">
@@ -19,7 +19,7 @@
             当前价格,   折扣价格,
             商品名称     折扣
             -->
-    <resultMap id="queryBoookItem" type="com.xupt.bookshop.model.home.BookingPo">
+    <resultMap id="queryBookItem" type="com.xupt.bookshop.model.home.BookingPo">
         <!-- 静态信息 -->
         <result column="book_Id" property="bookId"/>
         <result column="book_name" property="bookName"/>
@@ -30,10 +30,11 @@
         <!-- 动态信息 -->
         <result column="browse_count" property="browseCount"/>
         <result column="buy_count" property="buyCount"/>
+        <result column="state" property="bookState" typeHandler="BookStateEnumTypeHandler"/>
 
     </resultMap>
     <!--order by  buy Count-->
-    <select id="queryBookingPo" resultMap="queryBoookItem">
+    <select id="queryBookingPo" resultMap="queryBookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book
@@ -43,7 +44,7 @@
     </select>
 
     <!--类别查询-->
-    <select id="queryBookingPoByCategory" parameterType="String" resultMap="queryBoookItem">
+    <select id="queryBookingPoByCategory" parameterType="String" resultMap="queryBookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book
@@ -53,7 +54,7 @@
         ORDER BY buy_count
     </select>
 
-    <select id="queryBookingPoByState" parameterType="Integer" resultMap="queryBoookItem">
+    <select id="queryBookingPoByState" parameterType="Integer" resultMap="queryBookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book

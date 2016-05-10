@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
+/**订单状态转换
  * Created by zhangge on 16-4-20.
  */
 public class EnumTypeHandler implements TypeHandler<OrderState> {

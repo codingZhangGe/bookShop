@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Description: HomeDao
  *
- * @author lingtong.fu
+ * @author ge.zhang
  * @version 2016-04-19 14:13
  */
 @Repository

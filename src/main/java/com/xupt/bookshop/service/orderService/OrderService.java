@@ -15,7 +15,7 @@ public interface OrderService {
 
     //创建订单
     ResultOfRequest createOrder(String username,OrderParam orderParam);
-    OrderItem queryOrderWithUser(String username);
+    List<OrderItem> queryOrderWithUser(int currentPage,int pageSize,String username);
    // 更新订单状态 只存在时间到了修改成为失效
     int updateOrderStatus(String OrderId);
      List<String> selectOrderitemWithTime();

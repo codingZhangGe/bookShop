@@ -1,6 +1,6 @@
 package com.xupt.bookshop.web.interceptor;
 
-import com.xupt.bookshop.service.auctiondetails.BookDetailService;
+import com.xupt.bookshop.service.bookdetails.BookDetailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;

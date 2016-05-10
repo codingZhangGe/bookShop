@@ -5,13 +5,12 @@ import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.bookdetails.param.BookDetailParam;
 import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
-import com.xupt.bookshop.service.auctiondetails.BookDetailService;
+import com.xupt.bookshop.service.bookdetails.BookDetailService;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import qunar.api.pojo.json.JsonV2;
 import qunar.web.spring.annotation.JsonBody;
 import javax.annotation.Resource;
@@ -52,7 +51,7 @@ public class BookDetailController extends BaseController {
      *@param
      *@return 成功：返回商品id 和现 失败：返回失败信息
      */
-    @RequestMapping(value = "/category", method = RequestMethod.POST)
+    @RequestMapping(value = "/cart", method = RequestMethod.POST)
     @JsonBody
     public JsonV2<Object> addCategory(@Valid AddCategoryParam doOrderParam, @CookieValue("login_id") String username)
     {

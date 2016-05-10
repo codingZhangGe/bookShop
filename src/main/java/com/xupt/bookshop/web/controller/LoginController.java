@@ -7,6 +7,7 @@ import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.login.User;
 import com.xupt.bookshop.model.login.param.LoginPara;
+import com.xupt.bookshop.model.login.param.RegisterParam;
 import com.xupt.bookshop.service.cart.CartService;
 import com.xupt.bookshop.service.login.LoginService;
 import org.slf4j.Logger;
@@ -58,7 +59,8 @@ public class LoginController {
     public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse ,@Valid LoginPara loginPara, BindingResult result) {
 
         if (ParameterCheckUtil.checkBingResultParam(result).equals("true")) {
-            User user = loginService.queryByName(loginPara.getUsername());
+            User user;
+            user = loginService.queryByName(loginPara.getUsername());
 
             if (user != null) {
                 if(!loginPara.getPassword().equals(user.getPassword())){
@@ -100,8 +102,17 @@ public class LoginController {
         return "redirect:/login";
     }
 
+    //用户注册邮箱激活
+     public Object register(@Valid RegisterParam registerParam){
+         User name = loginService.queryByName(registerParam.getName());
+         if(name!=null){
+             logger.error("<register> user is exist");
+             return JsonResult.fail("注册失败");
+         }
 
+         loginService.createUser(registerParam);
+         return  JsonResult.succ();
+     }
 
-    //todo 用户注册功能
 
 }

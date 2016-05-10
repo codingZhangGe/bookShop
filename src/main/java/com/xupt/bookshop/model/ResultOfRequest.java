@@ -5,7 +5,7 @@ import qunar.api.pojo.Money;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * @author yunfeng.yang created on 16-4-23
+ * @author ge.zhang created on 16-4-23
  * @version 1.0
  */
 public class ResultOfRequest<T> {

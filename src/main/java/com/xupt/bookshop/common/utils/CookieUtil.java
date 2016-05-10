@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 
 
 /**
- * @author yunfeng.yang created on 16-4-14
+ * @author ge.zhang created on 16-4-14
  * @version 1.0
  */
 public class CookieUtil {

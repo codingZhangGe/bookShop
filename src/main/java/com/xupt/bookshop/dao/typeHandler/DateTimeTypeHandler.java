@@ -10,8 +10,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-/**
- * @author yunfeng.yang created on 16-4-14
+/**时间类型转换
+ * @author ge.zhang created on 16-4-14
  * @version 1.0
  */
 public class DateTimeTypeHandler implements TypeHandler<DateTime> {

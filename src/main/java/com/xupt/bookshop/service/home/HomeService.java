@@ -10,14 +10,13 @@ import java.util.List;
 /**
  * Description: 主页Service
  *
- * @author lingtong.fu
+ * @author ge.zhang
  * @version 2016-04-18 13:02
  */
 
 @Service
 public interface HomeService {
 
-    String sayHi(String name);
 
     /**
      * 查询所有类别
@@ -30,7 +29,7 @@ public interface HomeService {
     PageResult<BookingVo> queryBookingVo( Integer currentPage, Integer pageSize);
 
     /**
-     * 通过类别查询正在竞拍中的物品信息
+     * 通过类别查询物品信息
      */
     PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize);
 
@@ -41,4 +40,6 @@ public interface HomeService {
     int queryBookPages();
 
     PageResult<BookingVo> queryItemByState(int state,int currentPage,int pageSize);
+
+    PageResult<BookingVo> queryItemByStateAndCategory(int state,String category,int currentPage,int pageSize);
 }

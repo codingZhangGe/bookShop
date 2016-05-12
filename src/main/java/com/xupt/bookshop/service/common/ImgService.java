@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * Created by liuyanjiang on 16-4-17.
+ * Created by ge.zhang on 16-4-17.
  */
 public interface ImgService {
 

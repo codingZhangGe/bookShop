@@ -8,6 +8,8 @@ import javax.annotation.Resource;
 import com.xupt.bookshop.common.utils.PageResult;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
 import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.common.JsonResult;
+import com.xupt.bookshop.model.enums.BookState;
 import com.xupt.bookshop.model.home.BookingVo;
 import com.xupt.bookshop.service.home.HomeService;
 import org.slf4j.Logger;
@@ -48,7 +50,7 @@ public class HomeController {
         logger.info("home of book ");
         checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
         checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-        return  homeService.queryBookingVo(currentPage,pageSize);
+        return JsonResult.succ(homeService.queryBookingVo(currentPage, pageSize));
     }
 
     /**
@@ -60,39 +62,61 @@ public class HomeController {
     public Object queryCategory() {
         List<Category> categories = homeService.queryAllCategory();
 
-        return new JsonV2<>(CodeMessage.OK,"成功获取分类",categories);
+        return JsonResult.succ(categories);
     }
 
-    /**
-     *
-     * @return 通过类别查询图书信息
-     */
+//    /**
+//     *
+//     * @return 通过类别查询图书信息
+//     */
+//    @JsonBody
+//    @RequestMapping(value = "/index/queryItemByCategory", method = RequestMethod.GET)
+//    public PageResult<BookingVo> queryItemByCategory(   @RequestParam(value = "categoryName", required = false, defaultValue = "1") String  categoryName,
+//                                                  @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
+//                                                  @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize) {
+//
+//        checkArgument(categoryName != null && categoryName.length() > 0, "categoryId参数错误");
+//        checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
+//        checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
+//        return homeService.queryItemByCategory(categoryName, currentPage, pageSize);
+//    }
+//
+//
+//    @JsonBody
+//    @RequestMapping(value = "/index/queryItemByState",method = RequestMethod.GET)
+//    public PageResult<BookingVo> queryItemByState(  @RequestParam(value = "state", required = false, defaultValue = "1") Integer state,
+//                                                    @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
+//                                                    @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize){
+//
+//        checkArgument(state != null && state > 0, "state参数错误");
+//        checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
+//        checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
+//
+//        return homeService.queryItemByState(state,currentPage,pageSize);
+//
+//    }
+
+
+    //todo 组合查询
     @JsonBody
-    @RequestMapping(value = "/index/queryItemByCategory", method = RequestMethod.GET)
-    public PageResult<BookingVo> queryItemByCategory(   @RequestParam(value = "categoryName", required = false, defaultValue = "1") String  categoryName,
-                                                  @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
-                                                  @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize) {
+    @RequestMapping(value = "/index/query",method = RequestMethod.GET)
+    public  Object queryItemByCategoryAndState(@RequestParam(value = "state") String state,
+                                                              @RequestParam(value = "category") String category,
+                                                              @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
+                                                              @RequestParam(value = "pageSize", required = false, defaultValue = "9")Integer pageSize){
 
-        checkArgument(categoryName != null && categoryName.length() > 0, "categoryId参数错误");
-        checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
-        checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-        return homeService.queryItemByCategory(categoryName, currentPage, pageSize);
+        if(state==null&&category!=null){
+            return homeService.queryItemByCategory(category,currentPage,pageSize);
+
+        }
+        else if(state!=null&&category==null){
+            return homeService.queryItemByState(BookState.byString(state).getCode(), currentPage, pageSize);
+        }
+        else if(state!=null&&category!=null){
+            return  homeService.queryItemByStateAndCategory(BookState.byString(state).getCode(),category,currentPage,pageSize);
+        }
+        else{
+            return homeService.queryAllCategory();
+        }
     }
-
-
-    @ResponseBody
-    @RequestMapping(value = "/index/queryItemByState",method = RequestMethod.GET)
-    public PageResult<BookingVo> queryItemByState(  @RequestParam(value = "state", required = false, defaultValue = "1") Integer state,
-                                                    @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
-                                                    @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize){
-
-        checkArgument(state != null && state > 0, "state参数错误");
-        checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
-        checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-
-        return homeService.queryItemByState(state,currentPage,pageSize);
-
-    }
-
-
 }

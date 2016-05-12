@@ -102,7 +102,7 @@ public class LoginController {
         return "redirect:/login";
     }
 
-    //用户注册邮箱激活
+    //用户注册
      public Object register(@Valid RegisterParam registerParam){
          User name = loginService.queryByName(registerParam.getName());
          if(name!=null){

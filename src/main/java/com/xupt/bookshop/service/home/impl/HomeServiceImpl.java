@@ -33,12 +33,6 @@ public class HomeServiceImpl implements HomeService {
     @Resource
     OrikaBeanMapper orikaBeanMapper;
 
-    @Override
-    public String sayHi(String name) {
-
-        Assert.hasText(name, "名字不能为空");
-        return "Hello, " + name;
-    }
 
     @Override
     @DataSource(value = DataSource.slave)
@@ -104,5 +98,21 @@ public class HomeServiceImpl implements HomeService {
             BookingVos.add(auctioningVo);
         }
         return new PageResult<>(homeDao.queryBookPagesByState(state),BookingVos);
+    }
+
+    @Override
+    public PageResult<BookingVo> queryItemByStateAndCategory(int state, String category, int currentPage, int pageSize) {
+        List<BookingVo> BookingVos = Lists.newArrayList();
+        RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
+        List<BookingPo> BookingPos = homeDao.queryBookingPoByStateAndCategory(state,category, rowBounds);
+
+        for (BookingPo po : BookingPos) {
+
+            BookingVo auctioningVo ;
+            auctioningVo=orikaBeanMapper.map(po, BookingVo.class);
+            auctioningVo.setUrlList(imgService.getFirstPictureUrl(po.getBookId()));
+            BookingVos.add(auctioningVo);
+        }
+        return new PageResult<>(homeDao.queryBookPagesByCategoryAndState(category,state),BookingVos);
     }
 }

@@ -54,6 +54,7 @@
         ORDER BY buy_count
     </select>
 
+
     <select id="queryBookingPoByState" parameterType="Integer" resultMap="queryBookItem">
         SELECT
         <include refid="selectFields"/>
@@ -63,6 +64,21 @@
         WHERE state=#{state}
         ORDER BY buy_count
     </select>
+
+
+
+    <select id="queryBookingPoByStateAndCategory" parameterType="Integer" resultMap="queryBookItem">
+        SELECT
+        <include refid="selectFields"/>
+        FROM book
+        LEFT JOIN book_dynamic_info
+        ON book.book_id=book_dynamic_info.book_id
+        WHERE state=#{state}
+        AND
+        category_name=#{categoryName}
+        ORDER BY buy_count
+    </select>
+
 
 <!--图书总数-->
  <select id="queryBookPages"  resultType="Integer">

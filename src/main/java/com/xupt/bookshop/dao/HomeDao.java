@@ -23,9 +23,11 @@ public interface HomeDao {
 
     List<BookingPo> queryBookingPoByCategory(@Param("categoryName") String categoryName, RowBounds rowBounds);
     List<BookingPo> queryBookingPoByState(@Param("state") Integer state, RowBounds rowBounds);
-
+    List<BookingPo> queryBookingPoByStateAndCategory(@Param("state") Integer state, @Param("categoryName") String categoryName,RowBounds rowBounds);
 
     int queryBookPages();
     int queryBookPagesByState(@Param("state") Integer state);
     int queryBookPagesByCategory(@Param("categoryName") String categoryName);
+    int queryBookPagesByCategoryAndState(@Param("categoryName") String categoryName,@Param("state") Integer state);
+
 }

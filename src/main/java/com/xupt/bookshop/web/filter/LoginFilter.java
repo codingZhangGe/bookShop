@@ -16,7 +16,10 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.crypto.URIDereferencer;
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 /**
  * Description: Login
@@ -41,7 +44,7 @@ public class LoginFilter implements Filter {
 
         //如果现在处在登陆界面
 
-        if (httpServletRequest.getServletPath().contains("login")) {
+        if (httpServletRequest.getServletPath().contains("login")||httpServletRequest.getServletPath().contains("register")) {
             filterChain.doFilter(request, response);
             return;
         }
@@ -58,7 +61,7 @@ public class LoginFilter implements Filter {
         //cookie 中存在内容获取到对应的值
         for (Cookie cookie : cookies) {
             if ("login_id".equals(cookie.getName())) {
-                username = cookie.getValue();
+                username = URLDecoder.decode( cookie.getValue(),"utf-8");
                 break;
             }
         }

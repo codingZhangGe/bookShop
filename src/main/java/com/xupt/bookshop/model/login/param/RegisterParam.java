@@ -3,6 +3,7 @@ package com.xupt.bookshop.model.login.param;
 import com.xupt.bookshop.model.login.validation.Email;
 import com.xupt.bookshop.model.login.validation.Password;
 import com.xupt.bookshop.model.order.param.Tel;
+import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
 
@@ -10,9 +11,9 @@ import javax.validation.constraints.NotNull;
  * Created by zhangge on 16-5-10.
  */
 public class RegisterParam {
-   @NotNull
+   @NotBlank
     String name;
-    @NotNull
+
     @Password
     String password; //密码最少16位
     @Email

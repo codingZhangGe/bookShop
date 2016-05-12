@@ -6,13 +6,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/ImgService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/ImgService.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/CipherUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/DateUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/LogUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/UserContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/AdministratorDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/UserAuctionDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/admin/Administrator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/admin/FinishedItemInfoForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/admin/UnfinishedItemForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/admin/dto/ResultOfPutOn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/admin/dto/ResultOfTakeOff.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/bookdetails/AuctionMoney.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/bookdetails/AuctionOrder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/bookdetails/param/validation/QtalkValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/bookdetails/vo/AuctionBidderSuc.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/common/AuctionOrderModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/common/FinishedItemInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/common/ItemModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/common/UnfinishedItemDynamicInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/common/UnfinishedItemFixedInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/admin/AdministratorService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/admin/impl/AdministratorServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/auctiondetails/BookDetailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/userauction/UserAucitonService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/userauction/impl/UserAucitonServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/RedirectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/UserAuctionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/interceptor/AdminAuthorityInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/CipherUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/DateUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/LogUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/UserContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/AdministratorDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/UserAuctionDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/admin/Administrator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/admin/FinishedItemInfoForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/admin/UnfinishedItemForQuery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/admin/dto/ResultOfPutOn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/admin/dto/ResultOfTakeOff.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/bookdetails/AuctionMoney.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/bookdetails/AuctionOrder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/bookdetails/param/validation/QtalkValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/bookdetails/vo/AuctionBidderSuc.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/common/AuctionOrderModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/common/FinishedItemInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/common/ItemModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/common/UnfinishedItemDynamicInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/common/UnfinishedItemFixedInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/admin/AdministratorService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/admin/impl/AdministratorServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/auctiondetails/BookDetailService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/auctiondetails/impl/BookDetailsServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/userauction/UserAucitonService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/userauction/impl/UserAucitonServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/RedirectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/UserAuctionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/interceptor/AdminAuthorityInterceptor.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/exceptions/AuthorityException.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/exceptions/AuthorityException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/exceptions/AuthorityException.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/exceptions/AuthorityException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/BookDetailController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/BookDetailController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/BookDetailController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/BookDetailController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/BookDetailDao.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/BookDetailDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/BookDetailDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/BookDetailDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/interceptor/BrowserInterceptor.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/interceptor/BrowserInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/interceptor/BrowserInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/interceptor/BrowserInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/Constants.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/HomeDao.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/HomeDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/HomeDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/HomeDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/HomeService.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/HomeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/HomeService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/HomeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/common/impl/ImgServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/common/impl/ImgServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/common/impl/ImgServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/common/impl/ImgServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/LoginDao.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/LoginDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/LoginDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/LoginDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/login/LoginService.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/login/LoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/login/LoginService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/login/LoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/login/LoginServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/login/LoginServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/login/LoginServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/login/LoginServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/OrderDao.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/OrderDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/OrderDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/OrderDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/order/OrderItem.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/order/OrderItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/order/OrderItem.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/order/OrderItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/order/OrderItemVo.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/order/OrderItemVo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/order/OrderItemVo.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/order/OrderItemVo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/orderService/OrderService.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/orderService/OrderService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/OrderService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/orderService/impl/OrderServiceIMpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/login/validation/Password.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/login/validation/Password.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/login/validation/Password.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/login/validation/Password.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/SessionUtil.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/common/utils/SessionUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/SessionUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/common/utils/SessionUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/BookDetailDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/BookDetailDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Email.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Email.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/HomeDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/HomeDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/LoginDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/LoginDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/LoginDao.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/LoginDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/LoginDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/LoginDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/OrderDao.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/OrderDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/OrderDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/OrderDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/properties/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/properties/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/login.html" afterPath="$PROJECT_DIR$/target/bookShop/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/spring/spring-bean.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-bean.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-bean.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/spring/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/spring/spring-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookshop.iws" />
@@ -124,42 +244,6 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - bookshop@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="bookshop" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="cart_item" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - bookshop@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="bookshop" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="cart" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -167,41 +251,130 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DynamicDataSourceHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/datasource/DynamicDataSourceHolder.java">
+      <file leaf-file-name="RegisterParam.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="540">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="702">
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java">
+      <file leaf-file-name="ImgDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ImgDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1872">
-              <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1461983948741" expanded="true" signature="594:677" placeholder="SELECT pictu..item_picture..." />
+                <marker date="1461983948741" expanded="true" signature="781:934" placeholder="SELECT pictu..item_picture..." />
+                <marker date="1461983948741" expanded="true" signature="845:924" placeholder="SELECT MIN(i..item_picture..." />
+                <marker date="1461983948741" expanded="true" signature="1010:1066" placeholder="DELETE FROM ..." />
+                <marker date="1461983948741" expanded="true" signature="1148:1196" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/LoginDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="576">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1463024982225" expanded="true" signature="590:677" placeholder="select user_..user..." />
+                <marker date="1463024982225" expanded="true" signature="801:935" placeholder="INSERT into ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookDetailDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/BookDetailDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="869" max-vertical-offset="1368">
+              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+              <folding>
+                <marker date="1462460798922" expanded="true" signature="1471:2026" placeholder="SELECT book...book..." />
+                <marker date="1462460798922" expanded="true" signature="2108:2197" placeholder="UPDATE book_..." />
+                <marker date="1462460798922" expanded="true" signature="2276:2359" placeholder="UPDATE book_..." />
+                <marker date="1462460798922" expanded="true" signature="2415:2486" placeholder="UPDATE book ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35140997" vertical-offset="0" max-vertical-offset="594">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="1836">
+              <caret line="72" column="80" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml">
+      <file leaf-file-name="LoginFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="1872">
-              <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.32474226" vertical-offset="450" max-vertical-offset="1278">
+              <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadItemDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UploadItemDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="1026">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1462244448370" expanded="true" signature="257:406" placeholder="( book_id,bo..." />
+                <marker date="1462244448370" expanded="true" signature="518:983" placeholder="INSERT INTO ..." />
+                <marker date="1462244448370" expanded="true" signature="1111:1198" placeholder="INSERT INTO ..." />
+                <marker date="1462244448370" expanded="true" signature="1405:1498" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/OrderDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+              <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+              <folding>
+                <marker date="1462849687292" expanded="true" signature="1196:1312" placeholder="SELECT Order..orders..." />
+                <marker date="1462849687292" expanded="true" signature="1422:1707" placeholder="INSERT into ..." />
+                <marker date="1462849687292" expanded="true" signature="2192:2353" placeholder="SELECT order..orders..." />
+                <marker date="1462849687292" expanded="true" signature="2242:2283" placeholder="select date_..." />
+                <marker date="1462849687292" expanded="true" signature="2440:2536" placeholder="SELECT * FRO..orders..." />
+                <marker date="1462849687292" expanded="true" signature="2621:2724" placeholder="SELECT COUNT..orders..." />
+                <marker date="1462849687292" expanded="true" signature="2801:2864" placeholder="SELECT COUNT..orders..." />
+                <marker date="1462849687292" expanded="true" signature="2925:2992" placeholder="UPDATE order..." />
+                <marker date="1462849687292" expanded="true" signature="3053:3105" placeholder="UPDATE order..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Email.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Email.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="450">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -215,12 +388,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/BookStateEnumTypeHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/DateTimeTypeHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/typeHandler/EnumTypeHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/BookDetailDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/CartDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/ImgDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/UserAuctionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/dto/ResultOfUpdateAndCreateOrder.java" />
@@ -232,8 +399,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/UserAuctionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Password.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/email.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/LoginDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/LoginDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/login/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/UserInfoDao.java" />
@@ -260,12 +425,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-bean.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/ImgService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/BookDetailDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Email.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/LoginDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java" />
       </list>
     </option>
   </component>
@@ -314,9 +487,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="21" />
     <option name="width" value="1366" />
-    <option name="height" value="772" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -343,6 +516,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -390,6 +564,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,6 +754,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interceptor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1135,6 +1411,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bookshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="datasource" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1142,7 +1452,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1662,12 +1971,14 @@
       <workItem from="1462842381415" duration="100000" />
       <workItem from="1462842497027" duration="10658000" />
       <workItem from="1462886430452" duration="4131000" />
-      <workItem from="1463022471126" duration="21000" />
+      <workItem from="1463022471126" duration="67000" />
+      <workItem from="1463022918445" duration="18000" />
+      <workItem from="1463023310979" duration="2729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261588000" />
+    <option name="totallyTimeSpent" value="264381000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1690,40 +2001,40 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="21" width="1366" height="747" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1894061" sideWeight="0.2621212" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1894061" sideWeight="0.2621212" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20151515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20151515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24558587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25151515" sideWeight="0.5008026" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2953451" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2885439" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40770465" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25151515" sideWeight="0.5008026" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0016051364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.056818184" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.056818184" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41761827" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23636363" sideWeight="0.49919742" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14767255" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23030303" sideWeight="0.49919742" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30658105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55216694" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24558587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40770465" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1731,33 +2042,33 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.060606062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20151515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2953451" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2953451" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2885439" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0016051364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41761827" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11212121" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23636363" sideWeight="0.49919742" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17174959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37078652" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20385233" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55216694" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48796147" sideWeight="0.2621212" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1894061" sideWeight="0.2621212" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4670947" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24558587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25151515" sideWeight="0.5008026" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40770465" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25151515" sideWeight="0.5008026" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.057280514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.056818184" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1782,7 +2093,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="49" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1791,153 +2102,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/order/OrderItemVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1512">
-          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="720">
-          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/CartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/51b59265/7cb93cba-36e9-4784-981d-42461a16d1ec/bookshop..orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/51b59265/7cb93cba-36e9-4784-981d-42461a16d1ec/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.8" vertical-offset="1272" max-vertical-offset="1674">
-          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/order/OrderItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50358" vertical-offset="977" max-vertical-offset="1692">
-          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/userinfo/impl/UserInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1314">
-          <caret line="64" column="63" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/OrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/OrderDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="1566">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/UserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1476">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookdetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.2962964" vertical-offset="413" max-vertical-offset="1710">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-datasource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6254826" vertical-offset="0" max-vertical-offset="756">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding>
-            <element signature="e#513#538#0" expanded="false" />
-            <element signature="e#581#611#0" expanded="false" />
-            <element signature="e#654#684#0" expanded="false" />
-            <element signature="e#908#934#0" expanded="false" />
-            <element signature="e#977#1008#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-aop.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.08" vertical-offset="0" max-vertical-offset="378">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/bookdetails/impl/BookDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2764" max-vertical-offset="3294">
-          <caret line="111" column="46" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/cart/impl/CartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/common/impl/ImgServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="2088">
-          <caret line="121" column="40" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2118812" vertical-offset="0" max-vertical-offset="828">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5" vertical-offset="594" max-vertical-offset="1026">
@@ -2016,21 +2180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="504">
           <caret line="29" column="10" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/datasource/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/datasource/DataSourceAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1026">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2119,20 +2268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1782">
-          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CookieUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="936">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/PageResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
@@ -2162,18 +2297,235 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="1872">
-          <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="594">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/datasource/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35140997" vertical-offset="0" max-vertical-offset="594">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/interceptor/BrowserInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="1944">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/BookDetailDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/datasource/DataSourceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="1026">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="1872">
+          <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+          <folding>
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT categ..category..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..book..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..book..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..book..." />
+            <marker date="1462949394985" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..book..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/upload.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="37.333332" vertical-offset="1188" max-vertical-offset="2538">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46601942" vertical-offset="0" max-vertical-offset="414">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/SessionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5212766" vertical-offset="218" max-vertical-offset="594">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#650#651#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.111111" vertical-offset="159" max-vertical-offset="540">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Password.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/validation/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="450">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="702">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ImgDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1461983948741" expanded="true" signature="594:677" placeholder="SELECT pictu..item_picture..." />
+            <marker date="1461983948741" expanded="true" signature="781:934" placeholder="SELECT pictu..item_picture..." />
+            <marker date="1461983948741" expanded="true" signature="845:924" placeholder="SELECT MIN(i..item_picture..." />
+            <marker date="1461983948741" expanded="true" signature="1010:1066" placeholder="DELETE FROM ..." />
+            <marker date="1461983948741" expanded="true" signature="1148:1196" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UploadItemDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1462244448370" expanded="true" signature="257:406" placeholder="( book_id,bo..." />
+            <marker date="1462244448370" expanded="true" signature="518:983" placeholder="INSERT INTO ..." />
+            <marker date="1462244448370" expanded="true" signature="1111:1198" placeholder="INSERT INTO ..." />
+            <marker date="1462244448370" expanded="true" signature="1405:1498" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/OrderDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+          <folding>
+            <marker date="1462849687292" expanded="true" signature="1196:1312" placeholder="SELECT Order..orders..." />
+            <marker date="1462849687292" expanded="true" signature="1422:1707" placeholder="INSERT into ..." />
+            <marker date="1462849687292" expanded="true" signature="2192:2353" placeholder="SELECT order..orders..." />
+            <marker date="1462849687292" expanded="true" signature="2242:2283" placeholder="select date_..." />
+            <marker date="1462849687292" expanded="true" signature="2440:2536" placeholder="SELECT * FRO..orders..." />
+            <marker date="1462849687292" expanded="true" signature="2621:2724" placeholder="SELECT COUNT..orders..." />
+            <marker date="1462849687292" expanded="true" signature="2801:2864" placeholder="SELECT COUNT..orders..." />
+            <marker date="1462849687292" expanded="true" signature="2925:2992" placeholder="UPDATE order..." />
+            <marker date="1462849687292" expanded="true" signature="3053:3105" placeholder="UPDATE order..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/LoginDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="576">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1463024982225" expanded="true" signature="590:677" placeholder="select user_..user..." />
+            <marker date="1463024982225" expanded="true" signature="801:935" placeholder="INSERT into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/XSSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53731346" vertical-offset="0" max-vertical-offset="630">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/BookDetailDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="869" max-vertical-offset="1368">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <marker date="1462460798922" expanded="true" signature="1471:2026" placeholder="SELECT book...book..." />
+            <marker date="1462460798922" expanded="true" signature="2108:2197" placeholder="UPDATE book_..." />
+            <marker date="1462460798922" expanded="true" signature="2276:2359" placeholder="UPDATE book_..." />
+            <marker date="1462460798922" expanded="true" signature="2415:2486" placeholder="UPDATE book ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/common/utils/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0721443" vertical-offset="275" max-vertical-offset="936">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="1836">
+          <caret line="72" column="80" selection-start-line="72" selection-start-column="80" selection-end-line="72" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/filter/LoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32474226" vertical-offset="450" max-vertical-offset="1278">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
           <folding />
         </state>
       </provider>

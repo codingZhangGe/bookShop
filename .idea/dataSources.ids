@@ -88,7 +88,7 @@
       <primary-key name="PRIMARY" columns="OrderID"/>
     </table>
     <table name="user" schema="" catalog="bookshop" type="TABLE">
-      <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="UID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="user_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>

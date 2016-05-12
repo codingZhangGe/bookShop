@@ -26,6 +26,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 /**
  * Description: Login
@@ -56,7 +58,7 @@ public class LoginController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @JsonBody
-    public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse ,@Valid LoginPara loginPara, BindingResult result) {
+    public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse ,@Valid LoginPara loginPara, BindingResult result) throws UnsupportedEncodingException {
 
         if (ParameterCheckUtil.checkBingResultParam(result).equals("true")) {
             User user;
@@ -67,7 +69,8 @@ public class LoginController {
                     return  JsonResult.fail("密码输入错误");
                 }
                 else{
-                    CookieUtil.addCookie(httpServletResponse,"login_id",loginPara.getUsername(),60);
+                    String username= URLEncoder.encode(loginPara.getUsername(),"utf-8");
+                    CookieUtil.addCookie(httpServletResponse,"login_id",username,60);
                     //用户登陆创建购物车
                     cartService.createCategoryWithUser(loginPara.getUsername());
                     return JsonResult.succ();
@@ -103,6 +106,8 @@ public class LoginController {
     }
 
     //用户注册
+    @RequestMapping("/register")
+    @JsonBody
      public Object register(@Valid RegisterParam registerParam){
          User name = loginService.queryByName(registerParam.getName());
          if(name!=null){

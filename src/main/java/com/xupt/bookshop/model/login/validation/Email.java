@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 /**
  * Created by zhangge on 16-5-10.
  */
-@Pattern(regexp = "/^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$/;\n" +"\n")
+@Pattern(regexp = "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$")
 @Target({ElementType.FIELD,ElementType.METHOD,ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {})

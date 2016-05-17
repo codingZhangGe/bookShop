@@ -22,6 +22,7 @@ public interface Constants {
     int LESS_NUM_CODE = -11;
     int ADD_CATEGORY_FAIL = -12;
     int FAILURE_CREATE_ORDER_CODE = -13;
+    int ADD_CART_NUM_SUCC=-14;
 
     /**
      * 电话号码正则表达式

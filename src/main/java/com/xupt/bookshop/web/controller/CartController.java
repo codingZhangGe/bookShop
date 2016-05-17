@@ -55,5 +55,15 @@ public class CartController {
 
         return resultOfRequest;
     }
-//todo 增加数量
+
+@RequestMapping("/deleteCartItem")
+@ResponseBody
+public Object addCartnum(@RequestParam("bookId") String bookId)
+{
+    logger.info("<deleteCategoryItem>  bookid={}  username={}",bookId, SessionUtil.getUserSession().getName());
+    Preconditions.checkNotNull(bookId!=null,"商品id 不存在");
+    ResultOfRequest resultOfRequest = cartService.addCartItemNum(bookId);
+
+    return resultOfRequest;
+}
 }

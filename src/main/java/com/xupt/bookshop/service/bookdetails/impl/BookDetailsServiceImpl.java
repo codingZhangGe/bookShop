@@ -116,8 +116,14 @@ public class BookDetailsServiceImpl implements BookDetailService {
         cartItem.setBuyNum(addCategoryParam.getBuyNumber());
         cartItem.setPrice(bookDetail.getPrice());
         //用户重复添加相同的商品,只是增加数量
-        cartDao.insertCartitem(cartItem);
-        cartItem.setPictureUrl(imgService.getFirstPictureUrl(bookDetail.getBookId()));
+       CartItem item=cartDao.queryCartDetailsByBookId(bookDetail.getBookId());
+        if(item==null) {
+            cartDao.insertCartitem(cartItem);
+            cartItem.setPictureUrl(imgService.getFirstPictureUrl(bookDetail.getBookId()));
+        }
+        else{
+            cartDao.updateCartDetailCount(bookDetail.getBookId());
+        }
         ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
         resultOfRequest.setResult(true);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);

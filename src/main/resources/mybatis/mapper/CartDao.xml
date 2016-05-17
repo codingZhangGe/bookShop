@@ -26,6 +26,9 @@
          )
     </select>
 
+    <select id="queryCartDetailsByBookId" parameterType="String" resultType="com.xupt.bookshop.model.cart.CartItem">
+        SELECT  * FROM cart_item WHERE book_id=#{bookId}
+    </select>
     <select id="queryCartId" parameterType="String" resultType="String">
         select cart_id FROM  cart
         WHERE  user_name=#{username}
@@ -48,4 +51,10 @@
   <select id="updateCategoryItem">
       TRUNCATE TABLE cart_item;
   </select>
+
+    <update id="updateCartDetailCount" parameterType="String">
+        UPDATE cart_item SET
+        buy_num=buy_num+1
+        WHERE book_id=#{bookId}
+    </update>
 </mapper>

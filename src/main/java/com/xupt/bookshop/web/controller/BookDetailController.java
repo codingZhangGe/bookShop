@@ -68,5 +68,5 @@ public class BookDetailController extends BaseController {
 
     }
 
- //todo 加入购物车相同的商品,在原始的上面数量增加
+
 }

@@ -31,6 +31,7 @@ public interface CartDao {
      */
     List<CartItem> queryCartDetail(String username);
 
+    CartItem queryCartDetailsByBookId(@Param("bookId") String bookId);
     /**
      * 查询购物车
      * @param username
@@ -53,6 +54,11 @@ public interface CartDao {
     int deleteCategoryItem(@Param("list")List<String> bookId);
    //清空详情
     void updateCategoryItem();
+
+    /**
+     * 增加购买数量
+     */
+    void updateCartDetailCount(@Param("bookId")String bookId);
 
 
 }

@@ -2,15 +2,6 @@ package com.xupt.bookshop.service.userinfo;
 
 import com.xupt.bookshop.common.utils.PageResult;
 import com.xupt.bookshop.model.enums.OrderState;
-import com.xupt.bookshop.model.order.OrderItemVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionInAfterVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionInNowVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionOrderFailVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionOrderSuccessVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionOutAfterVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionOutBeforeVo;
-import com.xupt.bookshop.model.userauction.vo.UserAuctionOutNowVo;
-import org.apache.ibatis.annotations.Param;
 
 /**
  *

@@ -1,6 +1,5 @@
 package com.xupt.bookshop.model.order;
 
-import com.xupt.bookshop.common.utils.DateTimeUtil;
 import com.xupt.bookshop.model.cart.CartItem;
 import com.xupt.bookshop.model.enums.OrderState;
 import org.joda.time.DateTime;
@@ -8,15 +7,18 @@ import org.joda.time.DateTime;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * 返回前端对象
- * Created by zhangge on 16-5-5.
+/**订单详情
+ * Created by zhangge on 16-4-27.
  */
-public class OrderItemVo {
+public class Orders {
     /**
      *订单号
      */
     String OrderId;
+    /**
+     * 下单用户
+     */
+    String username;
     /**
      * 联系人
      */
@@ -36,17 +38,17 @@ public class OrderItemVo {
     /**
      * 下单时间
      */
-    String orderTime;
+    DateTime orderTime;
     /**
      * 地址
      */
     String address;
 
-
     /**
      *商品名称
      */
     List<CartItem> cartItems;
+
 
     public String getOrderId() {
         return OrderId;
@@ -68,7 +70,7 @@ public class OrderItemVo {
         return status;
     }
 
-    public String getOrderTime() {
+    public DateTime getOrderTime() {
         return orderTime;
     }
 
@@ -76,7 +78,13 @@ public class OrderItemVo {
         return address;
     }
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public List<CartItem> getCartItems() {
         return cartItems;
@@ -103,12 +111,13 @@ public class OrderItemVo {
     }
 
     public void setOrderTime(DateTime orderTime) {
-        this.orderTime = DateTimeUtil.getStandardStr(orderTime);
+        this.orderTime = orderTime;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
+
 
     public void setCartItems(List<CartItem> cartItems) {
         this.cartItems = cartItems;

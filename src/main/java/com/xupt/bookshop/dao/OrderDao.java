@@ -1,8 +1,8 @@
 package com.xupt.bookshop.dao;
 
 import com.xupt.bookshop.model.enums.OrderState;
-import com.xupt.bookshop.model.enums.BookState;
 import com.xupt.bookshop.model.order.OrderItem;
+import com.xupt.bookshop.model.order.Orders;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 import org.joda.time.DateTime;
@@ -16,11 +16,12 @@ import java.util.List;
  */
 @Repository
 public interface OrderDao {
-    public void createOrders(@Param("order")OrderItem orderItem);
-    public void createOrderItem(@Param("orderItem") OrderItem orderItem);
+    public void createOrders(@Param("order")Orders orders);
+    public void createOrderItem(@Param("orderItem") Orders orders);
 
-    public List<OrderItem> queryOrderDetails(RowBounds rowBounds,@Param("username")String username);
-    public List<OrderItem> queryOrderByState(RowBounds rowBounds,@Param("username")String username,@Param("state")int orderState);
+    public List<OrderItem> queryOrderItem(@Param("orderId") String orderId);
+    public List<Orders> queryOrderDetails(RowBounds rowBounds,@Param("username")String username);
+    public List<Orders> queryOrderByState(RowBounds rowBounds,@Param("username")String username,@Param("state")int orderState);
 
     public int updateOrderStatus(@Param("orderState")OrderState orderState);
 

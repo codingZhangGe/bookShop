@@ -14,6 +14,6 @@ public interface LoginService {
      */
     public User queryByName(String name);
 
-    public  void createUser(RegisterParam registerParamr);
+    public  String  createUser(RegisterParam registerParamr);
 
 }

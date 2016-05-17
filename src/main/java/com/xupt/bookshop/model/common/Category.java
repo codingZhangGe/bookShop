@@ -5,10 +5,7 @@ package com.xupt.bookshop.model.common;
  * @version 1.0
  */
 public class Category {
-    /**
-     * 主键id
-     */
-    private int id;
+
     /**
      * 类别
      */
@@ -22,11 +19,4 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }

@@ -17,6 +17,8 @@ public interface LoginDao {
      * @return
      */
     public User queryByName(@Param("name")String name);
+    public User queryByEmail(@Param("email")String email);
+    public User queryByTel(@Param("tel")String tel);
 
     /**
      * 创建用户

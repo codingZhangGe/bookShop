@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.xupt.bookshop.common.exceptions.ParameterException;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
 
 /**
  * @author ge.zhang created on 16-4-14
@@ -37,11 +40,17 @@ public class CookieUtil {
      */
     public static String getCookieValue(HttpServletRequest request, String cookieName) throws ParameterException {
         Cookie[] cookies = request.getCookies();
+        String result = null;
         if (cookies != null) {
             ParameterCheckUtil.checkNotNull(cookieName, "cookie名不能为空");
             for (Cookie cookie : cookies) {
                 if (cookieName.equals(cookie.getName())) {
-                    return StringUtils.isBlank(cookie.getValue()) ? null : cookie.getValue();
+                    try {
+                        result=URLDecoder.decode( cookie.getValue(),"utf-8");
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+                    return StringUtils.isBlank(result) ? null : result;
                 }
             }
         }

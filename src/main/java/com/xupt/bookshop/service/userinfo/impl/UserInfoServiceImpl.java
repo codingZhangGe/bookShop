@@ -5,8 +5,8 @@ import com.xupt.bookshop.common.utils.PageResult;
 import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
 import com.xupt.bookshop.dao.OrderDao;
 import com.xupt.bookshop.model.enums.OrderState;
-import com.xupt.bookshop.model.order.OrderItem;
-import com.xupt.bookshop.model.order.OrderItemVo;
+import com.xupt.bookshop.model.order.Orders;
+import com.xupt.bookshop.model.order.OrdersVo;
 import com.xupt.bookshop.service.common.ImgService;
 
 import com.xupt.bookshop.service.userinfo.UserInfoService;
@@ -36,32 +36,33 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public PageResult queryOrderByState(Integer currentPage,Integer PageSize,String username, OrderState orderState) {
 
-        List<OrderItemVo> orderItemVoList = Lists.newArrayList();
+        List<OrdersVo> ordersVoList = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage-1, PageSize);
-        List<OrderItem> orderItems = orderDao.queryOrderByState(rowBounds, username, orderState.getCode());
+        List<Orders> orderses = orderDao.queryOrderByState(rowBounds, username, orderState.getCode());
 
-        for (OrderItem po : orderItems) {
+        for (Orders po : orderses) {
 
-            OrderItemVo orderVo ;
-            orderVo=orikaBeanMapper.map(po, OrderItemVo.class);
+            OrdersVo orderVo ;
+            orderVo=orikaBeanMapper.map(po, OrdersVo.class);
 
-            orderItemVoList.add(orderVo);
+            ordersVoList.add(orderVo);
         }
-    return new PageResult(orderDao.queryOrderPagesWithState(username,orderState.getCode()),orderItemVoList);
+    return new PageResult(orderDao.queryOrderPagesWithState(username,orderState.getCode()), ordersVoList);
     }
 
     @Override
     public PageResult queryAllOrder(Integer currentPage,Integer PageSize,String username) {
-        List<OrderItemVo> orderItemVoList = Lists.newArrayList();
+        List<OrdersVo> ordersVoList = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage-1, PageSize);
-        List<OrderItem> orderItems=orderDao.queryOrderDetails(rowBounds,username);
+        List<Orders> orderses =orderDao.queryOrderDetails(rowBounds,username);
 
-        for (OrderItem po : orderItems) {
+        for (Orders po : orderses) {
 
-            OrderItemVo orderVo ;
-            orderVo=orikaBeanMapper.map(po, OrderItemVo.class);
-            orderItemVoList.add(orderVo);
+            OrdersVo orderVo ;
+            orderVo=orikaBeanMapper.map(po, OrdersVo.class);
+            orderVo.setCartItems(orderDao.queryOrderItem(po.getOrderId()));
+            ordersVoList.add(orderVo);
         }
-        return new PageResult(orderDao.queryOrderPages(username),orderItemVoList);
+        return new PageResult(orderDao.queryOrderPages(username), ordersVoList);
     }
 }

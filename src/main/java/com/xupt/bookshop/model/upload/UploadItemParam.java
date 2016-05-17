@@ -50,7 +50,7 @@ public class   UploadItemParam {
     /**
      * 价格
      */
-@NotNull
+    @NotNull
     private BigDecimal price;
 
     /**

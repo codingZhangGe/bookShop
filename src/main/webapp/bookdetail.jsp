@@ -84,6 +84,33 @@
 </form>
 
 
+
+
+<form action="/index/query" method="get">
+    <table border="0">
+        分类展示
+        <tr>
+            <td>类别</td>
+            <td><input name="category"/></td>
+        </tr>
+
+        <tr>
+            <td>状态</td>
+            <td><input name="state" /></td>
+        </tr>
+        <tr>
+            <td>currentPage</td>
+            <td><input name="currentPage"  value="1"/></td>
+        </tr>
+        <tr>
+            <td>pageSize</td>
+            <td><input name="pageSize" value="3"/></td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>
+
+
 </body>
 
 </html>

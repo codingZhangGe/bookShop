@@ -3,7 +3,6 @@ package com.xupt.bookshop.web.controller;
 import com.google.common.base.Preconditions;
 import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.common.JsonResult;
-import com.xupt.bookshop.model.order.OrderItem;
 import com.xupt.bookshop.model.order.param.OrderParam;
 import com.xupt.bookshop.service.orderService.OrderService;
 import org.slf4j.Logger;
@@ -31,8 +30,8 @@ public class OrderController {
      * @param orderParam
      * @return
      */
-    @RequestMapping("/doOrder")
-    @JsonBody
+    @RequestMapping(value = "/doOrder",method = RequestMethod.POST)
+    @ResponseBody
     public JsonResult doOrderAndDetail(@RequestParam("cartId") String cartId,@Valid OrderParam orderParam,
                                        @CookieValue("login_id") String username){
         logger.info("<do OrderAnd Detail>  create order user={}",username);

@@ -126,7 +126,7 @@ public class ImgServiceImpl implements ImgService {
 
         String pictureUrl ="http://7xti7f.com2.z0.glb.clouddn.com/"+pictureId;
 
-        return pictureId;
+        return pictureUrl;
     }
 
 }

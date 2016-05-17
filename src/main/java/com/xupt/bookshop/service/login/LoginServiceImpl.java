@@ -30,8 +30,21 @@ public class LoginServiceImpl  implements LoginService {
 
     @Override
     @DataSource(value = DataSource.master)
-    public void createUser(RegisterParam registerParamr) {
+    public String  createUser(RegisterParam registerParamr) {
+
         logger.info("<createUser> user register" );
+
+        if(loginDao.queryByName(registerParamr.getName())!=null){
+            return "用户名已经存在";
+        }
+        else if(loginDao.queryByEmail(registerParamr.getEmail())!=null){
+            return "邮箱已注册";
+        }
+        else if(loginDao.queryByTel(registerParamr.getTel())!=null){
+            return "手机号已经注册";
+        }
+
         loginDao.addUser(registerParamr);
+        return "注册成功";
     }
 }

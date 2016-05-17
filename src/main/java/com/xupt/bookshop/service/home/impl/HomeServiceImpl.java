@@ -104,7 +104,7 @@ public class HomeServiceImpl implements HomeService {
     public PageResult<BookingVo> queryItemByStateAndCategory(int state, String category, int currentPage, int pageSize) {
         List<BookingVo> BookingVos = Lists.newArrayList();
         RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
-        List<BookingPo> BookingPos = homeDao.queryBookingPoByStateAndCategory(state,category, rowBounds);
+        List<BookingPo> BookingPos = homeDao.queryBookingPoByStateAndCategory(state,category,rowBounds);
 
         for (BookingPo po : BookingPos) {
 

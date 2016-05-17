@@ -115,7 +115,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
         cartItem.setCurrentPrice(bookDetail.getCurrentPrice());
         cartItem.setBuyNum(addCategoryParam.getBuyNumber());
         cartItem.setPrice(bookDetail.getPrice());
-
+        //用户重复添加相同的商品,只是增加数量
         cartDao.insertCartitem(cartItem);
         cartItem.setPictureUrl(imgService.getFirstPictureUrl(bookDetail.getBookId()));
         ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
@@ -188,6 +188,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
     public BookInfoVo bookPoToVo(BookDetail bookDetail){
         BookInfoVo infoVo ;
         infoVo=orikaBeanMapper.map(bookDetail,BookInfoVo.class);
+        infoVo.setBookState(bookDetail.getBookState());
         infoVo.setUrlList(imgService.getPictureUrl(bookDetail.getBookId()));
         return infoVo;
     }

@@ -33,11 +33,11 @@ public enum BookState {
 
 
     public static BookState byString(String src) {
-        if (src.equals(OUT_OF_STOCK.toString())) {
+        if (src.equals(OUT_OF_STOCK.getDescription())) {
             return OUT_OF_STOCK;
-        } else if (src.equals(UNDER_CARRIAGE.toString())) {
+        } else if (src.equals(UNDER_CARRIAGE.getDescription())) {
             return UNDER_CARRIAGE;
-        }else if(src.equals(OK_TO_ORDER.toString())) {
+        }else if(src.equals(OK_TO_ORDER.getDescription())) {
             return OK_TO_ORDER;
         }
         else

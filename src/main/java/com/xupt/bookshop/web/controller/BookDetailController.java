@@ -5,12 +5,14 @@ import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.bookdetails.param.BookDetailParam;
 import com.xupt.bookshop.model.bookdetails.param.AddCategoryParam;
 import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
+import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.service.bookdetails.BookDetailService;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import qunar.api.pojo.json.JsonV2;
 import qunar.web.spring.annotation.JsonBody;
 import javax.annotation.Resource;
@@ -36,13 +38,13 @@ public class BookDetailController extends BaseController {
      * @return
      */
     @RequestMapping(value = "/details", method = RequestMethod.POST)
-    @JsonBody
-    public BookInfoVo bookDescription(@Valid BookDetailParam bookDetailParam) {
+    @ResponseBody
+    public Object bookDescription(@Valid BookDetailParam bookDetailParam) {
 
        logger.info("query book details book id={}",bookDetailParam.getBookId());
 
         BookInfoVo bookInfoVo = bookDetailService.queryBookDetail(bookDetailParam.getBookId());
-        return bookInfoVo;
+        return JsonResult.succ(bookInfoVo);
 
     }
 
@@ -52,8 +54,8 @@ public class BookDetailController extends BaseController {
      *@return 成功：返回商品id 和现 失败：返回失败信息
      */
     @RequestMapping(value = "/cart", method = RequestMethod.POST)
-    @JsonBody
-    public JsonV2<Object> addCategory(@Valid AddCategoryParam doOrderParam, @CookieValue("login_id") String username)
+    @ResponseBody
+    public Object addCategory(@Valid AddCategoryParam doOrderParam, @CookieValue("login_id") String username)
     {
         checkArgument(!Strings.isNullOrEmpty(username),"username 不能是空");
         ResultOfRequest resultOfRequest ;
@@ -66,11 +68,5 @@ public class BookDetailController extends BaseController {
 
     }
 
-
-    /**
-     * 收藏功能
-     */
-
-
-
+ //todo 加入购物车相同的商品,在原始的上面数量增加
 }

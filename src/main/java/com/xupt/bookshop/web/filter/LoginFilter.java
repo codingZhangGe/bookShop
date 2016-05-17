@@ -1,7 +1,9 @@
 package com.xupt.bookshop.web.filter;
 
 import com.google.common.base.Strings;
+import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.Monitor;
+import com.xupt.bookshop.common.utils.CookieUtil;
 import com.xupt.bookshop.common.utils.SessionUtil;
 import com.xupt.bookshop.dao.LoginDao;
 import org.springframework.web.context.WebApplicationContext;
@@ -44,7 +46,10 @@ public class LoginFilter implements Filter {
 
         //如果现在处在登陆界面
 
-        if (httpServletRequest.getServletPath().contains("login")||httpServletRequest.getServletPath().contains("register")) {
+        if (httpServletRequest.getServletPath().contains("login")
+                ||httpServletRequest.getServletPath().contains("register")
+                ||httpServletRequest.getServletPath().contains("index")
+                ||httpServletRequest.getServletPath().contains("details")) {
             filterChain.doFilter(request, response);
             return;
         }
@@ -53,6 +58,7 @@ public class LoginFilter implements Filter {
         Cookie[] cookies = httpServletRequest.getCookies();
         if (cookies == null) {
             httpServletResponse.sendRedirect("/login.html");
+            CookieUtil.deleteCookie(httpServletResponse, Constants.USERCOOKIE);
             return;
         }
 

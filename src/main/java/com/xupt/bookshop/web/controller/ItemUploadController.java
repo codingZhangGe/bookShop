@@ -10,6 +10,7 @@ import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.common.utils.*;
 import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.upload.ImgModel;
 import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.common.ImgService;
@@ -43,8 +44,6 @@ public class ItemUploadController extends BaseController {
     private UploadItemService uploadItemService;
     @Resource
     private HomeService homeService;
-    // @Resource
-    // private AuctionMessage message;
 
     @RequestMapping(value = "/imageUpload", method = RequestMethod.POST)
     @JsonBody

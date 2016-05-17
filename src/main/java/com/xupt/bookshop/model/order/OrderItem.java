@@ -1,125 +1,55 @@
 package com.xupt.bookshop.model.order;
 
-import com.xupt.bookshop.model.cart.CartItem;
-import com.xupt.bookshop.model.enums.OrderState;
-import org.joda.time.DateTime;
-
 import java.math.BigDecimal;
-import java.util.List;
 
-/**订单详情
- * Created by zhangge on 16-4-27.
+/**
+ * Created by zhangge on 16-5-17.
  */
 public class OrderItem {
-    /**
-     *订单号
-     */
-    String OrderId;
-    /**
-     * 下单用户
-     */
-    String username;
-    /**
-     * 联系人
-     */
-    String linkman;
-    /**
-     * 电话
-     */
-    String telphone;
-    /**
-     * 总金额
-     */
-    BigDecimal totalPrice;
-    /**
-     * 状态
-     */
-    OrderState status;
-    /**
-     * 下单时间
-     */
-    DateTime orderTime;
-    /**
-     * 地址
-     */
-    String address;
-
-    /**
-     *商品名称
-     */
-    List<CartItem> cartItems;
-
+    //购物车信息： 商品名称 价格 折扣价 购买数量 商铺
+    String orderId;
+    String bookName;
+    BigDecimal price;
+    BigDecimal currentPrice;
+    int buyNum;
 
     public String getOrderId() {
-        return OrderId;
+        return orderId;
     }
 
-    public String getLinkman() {
-        return linkman;
+    public String getBookName() {
+        return bookName;
     }
 
-    public String getTelphone() {
-        return telphone;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public BigDecimal getTotalPrice() {
-        return totalPrice;
+    public BigDecimal getCurrentPrice() {
+        return currentPrice;
     }
 
-    public OrderState getStatus() {
-        return status;
-    }
-
-    public DateTime getOrderTime() {
-        return orderTime;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public List<CartItem> getCartItems() {
-        return cartItems;
+    public int getBuyNum() {
+        return buyNum;
     }
 
     public void setOrderId(String orderId) {
-        OrderId = orderId;
+        this.orderId = orderId;
     }
 
-    public void setLinkman(String linkman) {
-        this.linkman = linkman;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public void setTelphone(String telphone) {
-        this.telphone = telphone;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public void setTotalPrice(BigDecimal totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setCurrentPrice(BigDecimal currentPrice) {
+        this.currentPrice = currentPrice;
     }
 
-    public void setStatus(OrderState status) {
-        this.status = status;
-    }
-
-    public void setOrderTime(DateTime orderTime) {
-        this.orderTime = orderTime;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-
-    public void setCartItems(List<CartItem> cartItems) {
-        this.cartItems = cartItems;
+    public void setBuyNum(int buyNum) {
+        this.buyNum = buyNum;
     }
 }

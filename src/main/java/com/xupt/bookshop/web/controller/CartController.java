@@ -13,10 +13,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import qunar.web.spring.annotation.JsonBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.List;
 
 /**购物车页面
@@ -31,18 +34,19 @@ public class CartController {
     Logger logger= LoggerFactory.getLogger(CartController.class);
 
     @RequestMapping("/")
-    @JsonBody
-    public Object cartDetail(HttpServletRequest request) throws ParameterException {
+    @ResponseBody
+    public Object cartDetail(HttpServletRequest request) throws ParameterException, UnsupportedEncodingException {
         String login = CookieUtil.getCookieValue(request, "login_id");
+
         List<CartItem> cartItem = cartService.categoryDetail(login);
         if(null== cartItem){
-            return  JsonResult.fail("加入购物车失败");
+            return  JsonResult.fail("购物车不存在");
         }
         return JsonResult.succ(cartItem);
     }
 
    @RequestMapping("/deleteCartItem")
-   @JsonBody
+   @ResponseBody
     public Object deleteCartItem(@RequestParam("bookId") List<String> bookId)
     {
         logger.info("<deleteCategoryItem>  bookid={}  username={}",bookId, SessionUtil.getUserSession().getName());
@@ -51,5 +55,5 @@ public class CartController {
 
         return resultOfRequest;
     }
-
+//todo 增加数量
 }

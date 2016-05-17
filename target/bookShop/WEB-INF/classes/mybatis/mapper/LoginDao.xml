@@ -9,13 +9,25 @@
         <result column="email" property="email"/>
     </resultMap>
 
-<!--检测用户-->
+<!--检测用户 通过姓名-->
 <select id="queryByName" parameterType="String" resultMap="userResult">
     select user_name,password,telphone,email from bookshop.user
     WHERE user_name=#{name}
 </select>
+<!--检测用户通过邮箱-->
+    <select id="queryByEmail" parameterType="String" resultMap="userResult">
+        select user_name,password,telphone,email from bookshop.user
+        WHERE email=#{email}
+    </select>
 
-<!--注册用户-->
+    <!--检测用户通过手机号-->
+
+    <select id="queryByTel" parameterType="String" resultMap="userResult">
+        select user_name,password,telphone,email from bookshop.user
+        WHERE telphone=#{tel}
+    </select>
+
+    <!--注册用户-->
     <insert id="addUser" parameterType="com.xupt.bookshop.model.login.param.RegisterParam">
         INSERT into bookshop.user (user_name,password,email,telphone)
         VALUES (#{user.name},#{user.password},#{user.email},#{user.tel})

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xupt.bookshop.dao.OrderDao">
 
-    <parameterMap id="orderParamType" type="com.xupt.bookshop.model.order.OrderItem">
+    <parameterMap id="orderParamType" type="com.xupt.bookshop.model.order.Orders">
         <parameter property="linkman" />
         <parameter property="telphone"/>
         <parameter property="totalPrice"/>
@@ -11,25 +11,31 @@
         <parameter property="address" />
     </parameterMap>
 
-<resultMap id="orderItemresult" type="com.xupt.bookshop.model.order.OrderItem">
+<resultMap id="orderItemresult" type="com.xupt.bookshop.model.order.Orders">
   <result column="OrderID" property="OrderId"/>
-    <result column="UID" property="linkman"/>
+    <result column="user_name" property="username"/>
+    <result column="linkman" property="linkman"/>
     <result column="Address" property="address"/>
     <result column="Telphone" property="telphone"/>
-    <result column="order_time" />
-    <result column="Status"/>
+    <result column="order_time" property="orderTime" typeHandler="DateTimeTypeHandler"/>
+    <result column="Status" property="status" typeHandler="EnumTypeHandler"/>
+    <result column="total_price" property="totalPrice"/>
 </resultMap>
 
     <select id="queryOrderDetails" resultMap="orderItemresult" parameterType="String">
-        SELECT OrderID,user_name,linkman,Address,Telphone,order_time,Status FROM orders
+        SELECT OrderID,user_name,linkman,Address,Telphone,order_time,Status ,total_price FROM orders
          WHERE user_name=#{username}
     </select>
-    <insert id="createOrders" parameterType="com.xupt.bookshop.model.order.OrderItem">
+    <select id="queryOrderItem" resultType="com.xupt.bookshop.model.order.OrderItem">
+        SELECT book_name,price,current_price,buycount FROM order_item
+        WHERE  order_id=#{orderId}
+    </select>
+    <insert id="createOrders" parameterType="com.xupt.bookshop.model.order.Orders">
         INSERT into orders (OrderID, user_name,linkman, Address, Telphone, order_time, Status)
         VALUES (#{order.OrderId},#{order.username},#{order.linkman},#{order.address},#{order.telphone},#{order.orderTime,typeHandler=DateTimeTypeHandler},#{order.status,typeHandler=EnumTypeHandler})
     </insert>
 
-    <insert id="createOrderItem" parameterType="com.xupt.bookshop.model.order.OrderItem">
+    <insert id="createOrderItem" parameterType="com.xupt.bookshop.model.order.Orders">
         INSERT into order_item(order_id,book_name,price,current_price,buycount)
         VALUES
         <foreach collection="orderItem.cartItems" separator="," item="item">

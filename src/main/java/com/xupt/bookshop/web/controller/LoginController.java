@@ -57,7 +57,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @JsonBody
+    @ResponseBody
     public Object UserLogin(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse ,@Valid LoginPara loginPara, BindingResult result) throws UnsupportedEncodingException {
 
         if (ParameterCheckUtil.checkBingResultParam(result).equals("true")) {
@@ -91,7 +91,7 @@ public class LoginController {
      * @throws IOException
      */
     @RequestMapping("/logout")
-    @JsonBody
+    @ResponseBody
     public String logout(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //清除cookie 清除购物车
@@ -107,16 +107,10 @@ public class LoginController {
 
     //用户注册
     @RequestMapping("/register")
-    @JsonBody
+    @ResponseBody
      public Object register(@Valid RegisterParam registerParam){
-         User name = loginService.queryByName(registerParam.getName());
-         if(name!=null){
-             logger.error("<register> user is exist");
-             return JsonResult.fail("注册失败");
-         }
 
-         loginService.createUser(registerParam);
-         return  JsonResult.succ();
+         return  JsonResult.succ( loginService.createUser(registerParam));
      }
 
 

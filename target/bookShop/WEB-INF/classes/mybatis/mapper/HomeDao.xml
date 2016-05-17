@@ -9,7 +9,7 @@
 
     <select id="queryAllCategory" resultType="com.xupt.bookshop.model.common.Category">
         SELECT
-        category_id,category_name
+        category_name
         FROM category
     </select>
 
@@ -66,8 +66,7 @@
     </select>
 
 
-
-    <select id="queryBookingPoByStateAndCategory" parameterType="Integer" resultMap="queryBookItem">
+    <select id="queryBookingPoByStateAndCategory" resultMap="queryBookItem">
         SELECT
         <include refid="selectFields"/>
         FROM book
@@ -91,9 +90,16 @@
         WHERE state=#{state}
     </select>
 <!--根据类别查询总数-->
-    <select id="queryBookPagesByCategory" parameterType="int" resultType="Integer">
+    <select id="queryBookPagesByCategory" parameterType="String" resultType="Integer">
         SELECT COUNT(id) FROM book
         WHERE category_name =#{categoryName}
+    </select>
+    <!--根据类别和状态-->
+    <select id="queryBookPagesByCategoryAndState"  resultType="Integer">
+        SELECT COUNT(id) FROM book
+        WHERE category_name =#{categoryName}
+        AND
+        state=#{state}
     </select>
 
 </mapper>

@@ -61,7 +61,7 @@ public class BookInfoVo {
     /**
      * 状态
      */
-    BookState bookState;
+    String  bookState;
     /**
      * 图片
      */
@@ -111,7 +111,7 @@ public class BookInfoVo {
         return surplus;
     }
 
-    public BookState getBookState() {
+    public String  getBookState() {
         return bookState;
     }
 
@@ -164,7 +164,7 @@ public class BookInfoVo {
     }
 
     public void setBookState(BookState bookState) {
-        this.bookState = bookState;
+        this.bookState = bookState.getDescription();
     }
 
     public void setUrlList(List<String> urlList) {

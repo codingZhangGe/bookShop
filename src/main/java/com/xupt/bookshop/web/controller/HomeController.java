@@ -43,7 +43,7 @@ public class HomeController {
      *
      * @return 分页查询所有图书信息
      */
-    @JsonBody
+    @ResponseBody
     @RequestMapping(value = "/index/queryBooking", method = RequestMethod.GET)
     public Object queryBooking(  @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
                                              @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize) {
@@ -57,7 +57,7 @@ public class HomeController {
      *
      * @return 查询所有类别
      */
-    @JsonBody
+    @ResponseBody
     @RequestMapping(value = "/index/queryCategory", method = RequestMethod.GET)
     public Object queryCategory() {
         List<Category> categories = homeService.queryAllCategory();
@@ -97,26 +97,26 @@ public class HomeController {
 //    }
 
 
-    //todo 组合查询
-    @JsonBody
+
+    @ResponseBody
     @RequestMapping(value = "/index/query",method = RequestMethod.GET)
     public  Object queryItemByCategoryAndState(@RequestParam(value = "state") String state,
                                                               @RequestParam(value = "category") String category,
                                                               @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
-                                                              @RequestParam(value = "pageSize", required = false, defaultValue = "9")Integer pageSize){
+                                                              @RequestParam(value = "pageSize", required = false, defaultValue = "3")Integer pageSize){
 
-        if(state==null&&category!=null){
+        if(category!=""&&(state==null||state.length()==0)){
             return homeService.queryItemByCategory(category,currentPage,pageSize);
 
         }
-        else if(state!=null&&category==null){
+        else if(state!=""&&(category==null||category.length()==0)){
             return homeService.queryItemByState(BookState.byString(state).getCode(), currentPage, pageSize);
         }
-        else if(state!=null&&category!=null){
+        else if(state!=""&&category!=""){
             return  homeService.queryItemByStateAndCategory(BookState.byString(state).getCode(),category,currentPage,pageSize);
         }
         else{
-            return homeService.queryAllCategory();
+            return homeService.queryBookingVo(currentPage,pageSize);
         }
     }
 }

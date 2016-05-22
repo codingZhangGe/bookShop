@@ -1,8 +1,9 @@
 package com.xupt.bookshop.service.home;
 
 import com.xupt.bookshop.common.utils.PageResult;
+import com.xupt.bookshop.model.Category.CategoryVo;
 import com.xupt.bookshop.model.home.BookingVo;
-import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.Category.Category;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +22,9 @@ public interface HomeService {
     /**
      * 查询所有类别
      */
-    List<Category> queryAllCategory();
+    List<Category> queryParentCategory();
+    List<CategoryVo> queryAllCategory(String parentId);
+
 
     /**
      * 通过状态分页查询所有最近商品

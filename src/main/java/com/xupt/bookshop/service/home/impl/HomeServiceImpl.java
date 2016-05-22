@@ -1,22 +1,23 @@
 package com.xupt.bookshop.service.home.impl;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.xupt.bookshop.common.datasource.DataSource;
 import com.xupt.bookshop.common.utils.PageResult;
-import com.xupt.bookshop.common.utils.beanmapper.BeanMapper;
 import com.xupt.bookshop.common.utils.beanmapper.OrikaBeanMapper;
-import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.Category.Category;
 import com.xupt.bookshop.dao.HomeDao;
+import com.xupt.bookshop.model.Category.CategoryVo;
 import com.xupt.bookshop.model.home.BookingPo;
 import com.xupt.bookshop.model.home.BookingVo;
 import com.xupt.bookshop.service.home.HomeService;
 import com.xupt.bookshop.service.common.ImgService;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 主页详细信息展示
@@ -36,10 +37,30 @@ public class HomeServiceImpl implements HomeService {
 
     @Override
     @DataSource(value = DataSource.slave)
-    public List<Category> queryAllCategory() {
-        return homeDao.queryAllCategory();
+    public List<Category> queryParentCategory() {
+
+       List<Category> categoryList=  homeDao.querParentCategory();
+        return categoryList;
+
     }
-    
+
+    @Override
+    public List<CategoryVo> queryAllCategory(String parentName) {
+        List<CategoryVo> categoryVos = Lists.newArrayList();
+
+        List<Category> categoryList=homeDao.queryAllCategory(parentName);
+      for(Category category:categoryList){
+          CategoryVo categoryVo=new CategoryVo();
+          Map<String,List<Category>> childCategories= Maps.newHashMap();
+          categoryVo.setCategoryName(category.getCategoryName());
+          List<Category> categories=homeDao.queryAllCategory(category.getCategoryName());
+          childCategories.put(category.getCategoryName(), categories);
+          categoryVo.setChildCategory(childCategories);
+          categoryVos.add(categoryVo);
+      }
+return categoryVos;
+    }
+
 
     @Override
     @DataSource(value = DataSource.slave)

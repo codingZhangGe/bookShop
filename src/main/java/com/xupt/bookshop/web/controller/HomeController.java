@@ -2,15 +2,12 @@ package com.xupt.bookshop.web.controller;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Resource;
 
-import com.xupt.bookshop.common.utils.PageResult;
-import com.xupt.bookshop.model.bookdetails.vo.BookInfoVo;
-import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.Category.Category;
+import com.xupt.bookshop.model.Category.CategoryVo;
 import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.enums.BookState;
-import com.xupt.bookshop.model.home.BookingVo;
 import com.xupt.bookshop.service.home.HomeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import qunar.api.pojo.CodeMessage;
-import qunar.api.pojo.json.JsonV2;
-import qunar.web.spring.annotation.JsonBody;
-import com.google.common.collect.Maps;
 
 /**
  * Description: 主页展示所有图书信息Controller
@@ -55,46 +48,23 @@ public class HomeController {
 
     /**
      *
-     * @return 查询所有类别
+     * @return 查询一级类别所有类别
      */
     @ResponseBody
-    @RequestMapping(value = "/index/queryCategory", method = RequestMethod.GET)
-    public Object queryCategory() {
-        List<Category> categories = homeService.queryAllCategory();
+    @RequestMapping(value = "/index/queryParentCategory", method = RequestMethod.GET)
+    public Object queryParentCategory() {
+        List<Category> categories = homeService.queryParentCategory();
 
         return JsonResult.succ(categories);
     }
 
-//    /**
-//     *
-//     * @return 通过类别查询图书信息
-//     */
-//    @JsonBody
-//    @RequestMapping(value = "/index/queryItemByCategory", method = RequestMethod.GET)
-//    public PageResult<BookingVo> queryItemByCategory(   @RequestParam(value = "categoryName", required = false, defaultValue = "1") String  categoryName,
-//                                                  @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
-//                                                  @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize) {
-//
-//        checkArgument(categoryName != null && categoryName.length() > 0, "categoryId参数错误");
-//        checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
-//        checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-//        return homeService.queryItemByCategory(categoryName, currentPage, pageSize);
-//    }
-//
-//
-//    @JsonBody
-//    @RequestMapping(value = "/index/queryItemByState",method = RequestMethod.GET)
-//    public PageResult<BookingVo> queryItemByState(  @RequestParam(value = "state", required = false, defaultValue = "1") Integer state,
-//                                                    @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
-//                                                    @RequestParam(value = "pageSize", required = false, defaultValue = "9") Integer pageSize){
-//
-//        checkArgument(state != null && state > 0, "state参数错误");
-//        checkArgument(currentPage != null && currentPage > 0, "currentPage参数错误");
-//        checkArgument(pageSize != null && pageSize > 0, "pageSize参数错误");
-//
-//        return homeService.queryItemByState(state,currentPage,pageSize);
-//
-//    }
+    @ResponseBody
+    @RequestMapping(value = "/index/queryCategory", method = RequestMethod.GET)
+    public Object queryCategory(@RequestParam(value = "parentName") String parentName) {
+        List<CategoryVo> categories = homeService.queryAllCategory(parentName);
+
+        return JsonResult.succ(categories);
+    }
 
 
 
@@ -107,7 +77,6 @@ public class HomeController {
 
         if(category!=""&&(state==null||state.length()==0)){
             return homeService.queryItemByCategory(category,currentPage,pageSize);
-
         }
         else if(state!=""&&(category==null||category.length()==0)){
             return homeService.queryItemByState(BookState.byString(state).getCode(), currentPage, pageSize);
@@ -119,4 +88,6 @@ public class HomeController {
             return homeService.queryBookingVo(currentPage,pageSize);
         }
     }
+
+
 }

@@ -3,7 +3,7 @@ package com.xupt.bookshop.service.upload.impl;
 import javax.annotation.Resource;
 
 import com.xupt.bookshop.dao.UploadItemDao;
-import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.Category.Category;
 import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.upload.UploadItemService;
 import org.slf4j.Logger;
@@ -36,9 +36,13 @@ public class UploadServiceImpl implements UploadItemService {
     }
 
     @Override
-    public void uploadCategory(String name) {
+    public void uploadCategory(String name,String parentName) {
         Category category=new Category();
         category.setCategoryName(name);
+        if(parentName==""){
+            category.setParentId(0);
+        }
+        category.setCategoryId(uploadItemDao.selectParentCategoryId(parentName));
         uploadItemDao.insertCategory(category);
     }
 }

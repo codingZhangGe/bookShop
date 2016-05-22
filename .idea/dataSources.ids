@@ -54,6 +54,7 @@
     <table name="category" schema="" catalog="bookshop" type="TABLE">
       <column name="category_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="parent_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
       <primary-key name="PRIMARY" columns="category_id"/>
       <index name="category_name" unique="true" columns="category_name"/>
       <index name="unique_category_id" unique="true" columns="category_id"/>
@@ -93,6 +94,7 @@
       <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="telphone" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="QQ_number" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="UID"/>
       <index name="UName" unique="true" columns="user_name"/>
     </table>

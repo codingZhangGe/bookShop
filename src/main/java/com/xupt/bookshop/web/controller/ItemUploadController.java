@@ -9,8 +9,7 @@ import javax.validation.Valid;
 import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.common.utils.*;
-import com.xupt.bookshop.model.common.Category;
-import com.xupt.bookshop.model.common.JsonResult;
+import com.xupt.bookshop.model.Category.Category;
 import com.xupt.bookshop.model.upload.ImgModel;
 import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.common.ImgService;
@@ -19,7 +18,6 @@ import com.xupt.bookshop.service.upload.UploadItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -99,7 +97,7 @@ public class ItemUploadController extends BaseController {
             logger.warn("该拍卖物品图片并未上传，拍卖信息上传失败:itemId={}", uploadItemParam.getBookId());
             return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "该拍卖品图片并没有成功上传", uploadItemParam.getBookId());
         }
-        List<Category> categories = homeService.queryAllCategory();
+        List<Category> categories = homeService.queryParentCategory();
         boolean flag = false;
         for (Category category : categories) {
             if (category.getCategoryName().equals(uploadItemParam.getCategoryId()) ) {
@@ -120,8 +118,9 @@ public class ItemUploadController extends BaseController {
 
     @RequestMapping("/category")
     @JsonBody
-    public Object insertCategory(@RequestParam("category") String categoryname){
-        uploadItemService.uploadCategory(categoryname);
+    public Object insertCategory(@RequestParam("category") String categoryname,String parentName){
+
+        uploadItemService.uploadCategory(categoryname,parentName);
         return new JsonV2<>(CodeMessage.OK, "成功上传类别", "");
     }
 

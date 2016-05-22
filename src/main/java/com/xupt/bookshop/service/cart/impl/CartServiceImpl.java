@@ -74,13 +74,4 @@ public class CartServiceImpl implements CartService {
         return resultOfRequest;
     }
 
-    @Override
-    public ResultOfRequest addCartItemNum(String bookId) {
-        ResultOfRequest resultOfRequest=new ResultOfRequest();
-        cartDao.updateCartDetailCount(bookId);
-        resultOfRequest.setCode(Constants.ADD_CART_NUM_SUCC);
-        resultOfRequest.setResult(true);
-        resultOfRequest.setMessage("增加商品数量成功");
-        return resultOfRequest;
-    }
 }

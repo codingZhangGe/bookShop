@@ -29,8 +29,8 @@
 
     <!--注册用户-->
     <insert id="addUser" parameterType="com.xupt.bookshop.model.login.param.RegisterParam">
-        INSERT into bookshop.user (user_name,password,email,telphone)
-        VALUES (#{user.name},#{user.password},#{user.email},#{user.tel})
+        INSERT into bookshop.user (user_name,password,email,telphone,QQ_number)
+        VALUES (#{user.name},#{user.password},#{user.email},#{user.tel},#{user.QQNumber})
     </insert>
 
 

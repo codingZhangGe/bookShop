@@ -1,6 +1,6 @@
 package com.xupt.bookshop.dao;
 
-import com.xupt.bookshop.model.common.Category;
+import com.xupt.bookshop.model.Category.Category;
 import com.xupt.bookshop.model.home.BookingPo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
@@ -17,7 +17,8 @@ import java.util.List;
 @Repository
 public interface HomeDao {
 
-    List<Category> queryAllCategory();
+    List<Category> querParentCategory();
+    List<Category> queryAllCategory(@Param("parentId")String parentId);
 
     List<BookingPo> queryBookingPo( RowBounds rowBounds);
 

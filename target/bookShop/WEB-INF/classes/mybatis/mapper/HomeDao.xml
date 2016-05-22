@@ -7,12 +7,26 @@
              book.book_id,book.book_name,book.price,book.category_name,book.state,book.current_price,book.discount,book_dynamic_info.browse_count,book_dynamic_info.buy_count
     </sql>
 
-    <select id="queryAllCategory" resultType="com.xupt.bookshop.model.common.Category">
+    <select id="queryAllCategory" resultType="com.xupt.bookshop.model.Category.Category">
         SELECT
-        category_name
+        category_id,
+        category_name,
+        parent_id
         FROM category
+        WHERE parent_id
+        IN(
+        SELECT category_id
+        FROM category
+        WHERE  category_name=#{parentId})
     </select>
 
+    <select id="querParentCategory" resultType="com.xupt.bookshop.model.Category.Category">
+        SELECT
+         category_id,
+        category_name
+        FROM category
+        WHERE parent_id=0;
+    </select>
     <!--首页展示的拍品信息 默认标准,全部类别商品,价格随机排序,
             商品id ,    类别id,
             浏览人数,   购买人数,

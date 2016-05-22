@@ -52,7 +52,7 @@
       TRUNCATE TABLE cart_item;
   </select>
 
-    <update id="updateCartDetailCount" parameterType="String">
+    <update id="updateCartDetailCount" >
         UPDATE cart_item SET
         buy_num=buy_num+1
         WHERE book_id=#{bookId}

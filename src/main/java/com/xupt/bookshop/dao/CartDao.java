@@ -60,5 +60,6 @@ public interface CartDao {
      */
     void updateCartDetailCount(@Param("bookId")String bookId);
 
+    int deletecartItem(@Param("bookId")String bookId);
 
 }

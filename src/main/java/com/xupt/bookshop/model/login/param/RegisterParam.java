@@ -13,13 +13,13 @@ import javax.validation.constraints.NotNull;
 public class RegisterParam {
    @NotBlank
     String name;
-
     @Password
     String password; //密码最少16位
     @Email
     String email;
     @Tel
     String tel;
+    int QQNumber;
 
     public String getName() {
         return name;
@@ -51,5 +51,13 @@ public class RegisterParam {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public int getQQNumber() {
+        return QQNumber;
+    }
+
+    public void setQQNumber(int QQNumber) {
+        this.QQNumber = QQNumber;
     }
 }

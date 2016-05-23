@@ -6,58 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc93179-c62c-419c-aea8-fdeff944b839" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/cart/impl/CartServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/Category/Category.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/Category/Category.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/Category/Category.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/Category/Category.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/HomeDao.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/dao/HomeDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/HomeDao.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/dao/HomeDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/HomeService.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/HomeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/HomeService.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/HomeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/home/impl/HomeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/ItemUploadController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/ItemUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/ItemUploadController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/ItemUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/PayController.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/web/controller/PayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/PayController.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/web/controller/PayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/login/param/RegisterParam.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/model/login/param/RegisterParam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/login/param/RegisterParam.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/model/login/param/RegisterParam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/bookdetails/vo/BookInfoVo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/cart/impl/CartServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/cart/impl/CartServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/Category/Category.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/Category/Category.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/dao/HomeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/target/bookShop/WEB-INF/classes/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/HomeDao.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/HomeDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/HomeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/home/impl/HomeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/ItemUploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/PayController.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/PayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/model/login/param/RegisterParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/xupt/bookshop/service/upload/impl/UploadServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/checkout.html" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/contact.html" afterPath="$PROJECT_DIR$/src/main/webapp/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/contact.html" afterPath="$PROJECT_DIR$/target/bookShop/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/index.html" afterPath="$PROJECT_DIR$/target/bookShop/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/register.html" afterPath="$PROJECT_DIR$/src/main/webapp/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/register.html" afterPath="$PROJECT_DIR$/target/bookShop/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/single.html" afterPath="$PROJECT_DIR$/src/main/webapp/single.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/single.html" afterPath="$PROJECT_DIR$/target/bookShop/single.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/upload.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/upload.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/bookShop/upload.jsp" afterPath="$PROJECT_DIR$/target/bookShop/upload.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookshop.iws" />
@@ -157,8 +106,8 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3802817" vertical-offset="738" max-vertical-offset="1620">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.46478873" vertical-offset="720" max-vertical-offset="1602">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1444,12 +1393,12 @@
       <workItem from="1463757645438" duration="22441000" />
       <workItem from="1463924434278" duration="15509000" />
       <workItem from="1463973568467" duration="3206000" />
-      <workItem from="1463995474742" duration="38000" />
+      <workItem from="1463995474742" duration="336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334950000" />
+    <option name="totallyTimeSpent" value="335248000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1473,14 +1422,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="21" width="1366" height="747" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24558587" sideWeight="0.2621212" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24558587" sideWeight="0.2621212" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13787879" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1986,8 +1935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xupt/bookshop/web/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3802817" vertical-offset="738" max-vertical-offset="1620">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.46478873" vertical-offset="720" max-vertical-offset="1602">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>

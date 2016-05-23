@@ -62,7 +62,6 @@ public class HomeController {
     @RequestMapping(value = "/index/queryCategory", method = RequestMethod.GET)
     public Object queryCategory(@RequestParam(value = "parentName") String parentName) {
         List<CategoryVo> categories = homeService.queryAllChildCategory(parentName);
-
         return JsonResult.succ(categories);
     }
 

@@ -57,6 +57,12 @@
         <br/>
         图片2<input type="file" name="file">
         <br/>
+        图片3<input type="file" name="file">
+        <br/>
+        图片4<input type="file" name="file">
+        <br/>
+        图片5<input type="file" name="file">
+        <br/>
 
     </div>
     <input type="submit" value="上传">
@@ -119,7 +125,8 @@ surplus </td><td><input type="text" name="surplus"></td>
 
 
         <tr>
-
+            <td>parentName </td>
+            <td><input  name="parentName"></td>
             <td>categoryname </td>
             <td><input  name="category"></td>
         </tr>

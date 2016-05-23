@@ -16,15 +16,28 @@ import java.util.List;
  */
 @Repository
 public interface HomeDao {
+    /**
+     * 查询全部分类
+     * @return
+     */
+    List<Category> queryAllCategory();
 
+    /**
+     * 查询一级分类
+     * @return
+     */
     List<Category> querParentCategory();
-    List<Category> queryAllCategory(@Param("parentId")String parentId);
+    List<Category> queryAllChildCategory(@Param("parentId")String parentId);
+    Category queryParentIdByName(@Param("categoryName") String category);
 
     List<BookingPo> queryBookingPo( RowBounds rowBounds);
 
     List<BookingPo> queryBookingPoByCategory(@Param("categoryName") String categoryName, RowBounds rowBounds);
     List<BookingPo> queryBookingPoByState(@Param("state") Integer state, RowBounds rowBounds);
     List<BookingPo> queryBookingPoByStateAndCategory(@Param("state") Integer state, @Param("categoryName") String categoryName,RowBounds rowBounds);
+    List<BookingPo> searchBookingPoByState(@Param("state") Integer state, RowBounds rowBounds);
+
+
 
     int queryBookPages();
     int queryBookPagesByState(@Param("state") Integer state);

@@ -10,6 +10,7 @@ import com.xupt.bookshop.common.Constants;
 import com.xupt.bookshop.common.exceptions.ParameterException;
 import com.xupt.bookshop.common.utils.*;
 import com.xupt.bookshop.model.Category.Category;
+import com.xupt.bookshop.model.common.JsonResult;
 import com.xupt.bookshop.model.upload.ImgModel;
 import com.xupt.bookshop.model.upload.UploadItemParam;
 import com.xupt.bookshop.service.common.ImgService;
@@ -97,7 +98,7 @@ public class ItemUploadController extends BaseController {
             logger.warn("该拍卖物品图片并未上传，拍卖信息上传失败:itemId={}", uploadItemParam.getBookId());
             return new JsonV2<>(CodeMessage.SYSTEM_ERROR, "该拍卖品图片并没有成功上传", uploadItemParam.getBookId());
         }
-        List<Category> categories = homeService.queryParentCategory();
+        List<Category> categories = homeService.queryAllCategory();
         boolean flag = false;
         for (Category category : categories) {
             if (category.getCategoryName().equals(uploadItemParam.getCategoryId()) ) {
@@ -118,8 +119,11 @@ public class ItemUploadController extends BaseController {
 
     @RequestMapping("/category")
     @JsonBody
-    public Object insertCategory(@RequestParam("category") String categoryname,String parentName){
+    public Object insertCategory(@RequestParam("category") String categoryname,@RequestParam("parentName")String parentName){
 
+        if(parentName==null){
+            JsonResult.fail("一级分类不能为空");
+        }
         uploadItemService.uploadCategory(categoryname,parentName);
         return new JsonV2<>(CodeMessage.OK, "成功上传类别", "");
     }

@@ -23,6 +23,18 @@ public class BookInfoVo {
      */
     String description;
     /**
+     * 作者简介
+     */
+    String authorDes;
+    /**
+     * 前言e
+     */
+    String perface;
+    /**
+     * 内容简介
+     */
+    String content;
+    /**
      * 图书价格
      */
 
@@ -57,7 +69,6 @@ public class BookInfoVo {
      */
     String  surplus;
 
-
     /**
      * 状态
      */
@@ -66,6 +77,7 @@ public class BookInfoVo {
      * 图片
      */
     List<String> urlList;
+
 
     public String getBookId() {
         return BookId;
@@ -169,5 +181,33 @@ public class BookInfoVo {
 
     public void setUrlList(List<String> urlList) {
         this.urlList = urlList;
+    }
+
+    public String getAuthorDes() {
+        return authorDes;
+    }
+
+    public String getPerface() {
+        return perface;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setAuthorDes(String authorDes) {
+        this.authorDes = authorDes;
+    }
+
+    public void setPerface(String perface) {
+        this.perface = perface;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setBookState(String bookState) {
+        this.bookState = bookState;
     }
 }

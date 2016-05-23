@@ -61,33 +61,42 @@ public class HomeController {
     @ResponseBody
     @RequestMapping(value = "/index/queryCategory", method = RequestMethod.GET)
     public Object queryCategory(@RequestParam(value = "parentName") String parentName) {
-        List<CategoryVo> categories = homeService.queryAllCategory(parentName);
+        List<CategoryVo> categories = homeService.queryAllChildCategory(parentName);
 
         return JsonResult.succ(categories);
     }
 
-
+    /**
+     * 分类查询
+     * @param category
+     * @param currentPage
+     * @param pageSize
+     * @return
+     */
 
     @ResponseBody
     @RequestMapping(value = "/index/query",method = RequestMethod.GET)
-    public  Object queryItemByCategoryAndState(@RequestParam(value = "state") String state,
+    public  Object queryItemByCategoryAndState(
                                                               @RequestParam(value = "category") String category,
                                                               @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage,
                                                               @RequestParam(value = "pageSize", required = false, defaultValue = "3")Integer pageSize){
 
-        if(category!=""&&(state==null||state.length()==0)){
+        if(category!=""){
             return homeService.queryItemByCategory(category,currentPage,pageSize);
         }
-        else if(state!=""&&(category==null||category.length()==0)){
-            return homeService.queryItemByState(BookState.byString(state).getCode(), currentPage, pageSize);
-        }
-        else if(state!=""&&category!=""){
-            return  homeService.queryItemByStateAndCategory(BookState.byString(state).getCode(),category,currentPage,pageSize);
-        }
+
+
         else{
             return homeService.queryBookingVo(currentPage,pageSize);
         }
     }
-
+    /**
+     * 搜索
+     */
+    @ResponseBody
+    @RequestMapping(value = "/index/search",method = RequestMethod.GET)
+    public Object searchBook(@RequestParam("search") String search){
+return JsonResult.succ("搜索成功");
+    }
 
 }

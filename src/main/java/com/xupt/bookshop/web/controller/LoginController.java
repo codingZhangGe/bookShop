@@ -106,7 +106,7 @@ public class LoginController {
     }
 
     //用户注册
-    @RequestMapping("/register")
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
     @ResponseBody
      public Object register(@Valid RegisterParam registerParam){
 

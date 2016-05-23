@@ -23,7 +23,8 @@ public interface HomeService {
      * 查询所有类别
      */
     List<Category> queryParentCategory();
-    List<CategoryVo> queryAllCategory(String parentId);
+    List<Category> queryAllCategory();
+    List<CategoryVo> queryAllChildCategory(String parentId);
 
 
     /**
@@ -35,6 +36,10 @@ public interface HomeService {
      * 通过类别查询物品信息
      */
     PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize);
+    /**
+     * 搜索
+     */
+    PageResult<BookingVo> searchBook (String  categoryName, Integer currentPage, Integer pageSize);
 
     /**
      * 查询总数

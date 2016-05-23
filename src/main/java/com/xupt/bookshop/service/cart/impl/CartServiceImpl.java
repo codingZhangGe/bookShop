@@ -49,6 +49,13 @@ public class CartServiceImpl implements CartService {
         com.xupt.bookshop.model.cart.Cart cart=new com.xupt.bookshop.model.cart.Cart();
         cart.setUserName(username);
         cart.setCartId(UUIDGenerator.getUUID());
+        if(cartDao.queryCartId(username)!=null){
+            resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);
+            resultOfRequest.setResult(true);
+            resultOfRequest.setMessage("购物车已经存在");
+            return resultOfRequest;
+        }
+
         cartDao.insertCart(cart);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);
         resultOfRequest.setResult(true);

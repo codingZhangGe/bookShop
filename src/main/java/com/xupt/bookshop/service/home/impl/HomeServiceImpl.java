@@ -30,7 +30,6 @@ public class HomeServiceImpl implements HomeService {
     public HomeDao homeDao;
     @Resource
     public ImgService imgService;
-
     @Resource
     OrikaBeanMapper orikaBeanMapper;
 
@@ -45,15 +44,20 @@ public class HomeServiceImpl implements HomeService {
     }
 
     @Override
-    public List<CategoryVo> queryAllCategory(String parentName) {
+    public List<Category> queryAllCategory() {
+        return homeDao.queryAllCategory();
+    }
+
+    @Override
+    public List<CategoryVo> queryAllChildCategory(String parentName) {
         List<CategoryVo> categoryVos = Lists.newArrayList();
 
-        List<Category> categoryList=homeDao.queryAllCategory(parentName);
+        List<Category> categoryList=homeDao.queryAllChildCategory(parentName);
       for(Category category:categoryList){
           CategoryVo categoryVo=new CategoryVo();
           Map<String,List<Category>> childCategories= Maps.newHashMap();
           categoryVo.setCategoryName(category.getCategoryName());
-          List<Category> categories=homeDao.queryAllCategory(category.getCategoryName());
+          List<Category> categories=homeDao.queryAllChildCategory(category.getCategoryName());
           childCategories.put(category.getCategoryName(), categories);
           categoryVo.setChildCategory(childCategories);
           categoryVos.add(categoryVo);
@@ -85,9 +89,30 @@ return categoryVos;
     public PageResult<BookingVo> queryItemByCategory(String  categoryName, Integer currentPage, Integer pageSize) {
 
         List<BookingVo> BookingVos = Lists.newArrayList();
-        RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
-        List<BookingPo> BookingPos = homeDao.queryBookingPoByCategory(categoryName, rowBounds);
+        List<BookingPo> BookingPos=Lists.newArrayList();
 
+        RowBounds rowBounds = new RowBounds(currentPage-1, pageSize);
+        Category category=homeDao.queryParentIdByName(categoryName);
+        if(category.getParentId()==0){
+            //查询二级目录
+            List<Category> categories=homeDao.queryAllChildCategory(categoryName);
+            //遍历二级目录
+            for(Category category1:categories){
+                //查出三级目录
+                for(Category c:homeDao.queryAllChildCategory(category1.getCategoryName()))
+                {
+                    //根据三级目录查出图书
+                    List<BookingPo> pos=homeDao.queryBookingPoByCategory(c.getCategoryName(),rowBounds);
+                    BookingPos.addAll(pos);
+                }
+            }
+            //根据一级目录查询的图书
+            BookingPos.addAll(homeDao.queryBookingPoByCategory(categoryName,rowBounds));
+
+        }
+       else {
+            BookingPos = homeDao.queryBookingPoByCategory(categoryName, rowBounds);
+        }
         for (BookingPo po : BookingPos) {
 
             BookingVo auctioningVo ;
@@ -96,6 +121,11 @@ return categoryVos;
             BookingVos.add(auctioningVo);
         }
         return new PageResult<>(homeDao.queryBookPagesByCategory(categoryName),BookingVos);
+    }
+
+    @Override
+    public PageResult<BookingVo> searchBook(String categoryName, Integer currentPage, Integer pageSize) {
+        return null;
     }
 
     @Override

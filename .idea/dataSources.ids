@@ -64,6 +64,14 @@
       <column name="UID" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="comments" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
     </table>
+    <table name="contact" schema="" catalog="bookshop" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="6YKu5Lu2"/>
+      <column name="tel" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="55S16K+d"/>
+      <column name="message" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12" remarks="5bu66K6u"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="item_picture" schema="" catalog="bookshop" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6Ieq5aKeaWQ=" autoIncrement="true"/>
       <column name="item_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzEn" remarks="56ue5ZOB55qEaWQ="/>

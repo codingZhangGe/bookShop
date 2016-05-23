@@ -12,7 +12,7 @@ public class Category {
      * 类别
      */
     private String categoryName;
-    private int categoryId;
+    private int id;
     private  int parentId;
 
     public String getCategoryName() {
@@ -23,13 +23,12 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public int getId() {
+        return id;
     }
 
-
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getParentId() {
@@ -39,4 +38,5 @@ public class Category {
     public void setParentId(int parentId) {
         this.parentId = parentId;
     }
+
 }

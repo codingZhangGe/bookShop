@@ -425,11 +425,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-md-8 contact-left">
 				<h3>建议信息</h3>
-				<form>
-					<input type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-					<input type="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<input type="text" value="手机号码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
-					<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">您的建议...</textarea>
+				<form action="/contact/create" method="post">
+					<input name="username" type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					<input name="email" type="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					<input name="tel" type="text" value="手机号码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+					<textarea name="message" type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">您的建议...</textarea>
 					<input type="submit" value="提交" >
 				</form>
 			</div>
@@ -468,7 +468,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="#">工作待遇</a></li>
 				</ul>
 			</div>
-			<div class="clearfix"></div>
+ 			<div class="clearfix"></div>
 		</div>
 	</div>
 	<div class="footer-copy">

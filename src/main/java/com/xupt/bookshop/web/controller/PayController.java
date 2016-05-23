@@ -1,11 +1,14 @@
 package com.xupt.bookshop.web.controller;
 
 import com.xupt.bookshop.common.utils.PaymentUtils;
+import com.xupt.bookshop.dao.OrderDao;
+import com.xupt.bookshop.model.enums.OrderState;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/pay")
 public class PayController {
 
+    @Resource
+    OrderDao orderDao;
     @RequestMapping("/paySend")
     public String  paymentSend(HttpServletRequest request,HttpServletResponse response){
 
@@ -101,7 +106,8 @@ public class PayController {
         } else {
             request.setAttribute("message", "数据来源不合法");
         }
-
+       //更改订单状态是支付完成
+        orderDao.updateOrderStatus(OrderState.ORDER_PAY_SUCCESS);
        return "payresult";
     }
 

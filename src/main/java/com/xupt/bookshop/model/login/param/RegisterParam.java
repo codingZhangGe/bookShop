@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
  * Created by zhangge on 16-5-10.
  */
 public class RegisterParam {
-   @NotBlank
+   @NotNull
     String name;
     @Password
     String password; //密码最少16位

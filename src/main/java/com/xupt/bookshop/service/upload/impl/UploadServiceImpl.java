@@ -39,10 +39,8 @@ public class UploadServiceImpl implements UploadItemService {
     public void uploadCategory(String name,String parentName) {
         Category category=new Category();
         category.setCategoryName(name);
-        if(parentName==""){
-            category.setParentId(0);
-        }
-        category.setCategoryId(uploadItemDao.selectParentCategoryId(parentName));
+
+        category.setParentId(uploadItemDao.selectParentCategoryId(parentName));
         uploadItemDao.insertCategory(category);
     }
 }

@@ -414,22 +414,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h3>欢迎注册</h3>
 				<p>欢迎注册momo商城，请完善以下信息</p>
 				<p>如果你已经注册，请<a href="#">点击这里</a></p>
-				 <form>
+				 <form action="/xupt/register" method="post">
 					<ul>
 						<li class="text-info">用户名: </li>
-						<li><input type="text" value=""></li>
+						<li><input name="name" type="text" value=""></li>
 					</ul>
 					<ul>
 						<li class="text-info">QQ: </li>
-						<li><input type="text" value=""></li>
+						<li><input name="QQNumber" type="text" value=""></li>
 					 </ul>
 					<ul>
 						<li class="text-info">电子邮件: </li>
-						<li><input type="text" value=""></li>
+						<li><input name="email" type="text" value=""></li>
 					</ul>
 					<ul>
-						<li class="text-info">密码: </li>
-						<li><input type="password" value=""></li>
+						<li class="text-info">密码(字母开头，长度在6~18之间，只能包含字符、数字和下划线): </li>
+						<li><input name="password" type="password" value=""></li>
 					</ul>
 					<ul>
 						<li class="text-info">重复密码:</li>
@@ -437,7 +437,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 					<ul>
 						<li class="text-info">移动电话:</li>
-						<li><input type="text" value=""></li>
+						<li><input name="tel" type="text" value=""></li>
 					</ul>
 					<input type="submit" value="点击注册">
 					<p class="click">你点击按钮注册，代表你同意我们的<a href="#">momo准则.</a></p>

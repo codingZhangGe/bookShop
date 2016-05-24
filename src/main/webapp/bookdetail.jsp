@@ -14,7 +14,7 @@
 
 <br>
 
-<form action="/bookshop/details" method="post">
+<form action="/bookshop/details" method="get">
     图书详情
     <table border="0">
         <tr>

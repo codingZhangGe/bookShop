@@ -16,11 +16,6 @@ public class AddCategoryParam {
     @ItemIdValidator(message = "竞拍物品的itemId不满足要求")
     private String itemId;
 
-    /**
-     * 图书的状态state
-     */
-    @Range(min = 1, max = 4, message = "竞拍物品状态取值只能是1, 2, 3, 4")
-    private Integer state;
 
     /**
      * 购买数量
@@ -37,9 +32,7 @@ public class AddCategoryParam {
         return itemId;
     }
 
-    public Integer getState() {
-        return state;
-    }
+
 
     public int getBuyNumber() {
         return buyNumber;
@@ -53,9 +46,6 @@ public class AddCategoryParam {
         this.itemId = itemId;
     }
 
-    public void setState(Integer state) {
-        this.state = state;
-    }
 
     public void setBuyNumber(int buyNumber) {
         this.buyNumber = buyNumber;

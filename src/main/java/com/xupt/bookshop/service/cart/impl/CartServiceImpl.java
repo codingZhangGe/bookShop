@@ -6,6 +6,7 @@ import com.xupt.bookshop.common.utils.UUIDGenerator;
 import com.xupt.bookshop.dao.CartDao;
 import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.cart.CartItem;
+import com.xupt.bookshop.model.cart.CartItemVo;
 import com.xupt.bookshop.service.cart.CartService;
 import com.xupt.bookshop.service.common.ImgService;
 import org.springframework.stereotype.Service;
@@ -33,12 +34,15 @@ public class CartServiceImpl implements CartService {
      */
     @DataSource(DataSource.slave)
     @Override
-    public List<CartItem> categoryDetail(String username) {
+    public CartItemVo categoryDetail(String username) {
+        CartItemVo cartItemVo = new CartItemVo();
         List<CartItem> cart=cartDao.queryCartDetail(username);
         for(CartItem cartItem:cart){
             cartItem.setPictureUrl(imgService.getFirstPictureUrl(cartItem.getBookId()));
         }
-       return   cart;
+        cartItemVo.setCartItemList(cart);
+        cartItemVo.setTotalPrice(cartDao.selectTotalPrice(username));
+       return  cartItemVo;
 
     }
     // 用户登陆创建购物车

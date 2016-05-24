@@ -2,6 +2,7 @@ package com.xupt.bookshop.service.cart;
 
 import com.xupt.bookshop.model.ResultOfRequest;
 import com.xupt.bookshop.model.cart.CartItem;
+import com.xupt.bookshop.model.cart.CartItemVo;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public interface CartService {
 
-    List<CartItem> categoryDetail(String username);
+    CartItemVo categoryDetail(String username);
     public ResultOfRequest createCategoryWithUser(String username);
     public ResultOfRequest deleteCartItem(List<String> bookId);
 

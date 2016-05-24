@@ -20,7 +20,6 @@ public class TaskOfCart {
     OrderService orderService;
     @Scheduled(cron = "0/5 * * * * ?") //5秒执行一次
     public  void doTask(){
-      logger.info("<TaskOfCart> doing");
         List<String> orderItems=orderService.selectOrderitemWithTime();
        //配置为下线
         updateOrderState(orderItems);

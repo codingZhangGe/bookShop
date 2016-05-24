@@ -36,7 +36,7 @@
         <tr>
             <td height="25"><input type="radio" name="pd_FrpId" value="CEB-NET" >光大银行</td>
             <td height="25"><input type="radio" name="pd_FrpId" value="BOCO-NET">交通银行</td>
-            <td height="25"><input type="radio" name="pd_FrpId" value="CMBC-NET">民生银行</td>
+            <td height="2`5"><input type="radio" name="pd_FrpId" value="CMBC-NET">民生银行</td>
             <td height="25"><input type="radio" name="pd_FrpId" value="SDB-NET">深圳发展银行</td>
         </tr>
         <tr>

@@ -19,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 
 
 /**
@@ -108,6 +109,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
 
     private ResultOfRequest createCategoryWithBookItem(BookDetail bookDetail,AddCategoryParam addCategoryParam){
 
+        logger.info("添加购物车");
         CartItem cartItem =new CartItem();
         cartItem.setCartId(cartDao.queryCartId(addCategoryParam.getUserName()));
         cartItem.setBookName(bookDetail.getBookName());
@@ -124,6 +126,7 @@ public class BookDetailsServiceImpl implements BookDetailService {
         else{
             cartDao.updateCartDetailCount(bookDetail.getBookId());
         }
+        cartDao.updateTotalPrice(bookDetail.getCurrentPrice().multiply(BigDecimal.valueOf(addCategoryParam.getBuyNumber())),addCategoryParam.getUserName());
         ResultOfRequest<CartItem> resultOfRequest =new ResultOfRequest<>();
         resultOfRequest.setResult(true);
         resultOfRequest.setCode(Constants.ADD_CATEGORY_SUCC);

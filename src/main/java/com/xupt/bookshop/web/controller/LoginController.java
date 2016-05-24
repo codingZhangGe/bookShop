@@ -73,7 +73,7 @@ public class LoginController {
                     CookieUtil.addCookie(httpServletResponse,"login_id",username,60);
                     //用户登陆创建购物车
                     cartService.createCategoryWithUser(loginPara.getUsername());
-                    return JsonResult.succ();
+                    return "login";
                 }
             } else {
                 return JsonResult.fail("用户不存在");

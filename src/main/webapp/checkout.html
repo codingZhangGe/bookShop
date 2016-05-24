@@ -408,6 +408,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!---->
 <!-- check-out -->
+
+
+
+
 <div class="container">
 	<div class="check">
 		<div class="col-md-3 cart-total">
@@ -415,16 +419,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="price-details">
 				<h3>您的订单</h3>
 				<span>合计</span>
-				<span class="total1">6200.00</span>
-				<span>折扣</span>
-				<span class="total1">10%</span>
-				<span>运费</span>
-				<span class="total1">150.00</span>
+				<span id="totalPrice" class="total1"></span>
+                <span>运费</span>
+				<span class="total1">20.00</span>
 				<div class="clearfix"></div>
 			</div>
 			<ul class="total_price">
 			   <li class="last_price"> <h4>需支付</h4></li>
-			   <li class="last_price"><span>6150.00</span></li>
+			   <li  id="payPrice" class="last_price"><span></span></li>
 			   <div class="clearfix"> </div>
 			</ul>
 			<div class="clearfix"></div>
@@ -435,7 +437,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a class="cpns" href="pay.jsp">在线支付</a>
 			</div>
 		</div>
-		<div class="col-md-9 cart-items">
+		<div id="cartitem" class="col-md-9 cart-items">
 			<h1>我的购物车</h1>
 				<script>$(document).ready(function(c) {
 					$('.close1').on('click', function(c){
@@ -445,62 +447,108 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						});
 					});
 			   </script>
-			<div class="cart-header">
-				<div class="close1"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-						<div class="cart-item cyc">
-							<img src="images/4.jpg" class="img-responsive" alt=""/>
-						</div>
-					   <div class="cart-item-info">
-							<ul class="qty">
-								<li><p>价格 : 3100</p></li>
-								<li><p>数量 : 1</p></li>
-							</ul>
-							<div class="delivery">
-								 <p>运费 : 100</p>
-								 <span>将在2-3天到达</span>
-								 <div class="clearfix"></div>
-							</div>
-<!-- 							<div class="fgh">
-								<a href="#">Add To Cart</a>
-							</div> -->
-					   </div>
-					   <div class="clearfix"></div>
+			<!--<div class="cart-header">-->
+				<!--<div class="close1"> </div>-->
+				<!--<div class="cart-sec simpleCart_shelfItem">-->
+                    <script type="text/javascript">
 
-				  </div>
-			 </div>
-			 <script>$(document).ready(function(c) {
-					$('.close2').on('click', function(c){
-							$('.cart-header2').fadeOut('slow', function(c){
-						$('.cart-header2').remove();
-					});
-					});
-					});
-			 </script>
-			<div class="cart-header2">
-				<div class="close2"> </div>
-					<div class="cart-sec simpleCart_shelfItem">
-						<div class="cart-item cyc">
-							 <img src="images/2.jpg" class="img-responsive" alt=""/>
-						</div>
-					    <div class="cart-item-info">
-							<ul class="qty">
-								<li><p>价格 : 3100</p></li>
-								<li><p>数量 : 1</p></li>
-							</ul>
-							<div class="delivery">
-								<p>运费 : 100</p>
-								<span>将在2-3天到达</span>
-								<div class="clearfix"></div>
-							</div>
-<!-- 							<div class="fgh">
-								<a href="#">Add To Cart</a>
-							</div> -->
-					   </div>
-					   <div class="clearfix"></div>
-				    </div>
-			</div>
-		</div>
+                        var url="/cart/";
+                        var xhr=null;
+                        if(window.XMLHttpRequest){
+                            xhr=new XMLHttpRequest();
+                        }else{
+                            xhr= new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xhr.open("GET",url , true);
+                        xhr.send();
+                        xhr.onreadystatechange=function() {
+                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                var msg = xhr.responseText;
+                                msg = eval("(" + msg + ")");
+                                var a=msg.data.cartItemList;
+
+                                for(var attr in a)
+                                {
+                                    var at=a[attr];
+                                    var headdiv=document.createElement("div");
+                                    headdiv.setAttribute("class","cart-header");
+
+                                    var closediv=document.createElement("div");
+                                    closediv.setAttribute("class","close1");
+                                    var cartdesdiv=document.createElement("div");
+                                    cartdesdiv.setAttribute("class","cart-sec simpleCart_shelfItem");
+                                  var imgdiv=document.createElement("div");
+                                    imgdiv.setAttribute("class","cart-item cyc");
+                                   var img=document.createElement("img");
+                                    img.setAttribute("id","img");
+                                    img.setAttribute("class","img-responsive");
+                                    img.setAttribute("alt","");
+                                    img.setAttribute("src", "");
+
+                                    var div=document.createElement("div");
+                                    div.class="cart-item-info";
+                                    var p1=document.createElement("p");
+                                    var ur=document.createElement("ur");
+                                    ur.class="qty";
+                                    var li1=document.createElement("li");
+                                    var p1=document.createElement("p");
+                                    p1.setAttribute("id","price");
+                                    var li2=document.createElement("li");
+                                    var p2=document.createElement("p");
+                                    p2.setAttribute("id","number");
+                                    var deliverdiv=document.createElement("div");
+                                    deliverdiv.class="delivery";
+                                    var span=document.createElement("span");
+                                    span.innerText="将在2-3天到达";
+                                    var cleardiv=document.createElement("div");
+                                    cleardiv.class ="clearfix";
+
+                                    var cartitem=document.getElementById("cartitem");
+                                    cartitem.appendChild(headdiv);
+                                    headdiv.appendChild(closediv);
+
+                                    headdiv.appendChild(cartdesdiv);
+
+                                    headdiv.appendChild(cleardiv)
+
+                                    cartdesdiv.appendChild(imgdiv);
+
+                                    cartdesdiv.appendChild(div);
+
+                                    cartdesdiv.appendChild(deliverdiv);
+
+                                    deliverdiv.appendChild(cleardiv);
+                                    deliverdiv.appendChild(span);
+                                    imgdiv.appendChild(img);
+
+                                    div.appendChild(ur);
+
+                                    ur.appendChild(li1);
+
+                                    li1.appendChild(p1);
+
+                                    ur.appendChild(li2);
+
+                                    li2.appendChild(p2);
+                                      alert("******");
+                                      alert(at.currentPrice);
+                                    document.getElementById("img").src= at.pictureUrl;
+                                    document.getElementById("price").innerText="价格:"+ at.currentPrice;
+                                    document.getElementById("number").innerText= "数量:"+ at.buyNum;
+
+                                }
+                                for(var attr in msg) {
+                                    var flag=msg[attr];
+                                    document.getElementById("totalPrice").innerText = flag.totalPrice;
+                                    document.getElementById("payPrice").innerText=flag.totalPrice+20;
+                                }
+                            }
+                        }
+
+                    </script>
+
+</div>
+
 		<div class="clearfix"> </div>
 	</div>
 </div>

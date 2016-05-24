@@ -5,6 +5,7 @@ import com.xupt.bookshop.model.cart.CartItem;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**购物车
@@ -61,5 +62,7 @@ public interface CartDao {
     void updateCartDetailCount(@Param("bookId")String bookId);
 
     int deletecartItem(@Param("bookId")String bookId);
+    int updateTotalPrice(@Param("totalPrice") BigDecimal totalPrice,@Param("username")String username);
+    BigDecimal selectTotalPrice(@Param("username") String username);
 
 }

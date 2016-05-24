@@ -37,7 +37,7 @@ public class BookDetailController extends BaseController {
      * 商品详细信息展示
      * @return
      */
-    @RequestMapping(value = "/details", method = RequestMethod.POST)
+    @RequestMapping(value = "/details", method = RequestMethod.GET)
     @ResponseBody
     public Object bookDescription(@Valid BookDetailParam bookDetailParam) {
 

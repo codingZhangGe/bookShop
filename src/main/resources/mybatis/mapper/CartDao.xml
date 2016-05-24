@@ -33,6 +33,11 @@
         select cart_id FROM  cart
         WHERE  user_name=#{username}
     </select>
+
+    <select id="selectTotalPrice"  resultType="java.math.BigDecimal">
+        SELECT total_price FROM cart
+        WHERE user_name=#{username}
+    </select>
     <delete id="deleteCategoryItem" parameterType="String">
         DELETE FROM cart_item
         where
@@ -56,5 +61,11 @@
         UPDATE cart_item SET
         buy_num=buy_num+1
         WHERE book_id=#{bookId}
+    </update>
+
+    <update id="updateTotalPrice">
+        UPDATE cart SET
+        total_price =total_price+#{totalPrice}
+        WHERE user_name=#{username}
     </update>
 </mapper>

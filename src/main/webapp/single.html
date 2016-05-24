@@ -37,6 +37,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
+<script type="text/javascript">
+
+    var url = location.search;
+
+    var bookid=url.split("=");
+    var id=bookid[bookid.length-1];
+    var url="/bookshop/details?bookId="+id;
+    var xhr=null;
+    if(window.XMLHttpRequest){
+        xhr=new XMLHttpRequest();
+    }else{
+        xhr= new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.open("GET",url , true);
+    xhr.send();
+    xhr.onreadystatechange=function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+
+            var msg = xhr.responseText;
+
+            msg = eval("(" + msg + ")");
+
+            var a=msg.data;
+
+                document.getElementById("bookname").innerText = a.bookName;
+                document.getElementById("price").innerText = "$" + a.currentPrice;
+                document.getElementById("discount").innerText = a.discount + "%";
+                document.getElementById("surplus").innerText = "数量 ::" + a.surplus;
+                document.getElementById("browsercount").innerText =  a.browseCount;
+                document.getElementById("buycount").innerText =   a.buyCount;
+                document.getElementById("publish").innerText = "出版社  ::" + a.publish;
+                document.getElementById("des").innerText =  a.description;
+                alert(document.getElementById("quantity").value)
+               document.getElementById("addcart").action="/bookshop/cart?itemId="+ a.bookId+"&buyNumber="+document.getElementById("quantity").value;
+
+                for (var i = 1; i <= 4; i++) {
+
+
+                    var img = document.getElementById("img"+i);
+                    var li=document.getElementById("li"+i);
+                    img.src = a.urlList[i-1];
+                    li.setAttribute("data-thumb", a.urlList[i-1])
+
+                }
+
+
+
+        }
+    }
+</script>
 <!-- header -->
 
 <!-- //header -->
@@ -407,23 +457,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  </div>
 </div>
 <!---->
+
 <!-- single-page -->
 <div class="single">
 <div class="container">
 	<div class="single-page">
 		<div class="flexslider details-lft-inf">
 			<ul class="slides">
-				<li data-thumb="images/s1.jpg">
-					<img src="images/s1.jpg" />
+				<li id="li1" data-thumb="">
+					<img id="img1" src="" />
 				</li>
-				<li data-thumb="images/s2.jpg">
-					<img src="images/s2.jpg" />
+				<li id="li2" data-thumb="">
+					<img id="img2" src="" />
 				</li>
-				<li data-thumb="images/s3.jpg">
-					<img src="images/s3.jpg" />
+				<li id="li3" data-thumb="">
+					<img id="img3" src="" />
 				</li>
-				<li data-thumb="images/s4.jpg">
-					<img src="images/s4.jpg" />
+				<li id="li4" data-thumb="">
+					<img id="img4" src="" />
 				</li>
 			</ul>
 		</div>
@@ -440,68 +491,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  });
 			});
 			</script>
+
 		<div class="details-left-info">
-			<h3>我喜欢这个功利的世界 : 这世界承认每一个人的努力（咪蒙全新作品）</h3>
-				<h4>咪蒙 </h4>
+			<h3 id="bookname"></h3>
+				<h4 id="author"> </h4>
 			<div class="simpleCart_shelfItem">
-				<p><span class="item_price qwe">$ 729</span> <!-- <a href="#">Click for offer</a> --></p>
-<!-- 				<div class="col-rad">
-					<div class="col-rad-left">
-						<select class="arrival">
-							<option>Color</option>
-							<option>Green</option>
-							<option>Violet</option>
-							<option>Pink</option>
-						</select>
-					</div>
-					<div class="col-rad-right">
-						<section>
-							<div class="row">
-								<div class="colr ert">
-									<label class="radio"><input type="radio" name="radio" checked=""><i></i>14Kt</label>
-								</div>
-								<div class="colr">
-									<label class="radio"><input type="radio" name="radio"><i></i>10Kt</label>
-								</div>
-							</div>
-						</section>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-rad tyy">
-					<div class="col-rad-left">
-						<p>Diamond</p>
-					</div>
-					<div class="col-rad-right">
-						<section>
-							<div class="row">
-								<div class="colr ert">
-									<label class="radio"><input type="radio" name="radio1" checked=""><i></i>SI GH</label>
-								</div>
-								<div class="colr">
-									<label class="radio"><input type="radio" name="radio1"><i></i>VS GH</label>
-								</div>
-								<div class="colr">
-									<label class="radio"><input type="radio" name="radio1"><i></i>VVS EF</label>
-								</div>
-							</div>
-						</section>
-					</div>
-					<div class="clearfix"> </div>
-				</div> -->
-				<p class="qty">数量 ::</p><input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
-				<div class="single-but item_add">
+				<p><span id="price" class="item_price qwe"></span></p>
+                <p><span id="discount" ></span></p>
+				<p id="surplus" class="qty"></p><input min="1" max="" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+                <p><span id="browsercount" ></span>
+                    <span id="buycount" > </span>
+                </p>
+					<div class="single-but item_add">
+                        <form id="addcart" action="" method="post">
 					<input type="submit" value="加入购物车" >
+                        </form>
 				</div>
 			</div>
 			<div class="flower-type">
-			<p>出版社  ::<a href="#">湖南出版社</a></p>
-			<p>出版日期  ::<a href="#">2016.06</a></p>
+			<p id="publish"><a href="#" ></a></p>
+			<p>出版日期  ::<a href="#" id="publishtime">2016.05</a></p>
 			</div>
-			<p class="desc">你没发现吗？这个世界是：
-　　当你不够强大的时候，你想要一个小小的机会，都没有。
-　　当你足够牛×的时候，你的面前有一万个机会，你挡都挡不住。
-　　当你足够优秀的时候，你想要的一切都会主动来找你。</p>
+			<p class="desc" id="des"></p>
 		</div>
 		<div class="clearfix"></div>
 	</div>

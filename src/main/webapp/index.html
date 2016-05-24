@@ -530,6 +530,39 @@
 							});
 					</script>
 					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+                <script type="text/javascript">
+                    var url="/index/queryBooking?currentPage=1&pageSize=3";
+                    var xhr=null;
+                    if(window.XMLHttpRequest){
+                        xhr=new XMLHttpRequest();
+                    }else{
+                        xhr= new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xhr.open("GET",url , true);
+                    xhr.send();
+                    xhr.onreadystatechange=function() {
+
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            var msg = xhr.responseText;
+                            msg = eval("(" + msg + ")");
+                            var a=msg.data.pageData;
+                                  var i=1;
+                            for(var attr in a){
+                                var b= a[attr];
+
+                                    var img = document.getElementById("img" + i);
+                                    img.src = b.urlList;
+                                    var price = document.getElementById("price" + i);
+                                    price.innerText = "$"+b.currentPrice;
+                                    var a1 = document.getElementById("a" + i);
+                                    a1.href = "single.html?bookId=" + b.bookId;
+                                    i++;
+
+                            }
+
+                        }
+                    }
+                </script>
 			</div>
 <!-- //slider -->
 			<div class="clearfix"> </div>
@@ -637,15 +670,16 @@
 			<div class="product-one">
 				<div class="col-md-2 product-left">
 					<div class="p-one simpleCart_shelfItem jwe">
-							<a href="single.html">
-								<img src="images/1-.jpg" alt="" class="img-responsive" />
+							<a id="a1" href="">
+								<img  id="img1" src="" alt="" class="img-responsive" />
 								<div class="mask">
 									<span>详细信息</span>
 								</div>
 							</a>
 						<div class="product-left-cart">
 							<div class="product-left-cart-l">
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price">$729</span></a></p>
+								<p><a class="item_add" href="#"><i></i>
+                                    <span id="price1" class=" item_price"></span></a></p>
 							</div>
 							<div class="product-left-cart-r">
 								<a href="#"> </a>
@@ -656,15 +690,15 @@
 				</div>
 				<div class="col-md-2 product-left">
 					<div class="p-one simpleCart_shelfItem jwe">
-						<a href="single.html">
-								<img src="images/3-.jpg" alt="" class="img-responsive" />
+						<a id="a2" href="">
+								<img id="img2" src="" alt="" class="img-responsive" />
 								<div class="mask">
 									<span>详细信息</span>
 								</div>
 						</a>
 						<div class="product-left-cart">
 							<div class="product-left-cart-l">
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price">$729</span></a></p>
+								<p><a  class="item_add" href="#"><i></i> <span id="price2" class=" item_price"></span></a></p>
 							</div>
 							<div class="product-left-cart-r">
 								<a href="#"> </a>
@@ -675,15 +709,15 @@
 				</div>
 				<div class="col-md-2 product-left">
 					<div class="p-one simpleCart_shelfItem jwe">
-						<a href="single.html">
-								<img src="images/2-.jpg" alt="" class="img-responsive" />
+						<a href="" id="a3">
+								<img src="" id="img3" alt="" class="img-responsive" />
 								<div class="mask">
 									<span>详细信息</span>
 								</div>
 						</a>
 						<div class="product-left-cart">
 							<div class="product-left-cart-l">
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price">$729</span></a></p>
+								<p><a  class="item_add" href="#"><i></i> <span id="price3" class=" item_price"></span></a></p>
 							</div>
 							<div class="product-left-cart-r">
 								<a href="#"> </a>

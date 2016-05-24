@@ -29,7 +29,7 @@ public class DataSourceAspect implements Ordered {
     @Before("aspect()")
     public void before(JoinPoint point) throws NoSuchMethodException {
         // 获取方法上面的注解信息
-        logger.info("切面进入{}", point.getSignature().getName());
+
         // 实体类
         Object target = point.getTarget();
         // 方法名称
@@ -50,7 +50,6 @@ public class DataSourceAspect implements Ordered {
             DataSource source = method.getAnnotation(DataSource.class);
             if (source != null && StringUtils.isNotBlank(source.value())) {
                 DynamicDataSourceHolder.setDataSource(source.value());
-                logger.info("annotation message  :datasource is {}", source.value());
             } else {
                 DynamicDataSourceHolder.setDataSource(DataSource.master);
             }

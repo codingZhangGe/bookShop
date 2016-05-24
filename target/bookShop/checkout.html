@@ -464,15 +464,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         xhr.onreadystatechange=function() {
                             if (xhr.readyState == 4 && xhr.status == 200) {
                                 var msg = xhr.responseText;
+                                alert(msg);
                                 msg = eval("(" + msg + ")");
                                 var a=msg.data.cartItemList;
 
+                                var i=1;
                                 for(var attr in a)
                                 {
                                     var at=a[attr];
+                                    alert(at.price);
                                     var headdiv=document.createElement("div");
                                     headdiv.setAttribute("class","cart-header");
-
                                     var closediv=document.createElement("div");
                                     closediv.setAttribute("class","close1");
                                     var cartdesdiv=document.createElement("div");
@@ -480,7 +482,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   var imgdiv=document.createElement("div");
                                     imgdiv.setAttribute("class","cart-item cyc");
                                    var img=document.createElement("img");
-                                    img.setAttribute("id","img");
+                                    img.setAttribute("id","img"+i);
                                     img.setAttribute("class","img-responsive");
                                     img.setAttribute("alt","");
                                     img.setAttribute("src", "");
@@ -492,10 +494,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     ur.class="qty";
                                     var li1=document.createElement("li");
                                     var p1=document.createElement("p");
-                                    p1.setAttribute("id","price");
+                                    p1.setAttribute("id","price"+i);
                                     var li2=document.createElement("li");
                                     var p2=document.createElement("p");
-                                    p2.setAttribute("id","number");
+                                    p2.setAttribute("id","number"+i);
                                     var deliverdiv=document.createElement("div");
                                     deliverdiv.class="delivery";
                                     var span=document.createElement("span");
@@ -532,9 +534,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     li2.appendChild(p2);
                                       alert("******");
                                       alert(at.currentPrice);
-                                    document.getElementById("img").src= at.pictureUrl;
-                                    document.getElementById("price").innerText="价格:"+ at.currentPrice;
-                                    document.getElementById("number").innerText= "数量:"+ at.buyNum;
+                                    document.getElementById("img"+i).src= at.pictureUrl;
+                                    document.getElementById("price"+i).innerText="价格:"+ at.currentPrice;
+                                    document.getElementById("number"+i).innerText= "数量:"+ at.buyNum;
+                                    i++
 
                                 }
                                 for(var attr in msg) {

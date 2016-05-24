@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h4>小说</h4>
 								<ul>
 									<li><a href="products.html">世界名著</a></li>
-									<li><a href="products.html">作品集</a></li>
+									<li><a href="products.html?category=作品集">作品集</a></li>
 									<li><a href="products.html">古典小说</a></li>
 									<li><a href="products.html">四大名著</a></li>
 									<li><a href="products.html">当代小说</a></li>
@@ -414,188 +414,164 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!---->
 <!-- products -->
+
+
+<script type="text/javascript">
+    var url = location.search;
+
+    var category=url.split("=");
+    var name=category[category.length-1];
+    $("#name").html(decodeURI(name));
+    var url="/index/query?category="+name;
+    var xhr=null;
+    if(window.XMLHttpRequest){
+        xhr=new XMLHttpRequest();
+    }else{
+        xhr= new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.open("GET",url , true);
+    xhr.send();
+    xhr.onreadystatechange=function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var msg = xhr.responseText;
+            alert(msg);
+            msg = eval("(" + msg + ")");
+            var a=msg.pageData;
+             alert(a.length);
+
+
+            if(a.length%3==0){
+                for(var i=0;i< a.length/3;i++){
+                    var lftdiv=document.createElement("div");
+                    lftdiv.setAttribute("class","products-grid-lft");
+                }
+
+            }
+            else if(a.length<3){
+                var lftdiv=document.createElement("div");
+                lftdiv.setAttribute("class","products-grid-lft");
+            }
+            else{
+                for(var i=0;i< (a.length/3)+1;i++){
+                    var lftdiv=document.createElement("div");
+                    lftdiv.setAttribute("class","products-grid-lft");
+                }
+            }
+
+
+                var flag=1;
+                for(var attr in a) {
+
+                    alert(a[attr].bookName);
+                    var at = a[attr];
+                    var grddiv = document.createElement("div");
+                    grddiv.setAttribute("class","products-grd");
+                    var prddiv = document.createElement("div");
+                    prddiv.setAttribute("class","p-one simpleCart_shelfItem prd");
+
+                    var link = document.createElement("a");
+                    link.setAttribute("href","");
+                    link.setAttribute("id","link"+flag);
+
+                    var img = document.createElement("img");
+                    img.setAttribute("id","img"+flag);
+                    img.setAttribute("src","");
+                    img.setAttribute("class","img-responsive");
+
+                    var maskdiv = document.createElement("div");
+                    maskdiv.setAttribute("class","mask");
+
+                    var span = document.createElement("span");
+                    span.setAttribute("id","span"+flag);
+
+                    var bookname = document.createElement("h4");
+                    bookname.setAttribute("id","bookname"+flag);
+
+                    var p = document.createElement("p");
+
+                    var itemadd = document.createElement("a");
+                    itemadd.setAttribute("class","item_add");
+                    itemadd.setAttribute("href","#");
+
+                    var i = document.createElement("i");
+
+                    var pricespan = document.createElement("span");
+                    pricespan.setAttribute("class","item_price valsa");
+                    pricespan.setAttribute("id","pricespan"+flag);
+
+                    var progrddiv = document.createElement("div");
+                    progrddiv.setAttribute("class","pro-grd");
+
+                    var link2 = document.createElement("a");
+                    link2.setAttribute("id","link"+flag);
+                    link2.setAttribute("href","");
+
+                    var cleardiv=document.createElement("div");
+                    cleardiv.setAttribute("class","clearfix");
+
+                    var div=document.getElementById("div");
+                    div.appendChild(lftdiv);
+                    lftdiv.appendChild(grddiv);
+                   lftdiv.appendChild(cleardiv);
+                    grddiv.appendChild(prddiv);
+                    prddiv.appendChild(link);
+                    link.appendChild(img);
+                    link.appendChild(maskdiv);
+                    maskdiv.appendChild(span);
+                    prddiv.appendChild(bookname);
+                    prddiv.appendChild(p);
+                    p.appendChild(itemadd);
+                    prddiv.appendChild(itemadd);
+                    itemadd.appendChild(i);
+                    itemadd.appendChild(pricespan);
+                    prddiv.appendChild(progrddiv);
+                    progrddiv.appendChild(link2);
+
+
+                    document.getElementById("img"+flag).src=at.urlList;
+
+                    document.getElementById("link"+flag).href="single.html?bookId="+at.bookId;
+
+                    document.getElementById("span"+flag).innerText="了解更多";
+
+                    document.getElementById("bookname"+flag).innerText=at.bookName;
+
+                    document.getElementById("pricespan"+flag).innerText="$"+at.currentPrice;
+                    document.getElementById("link"+flag).href="single.html?bookId="+at.bookId;
+                //    document.getElementById("link"+flag).innerText=at.discount+"%";
+
+
+                    flag++;
+                }
+
+
+        }
+    }
+
+</script>
+
+
+
 	<div class="products">
 		<div class="container">
 			<div class="products-grids">
-				<div class="col-md-8 products-grid-left">
-					<div class="products-grid-lft">
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/11.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>中国文学史</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/10.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>有如走路的速度</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/9.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>美女都是狠角色</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="products-grid-lft">
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/1.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>买不到的味道</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/16.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>爱上了你</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/3.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>志摩的诗</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="products-grid-lft">
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/2.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>白说</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/17.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>皮囊</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="products-grd">
-							<div class="p-one simpleCart_shelfItem prd">
-								<a href="single.html">
-										<img src="images/4.jpg" alt="" class="img-responsive" />
-										<div class="mask">
-											<span>了解更多</span>
-										</div>
-								</a>
-								<h4>恰到好处的幸福</h4>
-								<p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">$729</span></a></p>
-								<div class="pro-grd">
-									<a href="single.html">10% Off</a>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
+				<div id="div" class="col-md-8 products-grid-left">
+
 				</div>
+
 				<div class="col-md-4 products-grid-right">
 					<div class="w_sidebar">
 						<div class="w_nav1">
 							<h4>全部分类</h4>
 							<ul>
-								<li><a href="#">文艺</a></li>
+								<li><a href="products.html?category=文艺">文艺</a></li>
 								<li><a href="#">人文社科</a></li>
 								<li><a href="#">童书</a></li>
 								<li><a href="#">经管</a></li>
 								<li><a href="#">励志</a></li>
 							</ul>
 						</div>
-						<section  class="sky-form">
-							<h4>经典</h4>
-							<div class="row1 scroll-pane">
-								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>现代经典</label>
-								</div>
-								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>言情经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>武侠经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>科幻经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>校园经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>推理经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>历史经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>艺术经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>散文经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>穿越经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>国外经典</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>军事经典</label>
-								</div>
-							</div>
-						</section>
+
 						<section  class="sky-form">
 							<h4>作者</h4>
 							<div class="row1 scroll-pane">

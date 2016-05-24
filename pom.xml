@@ -293,6 +293,19 @@
             <version>${commons.file.version}</version>
         </dependency>
 
+        <!--dem4j-->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <!--fastjson-->
+        <dependency>
+
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.1.41</version>
+    </dependency>
     </dependencies>
 
     <!--build-->
